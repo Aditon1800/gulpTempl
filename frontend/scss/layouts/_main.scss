@@ -1,0 +1,25 @@
+.container {
+  @include wrapper();
+  background-color: gray;
+}
+
+.row{
+  @include row-flex();
+  @include justify-content-xs(center);
+}
+
+.item {
+  background-color: yellow;
+  @include col();
+  @include col-3();
+  @include col-md-6();
+  @include col-sm-6();
+  @include col-xs-11();
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border: 1px solid gray;
+
+  p {
+    min-height: 150px;
+  }
+}

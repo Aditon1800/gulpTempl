@@ -1,0 +1,36 @@
+//- Input
+mixin inputBlock(inputClass, inputType, inputName, inputPlaceholder, inputTitle)
+  input.input(class=inputClass, type=inputType name=inputName, placeholder=inputPlaceholder, title=inputTitle, required oninvalid="this.setCustomValidity('#{inputTitle}')" oninput="setCustomValidity('')")
+
+//- Checkbox
+mixin checkBox(checkboxId, text)
+  .checkbox
+    input.checkbox__input(type="checkbox" id=checkboxId)
+    label.checkbox__label(for=checkboxId)=text
+
+//- crumbsLink
+mixin crumbsLink(crumbsLinkClass, crumbsAddress, crumbsTitle, crumbsSlash)
+  .crumbs__block
+    a(class=crumbsLinkClass, href=crumbsAddress)=crumbsTitle
+    span.crumbs__link-slash=crumbsSlash
+
+//- navLink
+mixin navLink(navLinkClass, navAddress, navTitle, navModActive)
+  .crumbs__nav-block(class=navModActive)
+    a(class=navLinkClass, href=navAddress)=navTitle
+
+//- navLinkCounter
+mixin navLinkCounter(navCountClass, navLinkClass, navAddress, navTitle, navCount, navModActive)
+  .crumbs__nav-block(class=navModActive)
+    a(class=navLinkClass, href=navAddress)=navTitle
+    span(class=navCountClass)=navCount
+
+//- News
+mixin newsBlock(imgUrl, title, date)
+  .news__block
+    a.news__img-link(href="news-page.html")
+      .news__img-block
+        img(src="img/news/#{imgUrl}.jpg" alt="news" )
+    .news__desc
+      a.news__title(href="news-page.html")=title
+      titme.news__date=date

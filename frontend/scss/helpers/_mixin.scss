@@ -1,0 +1,10 @@
+@mixin cf() {
+  &:before, &:after {
+    content: "";
+    display: block;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

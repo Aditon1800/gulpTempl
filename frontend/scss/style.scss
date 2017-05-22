@@ -1,0 +1,17 @@
+
+// normalize at smart-grid mixin
+@import 'common/smart-grid';
+@include normalize();
+
+// mixins and variables
+@import 'helpers/mixin';
+@import 'helpers/variables'; 
+
+// common
+@import 'common/fonts';
+// @import 'common/grid';
+@import 'common/global';
+
+// layouts
+@import 'layouts/main';
+

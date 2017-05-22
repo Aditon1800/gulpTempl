@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #000;
+  background-color: #ffffff;
+}
+
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img, abbr {
+  border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+small {
+  font-size: 80%;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+button, .btn, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+legend {
+  color: #000;
+}
+
+article, aside, blockquote, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+time {
+  display: inline-block;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+a:visited {
+  color: unset;
+}
+
+button, .btn {
+  overflow: visible;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  text-align: center;
+}
+
+button:focus, .btn:focus, button:active, .btn:active {
+  border: unset;
+}
+
+button, .btn, select {
+  text-transform: none;
+}
+
+button, .btn, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], [disabled].btn, html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, .btn::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  line-height: normal;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="text"]::-webkit-autofill {
+  background-color: #fff !important;
+}
+
+img {
+  display: block;
+  border: 0;
+  width: auto;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'FONT';
+  font-weight: 800;
+  src: url("../fonts/FONT.otf") format("opentype"), url("../fonts/FONT.woff") format("woff"), url("../fonts/FONT.woff2") format("woff2");
+}
+
+body {
+  min-width: 320px;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media screen and (max-width: 560px) {
+  .row {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.item {
+  background-color: yellow;
+  padding-left: 15px;
+  padding-right: 15px;
+  word-wrap: break-word;
+  width: calc(25%);
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border: 1px solid gray;
+}
+
+@media screen and (max-width: 960px) {
+  .item {
+    width: calc(50%);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .item {
+    width: calc(50%);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .item {
+    width: calc(91.66666666666667%);
+  }
+}
+
+.item p {
+  min-height: 150px;
+}
