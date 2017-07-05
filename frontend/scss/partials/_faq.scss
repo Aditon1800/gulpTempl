@@ -1,0 +1,73 @@
+.faq {
+
+  &__content {
+    max-width: 830px;
+    margin: 0 auto;
+  }
+
+  &__block {
+    border-top: 1px solid #dadada;
+
+    &:last-child {
+      border-bottom: 1px solid #dadada;
+    }
+  }
+
+  &__name {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 20px;
+      padding: 15px 0 15px 40px;
+    }
+    position: relative;
+    font-size: 24px;
+    line-height: 1;
+    padding: 20px 0 20px 50px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:before {
+      @media (max-width: $sm-screen - 1) {
+        left: 10px;
+      }
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      display: block;
+      width: 14px;
+      height: 23px;
+      background: url('../img/eng/arrow-down.png') center no-repeat;
+      vertical-align: bottom;
+      transition: all .3s;
+    }
+  }
+
+  &__list {
+    @media (max-width: $sm-screen - 1) {
+      padding-left: 0;
+    }
+    display: none;
+    font-size: 18px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__block--active {
+      
+    .faq__name {
+      color: $red;
+    }
+
+    .faq__name {
+      
+      &:before {
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+  }
+}

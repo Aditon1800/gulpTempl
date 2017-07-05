@@ -6,6 +6,7 @@ var gulp = require('gulp'),
         smartgrid = require('smart-grid'),
         mmq = require('gulp-merge-media-queries'),
         jade = require('gulp-jade'),
+        cssmin = require('gulp-cssmin'),
         autoprefixer = require('gulp-autoprefixer'),
         sourcemaps = require('gulp-sourcemaps'),
         concat = require('gulp-concat'),
@@ -89,6 +90,7 @@ gulp.task('mmq', function () {
     .pipe(mmq({
       log: true
     }))
+    // .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('dist/css'));
 });
 

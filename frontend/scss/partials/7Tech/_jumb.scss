@@ -1,0 +1,109 @@
+.jumb {
+
+  &--tech {
+    @media (max-width: $md-screen - 1) {
+      background-image: url('../img/7Tech/mob/main-bg-md.jpg');
+      background-size: cover;
+    }
+    @media (max-width: 480px) {
+      background-image: url('../img/7Tech/mob/main-bg-sm.jpg');
+    }
+    background-image: url('../img/7Tech/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom -1px;   
+  }
+
+  color: $ex-black;
+  padding: 35px 0 40px;
+
+  .logo {
+    @media (max-width: $sm-screen - 1) {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    margin-bottom: 40px;
+  }
+
+  &__main-desc {
+  @media (max-width: $md-screen - 1) {
+    padding-left: 0;
+    max-width: none;
+  }
+    max-width: 710px;
+    text-align: center;
+    padding-left: 50px;
+  }
+
+  .sec-title {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    @media (max-width: 480px) {
+      font-size: 38px;
+    }
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+
+    span{
+      @media (max-width: $sm-screen - 1) {
+        display: inline-block;
+        font-size: 32px;
+        line-height: 1.4;
+      }
+      @media (max-width: 480px) {
+        font-size: 28px;
+      }
+      font-size: 36px;
+      font-weight: 400;
+      padding-top: 5px;
+      text-transform: none;
+    }
+  }
+
+  &__desc {
+    @media (max-width: 480px) {
+      font-size: 28px;
+    }
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  &__date {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 36px;
+    }
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+    font-size: 48px;
+    font-weight: 400;
+    color: $red;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+    display: block;
+    width: 100%;
+    max-width: 370px;
+    border-radius: 30px;
+    background-color: $red;
+    font-size: 24px;
+    font-weight: 400;
+    color: $white;
+    padding: 15px 0;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      border-color: $red;
+      color: $red;
+    }
+  }
+}

@@ -1,0 +1,345 @@
+// Jumb
+@import 'partials/jumb';
+.jumb {
+
+  &__slova {
+    @media(max-width: $md-screen - 1) {
+      background-image: url('../img/slova/mob/bg-dictionary-sm.jpg');
+      background-size: cover;
+    }
+    @media(max-width: $md-screen - 1) {
+      background-image: url('../img/slova/bg-dictionary.jpg');
+      background-size: cover;
+    }
+    height: auto;
+    max-height: none;
+    background-image: url('../img/slova/bg-dictionary-line.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    &.sec {
+      @media(max-width: $md-screen - 1) {
+        padding-bottom: 40px;
+      }
+      padding: 0;
+    }
+
+    .jumb__content {
+      @media(max-width: $md-screen - 1) {
+        padding-top: 0;
+      }
+      line-height: 1.1;
+      color: $white;
+      text-align: center;
+      padding-top: 20px;
+    }
+
+    .jumb__over-title {
+      @media(max-width: $sm-screen - 1) {
+          font-size: 26px;
+        }
+      font-size: 30px;
+      font-weight: 300;
+      overflow: hidden;
+    }
+
+    .jumb__title {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 46px;
+      }
+      @media(max-width: 480px) {
+        font-size: 42px;
+      }
+      font-size: 58px;
+      font-weight: 300;
+      margin-top: 15px;
+      margin-bottom: 45px;
+    }
+
+    .jumb__date {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 32px;
+      }
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    .jumb__address {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 26px;
+      }
+      font-size: 30px;
+      font-weight: 300;
+
+      a {
+        display: inline-block;
+        line-height: .8;
+        color: $white;
+        border-bottom: 1px dashed rgba($white, 0.8);
+        padding-bottom: 2px;
+      }
+    }
+
+    .btn-block {
+      padding-top: 50px;
+    }
+
+    .jumb__btn {
+      @include btn-trans(570px);
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: none;
+      @media(max-width: $sm-screen - 1) {
+        font-size: 22px;
+      }
+    }
+
+    .jumb__bonus-block {
+      @media(max-width: $md-screen - 1) {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+        margin-top: 40px;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1035px;
+      text-align: left;
+      padding: 0 30px 40px 30px;
+      margin: 145px auto 0;
+    }
+
+    .jumb__bonus-name {
+      @media(max-width: $md-screen - 1) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      position: relative;
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic;
+      color: $white;
+      line-height: 1;
+      margin-right: 80px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: -12px;
+        left: -38px;
+        width: 203px;
+        height: 48px;
+        background: url('../img/speak_spb/bonus-bg.png') center no-repeat;
+        z-index: 2;
+      }
+
+      span {
+        @media(max-width: $sm-screen - 1) {
+        }
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $red;
+        z-index: 10;
+      }
+    }
+
+    .jumb__bonus {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 18px;
+      }
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+}
+
+.speak-block {
+
+  &__wrap {
+    @media (max-width: $md-screen - 1) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .iframe-block {
+    @media (max-width: $md-screen - 1) {
+      width: 100%;
+      max-width: 760px;
+      margin-right: 0;
+    }
+    width: 770px;
+    height: 435px;
+    margin-right: 30px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__iframe-desc {
+    @media (max-width: $md-screen - 1) {
+      background: none;
+      width: auto;
+      max-width: none;
+      height: auto;
+    }
+    width: 100%;
+    max-width: 380px;
+    height: 435px;
+    background:  url('../img/eng/speak_spb/txt2.png') center no-repeat;;
+
+    span {
+      @media (max-width: $md-screen - 1) {
+        display: inline-block;
+        width: 100%;
+        margin-top: 25px;
+      }
+      @media(max-width: $sm-screen - 1) {
+        font-size: 26px;
+      }
+      display: none;
+      font-size: 32px;
+      line-height: 1.1;
+      text-align: center;
+    }
+  }
+}
+
+// Why
+
+.about {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/slova/mob/bg-training-md.jpg')
+  }
+  background-image: url('../img/slova/bg-training.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &.sec {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 42px;
+    }
+    font-size: 48px;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .row {
+    @include justify-content-md(center);
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-md-10();
+    @include col-sm-10();
+    @include col-xs-11();
+  }
+}
+
+@import 'partials/tabs';
+
+// Tabs
+
+.tab__list-item {
+  width: calc(100%/2);
+}
+
+.tab__list-item:nth-child(2) {
+  left: auto;
+}
+
+// Cost
+
+.cost {
+  background-image: url('../img/slova/bg-price.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+
+  &__title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 28px;
+    }
+    font-size: 36px;
+    font-weight: 100;
+    margin-bottom: 5px;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__block {
+    font-weight: 400;
+  }
+
+  &__new {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    font-size: 60px;
+  }
+
+  &__bonus {
+    font-size: 23px;
+    padding: 30px 0 40px;
+    font-weight: 300;
+
+    a {
+      display: inline-block;
+      border-bottom: 1px dashed rgba($white, .8);
+      transition: all .3s;
+      color: $white;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__btn {
+    @include btn-trans(570px);
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: none;
+    @media(max-width: $sm-screen - 1) {
+      font-size: 22px;
+    }
+  }
+}
+
+
+@import 'partials/timer/timer';
+@import 'partials/7Tech/author';
+@import 'partials/reviews';
+@import 'partials/7Tech/recommend';
+@import 'partials/map/map';
+
+.map__info {
+  margin-top: 3.5em;
+}
+
+.map__info-list {
+  font-size: 26px;
+}
+
+@import 'partials/7Tech/feedback';

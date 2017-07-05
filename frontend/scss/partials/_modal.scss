@@ -1,0 +1,136 @@
+ .modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.modal__name {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modal__heading {
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.modal__btn {
+  width: 100%;
+  padding: 17px 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  background-color: $red;
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  border: none;
+}
+
+.modal-main {
+  width: 100%;
+  max-width: 600px;
+  padding: 25px 25px 15px;
+  text-align: center;
+}
+
+.modal-main .input {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  border: 1px solid #000;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.m-student__close,
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  display: block;
+  padding-right: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba($black, .4);
+  background: url("../img/ic_m-close.png") no-repeat right center;
+  cursor: pointer;
+}
+
+.modal-lesson {
+  display: none;
+  width: 65%;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 40px 60px;
+  text-align: center;
+  background-image: url("../img/arr-modal.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  opacity: 0;
+}
+
+.m-lesson__heading {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.m-lesson__desc {
+  padding: 1.5em 0 1.9em;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.m-lesson__btn {
+  display: inline-block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.7em 25px 0.5em;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f14950;
+  border: 1px solid #f14950;
+}
+
+.m-lesson__btn:visited {
+  color: #f14950;
+}
+
+.m-lesson__btn:hover {
+  color: #fff;
+  background-color: $red;
+}
+
+.modal-sub {
+  display: none;
+  width: 788px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 60px 55px;
+  text-align: center;
+}
+
+#overlay {
+  z-index: 50;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+}

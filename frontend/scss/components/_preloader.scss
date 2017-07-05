@@ -1,0 +1,46 @@
+@keyframes trans {
+
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  75% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 1100;
+
+  .icon {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -98px;
+    width: 186px;
+    height: 60px;
+    background: url("../img/main-logo.png") center center no-repeat;
+    -webkit-animation: trans 1s infinite ease-out;
+    animation: trans 1s infinite ease-out;
+  }
+}

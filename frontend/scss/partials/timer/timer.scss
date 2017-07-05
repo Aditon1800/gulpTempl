@@ -1,0 +1,129 @@
+.timer {
+  background-color: $l-gray;
+
+  &.sec {
+    padding: 40px 0;
+  }
+
+  &__title {
+    @media (max-width: $md-screen - 1) {
+      text-align: center;
+      padding-left: 0;
+      padding-top: 90px;
+    }
+    @media (max-width: 480px) {
+      font-size: 23px;
+      padding-top: 75px;
+    }
+    position: relative;
+    font-size: 36px;
+    font-weight: 700;
+    color: $l-black;
+    padding-left: 100px;
+
+    &:before {
+      @media (max-width: $md-screen - 1) {
+        top: 0px;
+        left: 0;
+        right: 0;
+        transform: translateY(0);
+        margin: 0 auto;
+      }
+      @media (max-width: 480px) {
+        background-size: cover;
+        width: 58px;
+        height: 65px;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 63px;
+      height: 80px;
+      background: url('../img/timer/alarm-clock.svg') center no-repeat;
+    }
+  }
+
+  .countbox {
+    @media (max-width: $lg-screen - 1) {
+      margin-top: 35px;
+    }
+    @include cf();
+  }
+
+  &__content {
+    @media (max-width: $lg-screen - 1) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__counter {
+
+
+    .countbox-days,
+    .countbox-hours,
+    .countbox-mins,
+    .countbox-secs {
+      @media (max-width: 480px) {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 28px;
+      }
+      position: relative;
+      float: left;
+      width: 70px;
+      height: 70px;
+      border-radius: 5px;
+      border: 1px solid $l-black;
+      background-color: $white;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 70px;
+      margin-right: 30px;
+
+      &:after {
+        position: absolute;
+        content: ':';
+        display: block;
+        top: 0;
+        right: -18px;
+        font-family: inherit;
+        font-size: 36px;
+        font-weight: 500;
+        color: $l-black;
+      }
+    }
+
+    .countbox-mins,
+    .countbox-secs {
+      font-weight: 300;
+    }
+
+    .countbox-secs {
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .countbox-days-text,
+    .countbox-hours-text,
+    .countbox-mins-text,
+    .countbox-secs-text {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+  }
+}

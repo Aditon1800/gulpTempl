@@ -1,0 +1,159 @@
+@import 'partials/7Tech/jumb';
+@import 'partials/eng/free_webinar/jumb';
+
+.jumb {
+
+  &.sec {
+    padding-top: 10px;
+  }
+
+  &--10sec {
+    @media(max-width: $md-screen - 1) {
+      background-position: left 0;
+      background-size: cover;
+    }
+    background-image: url('../img/10Secrets/bg_10secrets-1.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+    .jumb__main-desc {
+      @media(max-width: $md-screen - 1) {
+        max-width: none;
+      }
+      max-width: 790px;
+    }
+
+    .sec-title {
+      text-transform: none;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    .jumb__desc {
+      font-size: 30px;
+      font-weight: 400;
+      margin-top: 35px;
+      margin-bottom: 55px;
+    }
+  }
+}
+
+.know {
+    background-image: url('../img/10Secrets/bg_10secrets-2.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  .sec-title {
+    text-transform: none;
+  }
+
+  .row {
+    @include justify-content-sm(center);
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-md-6();
+    @include col-sm-10();
+    @include col-xs-12();
+  }
+
+  &__block-name {
+    @media(max-width: $sm-screen - 1) {
+
+      br {
+        display: none;
+      }
+    }
+    position: relative;
+    font-size: 23px;
+    font-weight: 300;
+    padding-left: 60px;
+    margin-bottom: 40px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: #000;
+    }
+
+    &--1:before {
+      background-image: url('../img/10Secrets/icons/test.png');
+    }
+
+    &--2:before {
+      background-image: url('../img/10Secrets/icons/open-book.png');
+    }
+
+    &--3:before {
+      background-image: url('../img/10Secrets/icons/test-2.png');
+    }
+
+    &--4:before {
+      background-image: url('../img/10Secrets/icons/handshake.png');
+    }
+
+    &--5:before {
+      background-image: url('../img/10Secrets/icons/line-shart.png');
+    }
+
+    &--6:before {
+      background-image: url('../img/10Secrets/icons/warning.png');
+    }
+
+    &--7:before {
+      background-image: url('../img/10Secrets/icons/university.png');
+    }
+
+    &--8:before {
+      background-image: url('../img/10Secrets/icons/guide.png');
+    }
+
+    &--9:before {
+      background-image: url('../img/10Secrets/icons/document.png');
+    }
+
+    &--10:before {
+      background-image: url('../img/10Secrets/icons/brain.png');
+    }
+
+    &--11:before {
+      background-image: url('../img/10Secrets/icons/bus.png');
+    }
+
+    &--12:before {
+      background-image: url('../img/10Secrets/icons/target.png');
+    }
+
+    &--13:before {
+      background-image: url('../img/10Secrets/icons/planning.png');
+    }
+
+    &--14:before {
+      background-image: url('../img/10Secrets/icons/monitoring.png');
+    }
+  }
+
+  .btn-block {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    @include btn-red(370px)
+  }
+}
+
+@import 'partials/timer/timer';
+@import 'partials/7Tech/author';
+@import 'partials/7Tech/recommend';
+@import 'partials/7Tech/feedback';

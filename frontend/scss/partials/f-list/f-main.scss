@@ -1,0 +1,77 @@
+@import 'components/f-block';
+@import 'components/f-icon';
+@import './././components/filter';
+
+.f-main {
+  position: relative;
+  background: url('../img/f-list/texture.jpg') repeat;
+  overflow-y: hidden;
+
+  &--fixed-filter {
+
+    .f-main__filter {
+      transform: translateY(0);
+    }
+
+    .f-main__blocks {
+
+      .container {
+        transform: translateY(80px);
+        padding-bottom: 80px;
+      }
+    }
+  }
+
+  &__filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-84px);
+    padding: 25px 0;
+    border-bottom: 1px solid #dadada;
+    background-color: $white;
+    transition: all .5s;
+    z-index: 50;
+  }
+
+  &__list {
+    @media (max-width: $md-screen - 1) {
+      justify-content: center;
+    }
+    @media (max-width: 480px) {
+      // flex-direction: column;
+      justify-content: center;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__filter-btn {
+    width: 250px;
+    height: 40px;
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: $white;
+    border-radius: 0 0 6px 6px;
+    border-bottom: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    border-right: 1px solid #dadada;
+    z-index: 20;
+
+    &:hover,
+    &:focus {
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid #dadada;
+      border-left: 1px solid #dadada;
+      border-right: 1px solid #dadada;
+    }
+  }
+}

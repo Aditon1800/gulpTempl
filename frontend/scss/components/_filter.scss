@@ -1,0 +1,45 @@
+.filter {
+
+  &__f-box {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: $l-black;
+    padding: 5px 0;
+    margin-right: 10px;
+    user-select: none;
+  }
+
+  &__cb {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    z-index: 0;
+    opacity: 0;
+
+    &:checked + .filter__cl:before {
+      background: url('../img/f-list/ico-checked.png') center no-repeat;
+    }
+  }
+
+  &__cl {
+    position: relative;
+    vertical-align: middle;
+    padding-left: 15px;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: -20px;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      border: 1px solid #c1c1c1;
+      background-color: $white;
+    }
+  }
+}

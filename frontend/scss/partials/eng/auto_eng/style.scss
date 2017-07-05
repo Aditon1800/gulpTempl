@@ -1,0 +1,175 @@
+@import 'partials/7Tech/jumb';
+@import 'partials/eng/free_webinar/jumb';
+
+.jumb {
+
+  &.sec {
+    padding-top: 10px;
+  }
+
+  &--auto {
+    background-image: url('../img/eng/auto_eng/bg-autoeng-1.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .jumb__main-desc {
+      max-width: none;
+      color: $white;
+    }
+
+    .sec-title {
+      text-transform: none;
+      font-weight: 500;
+      line-height: 1.1;
+      color: inherit;
+    }
+
+    .jumb__desc {
+      font-size: 30px;
+      font-weight: 400;
+      margin-top: 35px;
+      margin-bottom: 20px;
+    }
+
+    .jumb__untitle {
+      display: inline-block;
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+
+    .jumb__desc--lem {
+      color: #567bbe;
+    }
+  }
+
+  .jumb__date {
+    color: inherit;
+  }
+
+  &__eng-btn {
+    @include btn-red(370px);
+  }
+}
+
+.know {
+    background-image: url('../img/eng/auto_eng/bg-pattern.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  .sec-title {
+    text-transform: none;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-md-5();
+    @include col-sm-7();
+    @include col-xs-12();
+  }
+
+  &__block {
+    background-color: $white;
+    min-height: 235px;
+    padding: 25px;
+    margin-bottom: 30px;
+  }
+
+  &__block-name {
+    @media(max-width: $sm-screen - 1) {
+
+      br {
+        display: none;
+      }
+    }
+    position: relative;
+    font-size: 48px;
+    font-weight: 300;
+    color: $red;
+    padding-left: 60px;
+    margin-bottom: 20px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    &--1:before {
+      background-image: url('../img/eng/auto_eng/icons/ear.png');
+    }
+
+    &--2:before {
+      background-image: url('../img/eng/auto_eng/icons/stairs.png');
+    }
+
+    &--3:before {
+      background-image: url('../img/eng/auto_eng/icons/strategy.png');
+    }
+
+    &--4:before {
+      background-image: url('../img/eng/auto_eng/icons/checklist.png');
+    }
+
+    &--5:before {
+      background-image: url('../img/eng/auto_eng/icons/idea.png');
+    }
+
+    &--6:before {
+      background-image: url('../img/eng/auto_eng/icons/notes.png');
+    }
+
+    &--7:before {
+      background-image: url('../img/eng/auto_eng/icons/conversation.png');
+    }
+  }
+
+  &__block-list {
+    font-size: 18px;
+    font-weight: 300;
+    color: $l-black;
+
+    li {
+      position: relative;
+      padding-left: 10px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 7px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background-color: $red;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .btn-block {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    @include btn-red(370px)
+  }
+}
+
+@import 'partials/timer/timer';
+@import 'partials/7Tech/author';
+@import 'partials/7Tech/recommend';
+@import 'partials/7Tech/feedback';

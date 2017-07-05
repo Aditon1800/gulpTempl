@@ -1,0 +1,56 @@
+.coming {
+  background-color: $l-black;
+  color: $g-white;
+
+  &.sec {
+    padding: 40px 0;
+  }
+
+  &__title {
+    @extend .timer__title;
+    color: inherit;
+
+    &:before {
+      @extend .timer__title:before;
+      background:  url('../img/eng/coming/calendar.svg') center no-repeat;
+    }
+  }
+
+  &__content {
+    @extend .timer__content;
+  }
+
+  &__dates {
+    @media (max-width: $lg-screen - 1) {
+      margin-top: 35px;
+    }
+    @media (max-width: 480px) {
+      width: auto;
+      max-width: none;
+      flex-direction: column;
+      justify-content: center;
+    }
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: normal;
+  }
+
+  &__date-block {
+    @media (max-width: 480px) {
+      margin-bottom: 15px;
+      max-width: 330px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid $g-white;
+    line-height: 1.3;
+    padding: 15px;
+  }
+}

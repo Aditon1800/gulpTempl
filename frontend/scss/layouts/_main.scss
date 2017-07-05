@@ -1,25 +1,261 @@
+.container-fluid {
+  max-width: 1920px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
 .container {
   @include wrapper();
-  background-color: gray;
 }
 
-.row{
+.row {
   @include row-flex();
-  @include justify-content-xs(center);
 }
 
-.item {
-  background-color: yellow;
-  @include col();
-  @include col-3();
-  @include col-md-6();
-  @include col-sm-6();
-  @include col-xs-11();
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border: 1px solid gray;
+body {
+  min-width: 320px;
+  font-family: 'Frank';
+  font-weight: 400;
+  line-height: 1.2;
+  color: $l-black;
+}
 
-  p {
-    min-height: 150px;
+span {
+  display: inline-block;
+}
+
+.btn {
+  @extend button;
+  transition: all .3s;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+}
+
+.btn:visited {
+  color: inherit;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  border-color: inherit;
+  border: 2px solid;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.sec {
+  @media (max-width: 480px) {
+    padding: 40px 0;
+  }
+  padding: 70px 0;
+}
+
+.sec-title {
+  @media (max-width: $md-screen - 1) {
+    font-size: 50px;
+  }
+  @media (max-width: 480px) {
+    font-size: 36px;
+  }
+  font-size: 60px;
+  font-weight: 100;
+  // text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+  color: $l-black;
+}
+
+.sec-title--red {
+  color: $red;
+}
+
+.sec-btn {
+  @media (max-width: 480px) {
+    font-size: 22px;
+  }
+  width: 100%;
+  max-width: 370px;
+  border-radius: 30px;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 15px 0;
+  margin: 0 auto;
+}
+
+.cost__rf {
+  font-family: $fira;
+}
+
+.block-more {
+  text-align: center;
+  line-height: 1.1;
+  font-size: 20px;
+
+  &--red {
+    color: $red;
+  }
+
+  span {
+    display: inline-block;
+  }
+}
+
+.btn-block {
+  text-align: center;
+}
+
+.informer__tel {
+  padding: 10px 0 7px;
+  text-align: right;
+}
+
+.informer__tel .tel {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: 700;
+  color: #353535;
+}
+
+.informer__tel .tel:last-of-type {
+  margin-left: 1em;
+}
+
+.informer__action {
+  text-align: right;
+}
+
+.action__personal {
+  display: block;
+  padding: 8px 10px 8px 25px;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: 300;
+  text-align: center;
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 4px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: url("../img/ic_user.png") no-repeat 9px center;
+}
+
+.action__personal:hover {
+  color: #fff;
+  background-image: url("../img/ic_user-h.png");
+  background-color: #999;
+}
+
+.follow {
+  overflow: hidden;
+  display: block;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+.follow__item {
+  width: 40px;
+  height: 40px;
+  float: left;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  border: 1px solid #000;
+  border-left: none;
+  background-image: url("../img/social/social.png");
+  background-position: center;
+  -webkit-transition: background-position-y .4s ease;
+  transition: background-position-y .4s ease;
+}
+
+.follow__item_vk {
+  border-left: 1px solid #9a9a9a;
+  background-position: 1px center;
+}
+
+.follow__item_vk:hover {
+  background-position: 1px 0;
+}
+
+.follow__item_fb {
+  background-position: -39px center;
+}
+
+.follow__item_fb:hover {
+  background-position: -39px 0;
+}
+
+.follow__item_in {
+  background-position: -77px center;
+}
+
+.follow__item_in:hover {
+  background-position: -77px 0;
+}
+
+.follow__item_inst {
+  background-position: -117px center;
+}
+
+.follow__item_inst:hover {
+  background-position: -117px 0;
+}
+
+.follow__item_ok {
+  background-position: -157px center;
+}
+
+.follow__item_ok:hover {
+  background-position: -157px 0;
+}
+
+.follow__item_yt {
+  background-position: -194px center;
+}
+
+.follow__item_yt:hover {
+  background-position: -194px 0;
+}
+
+.follow__item a {
+  display: block;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+
+  .action__personal {
+    padding: 8px 10px 8px 25px;
+  }
+
+  .follow {
+    margin-bottom: 0;
+  }
+}
+
+.private-info {
+  font-size: 14px;
+  color: inherit;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.red-class{
+  display: inline-block;
+  color: $red;
+}
+
+.iframe-block {
+
+  iframe {
+    @media(max-width: $sm-screen - 1) {
+      height: 400px;
+    }
+    width: 100%;
+    max-width: 970px;
+    height: 545px;
   }
 }

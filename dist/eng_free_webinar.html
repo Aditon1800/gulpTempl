@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script src="//advance-club.justclick.ru/jsapi/click.js"></script>
+  </head>
+  <body>
+    <!--=== Preloader-->
+    <div id="preloader">
+      <div class="icon"></div>
+    </div>
+    <div class="container-fluid">
+      <!--=== Jumbotron-->
+      <section class="jumb jumb--free-webinar">
+        <div class="container">
+          <div class="logo"><img src="img/main-logo.png" alt="logo"/></div>
+          <div class="jumb__main-desc">
+            <h2 class="sec-title">Как выучить английский<br/><span>за 3 месяца</span></h2>
+            <p class="jumb__desc">Бесплатный вэбинар Николая Ягодкина<br/>по технологии изучения языков,<br/>который уже посетили более <span>30 000</span> человек</p>
+            <time datetime="2017-06-14" class="jumb__date"><strong>14 июня 2017</strong>, 20:00</time>
+            <button data-action="" class="btn jumb__btn js-getModal">Зарегистрироваться</button>
+          </div>
+        </div>
+      </section>
+      <!--=== Timer-->
+      <script>
+        var now = new Date();
+            year = 2017;
+            month = 05; // месяц указывает на 1 меньше( например, 03 - это апрель)
+            day = 12;
+            hour = 17; // по Гринвичу
+            minute = 00;
+            sec = 0;
+            dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
+        
+            function CountBox() {
+                dateNow = new Date();
+                amount = dateFuture.getTime() - dateNow.getTime() + 5;
+                delete dateNow;
+                if (amount < 0) {
+                    out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
+                    var list = document.getElementsByClassName("countbox");
+                    for (var i = 0; i < list.length; i++) {
+                        list[i].innerHTML = out;
+                    }
+        
+                } else {
+                    days = 0;
+                    hours = 0;
+                    mins = 0;
+                    secs = 0;
+                    out = "";
+                    amount = Math.floor(amount / 1e3);
+                    days = Math.floor(amount / 86400);
+                    amount = amount % 86400;
+                    hours = Math.floor(amount / 3600);
+                    amount = amount % 3600;
+                    mins = Math.floor(amount / 60);
+                    amount = amount % 60;
+                    secs = Math.floor(amount);
+                    out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
+                    var list = document.getElementsByClassName("countbox");
+                    for (var i = 0; i < list.length; i++) {
+                        list[i].innerHTML = out;
+                    }
+                    setTimeout("CountBox()", 1e3)
+                }
+            }
+        
+      </script>
+      <article class="timer sec">
+        <div class="container">
+          <div class="timer__content">
+            <h2 class="timer__title">До начала вебинара осталось:</h2>
+            <div class="timer__counter">
+              <div class="countbox"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!--=== About-->
+      <section class="about sec">
+        <div class="container">
+          <h2 class="sec-title sec-title--red">На вебинаре вы получите:</h2>
+          <div class="row">
+            <div class="col">
+              <div class="about__block">
+                <div class="about__img"><img src="img/eng/free_webinar/about/icon-1.png" alt="about"/></div>
+                <p><strong>Обзор самых эфективных методик</strong> и способов изучения английского языка</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="about__block">
+                <div class="about__img"><img src="img/eng/free_webinar/about/icon-2.png" alt="about"/></div>
+                <p><strong>Конкретные рекомендации</strong> которые Вы сможете применить сразу</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="about__block">
+                <div class="about__img"><img src="img/eng/free_webinar/about/icon-3.png" alt="about"/></div>
+                <p><strong>Мотивация</strong> для изучения английского языка</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="about__block">
+                <div class="about__img"><img src="img/eng/free_webinar/about/icon-4.png" alt="about"/></div>
+                <p><strong>Ссылки</strong> на лучшие ресурсы и материалы по освоению английского</p>
+              </div>
+            </div>
+          </div>
+          <div class="btn-block">
+            <button data-title="" class="btn about__btn js-getModel">Получить навыки</button>
+          </div>
+        </div>
+      </section>
+      <!--=== Author-->
+      <section class="author sec">
+        <div class="container">
+          <h2 class="sec-title">Кто ведёт?</h2>
+          <div class="row">
+            <div class="col col-first">
+              <div class="author__block"><img src="img/7Tech/photo-NJ.jpg" alt="author"/></div>
+            </div>
+            <div class="col col-last">
+              <div class="author__block">
+                <h3 class="author__block-name">Николай Ягодкин</h3>
+                <p class="author__block-desc">Самый известный в России специалист по технологии обучения и изучения языков</p>
+                <ul class="author__list">
+                  <li><strong>Закончил 2 высших образования: <span>математическое и</span> педагогическое, специалист по инновационным методикам обучения</strong></li>
+                  <li><strong>Основатель и владелец образовательной компании Advance, </strong> полные программы которого прошли более <span>50 000</span> человек по всему миру</li>
+                  <li><strong>Отзывов о результатах применения его технологий только ВКонтакте больше <span>10 000</span></strong></li>
+                  <li>Репортажи о его технологиях и результатах их применения показывали <strong>по Первому каналу, НТВ</strong> и д.р.</li>
+                  <li><strong>Консультирует министров образования и обучает парламенты зарубежных стран</strong></li>
+                  <li>Среди частных учеников <strong>министры, депутаты, ректора и профессоры, президенты правления крупнейших компаний и банков и их дети</strong></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=== Knowledge-->
+      <section class="knowledge sec">
+        <div class="container">
+          <h2 class="sec-title">На вэбинаре вы узнаете:</h2>
+          <div class="row">
+            <div class="col">
+              <div class="knowledge__block">
+                <div class="knowledge__img"><img src="img/eng/free_webinar/knowledge/icon-1.png" alt="knowledge"/></div>
+                <p><strong>Как самому быстро поставить навык понимания беглой речи</strong> на английском</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="knowledge__block">
+                <div class="knowledge__img"><img src="img/eng/free_webinar/knowledge/icon-2.png" alt="knowledge"/></div>
+                <p><strong>О системе уровней английского языка</strong> и сможете определить, на каком находитесь Вы</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="knowledge__block">
+                <div class="knowledge__img"><img src="img/eng/free_webinar/knowledge/icon-3.png" alt="knowledge"/></div>
+                <p><strong>Методы быстрого набора словарного запаса</strong> или как легко запоминать 80-150 слов в день</p>
+              </div>
+            </div>
+          </div>
+          <div class="knowledge__block-sub">
+            <div class="row row-sub">
+              <div class="col-sub">
+                <div class="knowledge__block knowledge__block-sub">
+                  <div class="knowledge__img knowledge__img-sub"><img src="img/eng/free_webinar/knowledge/icon-4.png" alt="knowledge"/></div>
+                  <p><strong>Заблуждения и мифы,</strong> из-за которых многие учат иностранный язык годами</p>
+                </div>
+              </div>
+              <div class="col-sub">
+                <div class="knowledge__block knowledge__block-sub">
+                  <div class="knowledge__img knowledge__img-sub"><img src="img/eng/free_webinar/knowledge/icon-5.png" alt="knowledge"/></div>
+                  <p><strong>Как и сколько нужно заниматься языком</strong> в неделю и как учить язык нельзя</p>
+                </div>
+              </div>
+              <div class="col-sub">
+                <div class="knowledge__block knowledge__block-sub">
+                  <div class="knowledge__img knowledge__img-sub"><img src="img/eng/free_webinar/knowledge/icon-6.png" alt="knowledge"/></div>
+                  <p><strong>Насколько проста грамматика английского,</strong> если учить ее правильным способом</p>
+                </div>
+              </div>
+              <div class="col-sub">
+                <div class="knowledge__block knowledge__block-sub">
+                  <div class="knowledge__img knowledge__img-sub"><img src="img/eng/free_webinar/knowledge/icon-7.png" alt="knowledge"/></div>
+                  <p><strong>До какого уровня нужно доучить язык,</strong> чтобы он потом безвозвратно не забылся</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-more block-more--red"><span>И многое другое...</span></div>
+          <div class="btn-block">
+            <button data-title="" class="btn knowledge__btn js-getModal">Записаться на вэбинар</button>
+          </div>
+        </div>
+      </section>
+      <!--=== Recommend us-->
+      <section class="recommend sec">
+        <div class="container">
+          <div class="recommend__main-desc">
+            <h2 class="sec-title">Порекомендуйте нас друзьям, и получите видео по запоминанию 100 слов в час бесплатно!</h2>
+          </div>
+          <div class="recommend__links">
+            <ul class="recommend__list">
+              <li class="recommend__item recommend__item--vk"><a href="https://vk.com/advanceclub"></a></li>
+              <li class="recommend__item recommend__item--fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+              <li class="recommend__item recommend__item--ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+              <li class="recommend__item recommend__item--inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--=== Reviews-->
+      <section class="reviews-slider sec">
+        <h2 class="sec-title">Почему 30 000 человек уже прошли наши программы?<br/><span>Емкое и в то же время лаконичное собрание полезных технологий</span></h2>
+        <div class="container">
+          <div class="my-flipster">
+            <ul>
+              <li data-flip-title=" ">
+                <div class="parent">
+                  <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                    <h6><b>Александр Шурцов</b></h6>
+                  </div>
+                  <div class="child">
+                    <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»!</span></h6>
+                  </div>
+                </div>
+              </li>
+              <li data-flip-title=" ">
+                <div class="parent">
+                  <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                    <h6><b>Александр Шурцов</b></h6>
+                  </div>
+                  <div class="child">
+                    <h6><span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                  </div>
+                </div>
+              </li>
+              <li data-flip-title=" ">
+                <div class="parent">
+                  <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                    <h6><b>Александр Шурцов</b></h6>
+                  </div>
+                  <div class="child">
+                    <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--=== Feedback-->
+      <section class="feedback sec">
+        <div class="container">
+          <h2 class="sec-title">Остались вопросы? Закажите обратный звонок!</h2>
+          <div class="form">
+            <form method="POST" target="_self" action="http://shop.advance-club.ru/subscribe/process/?rid[0]=full_sub&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_full_sub&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2F/thanks_uni_manager/">
+              <input type="text" name="lead_name" placeholder="Введите Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_phone" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите Ваш телефон" required="required" class="input phone-mask"/>
+              <button class="btn feedback__btn">Заказать звонок</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner-wrap">
+            <div class="footer__informer informer">
+              <ul class="footer__follow follow">
+                <li class="follow__item follow__item_vk"><a href="https://vk.com/advanceclub"></a></li>
+                <li class="follow__item follow__item_fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+                <li class="follow__item follow__item_inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
+                <li class="follow__item follow__item_ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+                <li class="follow__item follow__item_yt"><a href="https://www.youtube.com/user/advanceclub?sub_confirmation=1"></a></li>
+              </ul>
+              <div class="informer__tel_bottom"><span class="tel">+7 (812) 363-43-53 <b>|</b></span><span class="tel"><b>|</b> 8 (800) 700-53-42</span></div>
+              <p class="footer__copy"><a href="http://advance-club.justclick.ru/agreement">Advance © 2017. Соглашение об обработке персональных данных </a><br/><a href="http://advance-club.ru/partner/">Партнёрская программа | </a><a href="http://advance-club.justclick.ru/conf">Политика конфиденциальности </a><br/>По вопросам сотрудничества yagodkin.n@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Modals 3-->
+      <div hidden="hidden" class="modal modal-main js-modal"><span class="modal__close js-modal-close">Закрыть</span>
+        <div class="modal__form">
+          <div class="modal__name">Оставить заявку</div>
+          <div id="subscr-block-1007">
+            <form method="POST" action="#~" target="_self" data-hash="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl" id="subscr-form-1007" onsubmit="if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) this.removeAttribute('target'); return jc_chkscrfrm(this, true, true, false, false, false, false, true, true, true, true, false, false, [], [], [])">
+              <input type="hidden" name="hash" value="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl"/>
+              <input type="text" name="lead_name" placeholder="Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_email" placeholder="Ваш e-mail" required="required" class="input"/>
+              <input type="text" pattern="+[0-9]{1} ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="lead_phone" placeholder="Ваш телефон" required="required" class="input phone-mask"/>
+              <button class="button modal__btn">Оставить заявку</button>
+              <script language="JavaScript" src="http://justclick.ru/media/subscribe/helper2.js.php"></script>
+              <script language="JavaScript">jc_setfrmfld()</script>
+              <input name="activation" type="hidden" value="true"/>
+              <script language="JavaScript">
+                $(function(){$(".lgroup_datepicker").datepicker($.datepicker.regional["ru"]); $(".lgroup_datepicker").datepicker("option", "yearRange", "-100:+20"); $(".lgroup_datepicker").blur();});
+                
+              </script>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Overlay-->
+      <div id="overlay"></div>
+      <!-- Scroll top-->
+      <div class="top_btn"><span>^</span></div>
+      <script src="js/jquery.flipster.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>

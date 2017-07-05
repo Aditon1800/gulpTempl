@@ -1,0 +1,66 @@
+//=== Blocks
+section.blocks.sec
+  .container
+    h2.sec-title Программа состоит из трех блоков:
+    .blocks-wrap
+      //=== Block 1
+      .block.block-1
+        .block__content
+          .block__num 1 Блок
+          header.block__header
+            .block__name Базовые 1000 слов 
+              br
+              | для детей
+            time.block__date 24 июля - 11 августа
+          .block__main-info
+            .block__desc Обучение навыку запоминания любых иностранных слов и практическое освоение от 500 (младшие школьники) и до 2000 слов (старшие школьники). В ходе занятий будут изучены правила чтения, фонетика и базовая лексика английского языка.
+            .block__time 8 занятий #[span с 11:00 до 13:00]
+
+            .block__sum #[strong Итог первого блока:] Старшие школьники запомнят от 500 английских слов, а самые сообразительные участники курса — 800 слов и более.
+
+      //=== Block
+      .block.block-2
+        .block__content
+          .block__num 2 Блок
+          header.block__header
+            .block__name Грамматика английского 
+              br
+              | языка
+            time.block__date 20-27 августа
+          .block__main-info
+            .block__desc Правила, которые обретут новую форму в майнд-картах, наглядных схемах и будут применены на практике с использованием технологии паттернов;
+            .block__time 7 занятий, ежедневно по 6 часов с 11:00 до 17:00
+
+            .block__sum #[strong Итог второго блока:] Участники разберут все базовые грамматические темы школьной программы, научатся быстро различать и применять языковые конструкции, заполнят пробелы в знании английского и обгонят сверстников!
+
+      //=== Block
+      .block.block-3
+        .block__content
+          .block__num 3 Блок
+          header.block__header
+            .block__name Вывод лексики в актив и отработка грамматических 
+              br
+              | конструкций
+            time.block__date 4-21 сентября
+          .block__main-info
+            .block__desc Третий блок максимально игровой, основан на современных коммуникативных методиках, включает глубокую проработку грамматики и вывод в актив лексики при помощи паттернов.
+            .block__time 8 занятий, по вторникам и четвергам #[span с 16:45 до 18:45]
+
+            .block__sum #[strong Итог второго блока:] Школьники применят в активной речи каждую грамматическую конструкцию с использованием всех выученных слов и получат обширную практику живого общения.
+
+    .block__warn #[span Обратите внимание!] 
+      br
+      | Можно приобрести весь курс или #[a(href="#~") первый блок отдельно].
+
+script.
+  $('.block').each(function(index, elem) {
+
+    $(elem).bind('mouseenter',function(){
+        $(this).stop(true).addClass('block--active').removeClass('block--siblings');
+        $(this).stop(true).siblings().addClass('block--siblings').removeClass('block--active');
+    });
+    $(elem).bind('mouseleave', function() {
+        $(this).removeClass('block--active');
+        $(this).siblings().removeClass('block--siblings');
+    });
+  });

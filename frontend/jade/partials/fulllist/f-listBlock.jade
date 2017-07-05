@@ -1,0 +1,218 @@
+main.f-main
+  //=== FIlter
+  .filter.f-main__filter
+    .container
+      ul.filter__list.f-main__list
+        li.filter__f-box
+          input.filter__cb#cb-1(type="checkbox" data-filter="inter")
+          label.filter__cl(for="cb-1") Живое участие
+        li.filter__f-box
+          input.filter__cb#cb-2(type="checkbox" data-filter="online")
+          label.filter__cl(for="cb-2") Онлайн трансляция
+        li.filter__f-box
+          input.filter__cb#cb-3(type="checkbox" data-filter="spb")
+          label.filter__cl(for="cb-3") Санкт-Петербург
+        li.filter__f-box
+          input.filter__cb#cb-4(type="checkbox" data-filter="msk")
+          label.filter__cl(for="cb-4") Москва
+        li.filter__f-box
+          input.filter__cb#cb-5(type="checkbox" data-filter="grown")
+          label.filter__cl(for="cb-5") Взрослые
+        li.filter__f-box
+          input.filter__cb#cb-6(type="checkbox" data-filter="child")
+          label.filter__cl(for="cb-6") Для детей
+      button.btn.f-main__filter-btn.js-filterBtn Показать фильтр
+  script.
+    
+
+
+
+  section.f-main__blocks
+    .container
+      .row
+          //- F-main block
+          .f-main__block(data-filter="inter, onlie, msk")
+            .f-main__header
+              .f-main__header-img(style="background-image: url('img/f-list/f-list-img-1.jpg');")
+              .f-main__header-date
+                time.date 15
+                  small июня
+            .f-main__content
+              .f-main__content-wrap
+                .f-main__name
+                  | Как выучить английский 
+                  br
+                  | за 3 месяца
+                .f-main__desc Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек
+              .f-main__data
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--int Очно
+                  span.f-main__data-desc.f-main__data-desc--online Онлайн
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--lang Иностранные языки
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--pl Санкт-Петербург
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--free Бесплатный семинар
+
+          //- F-main block
+          .f-main__block(data-filter="inter, spb")
+            .f-main__header
+              .f-main__header-img(style="background-image: url('img/f-list/f-list-img-2.jpg');")
+              .f-main__header-date
+                time.date 15
+                  small июня
+            .f-main__content
+              .f-main__content-wrap
+                .f-main__name
+                  | Пробные уроки 
+                  br
+                  | иностранных языков
+                .f-main__desc Полноценное 3х-часовое занятие по авторским технологиям ускоренного обучения Николая Ягодкина
+              .f-main__data
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--int Очно
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--lang Иностранные языки
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--pl Санкт-Петербург
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--free Бесплатный вебинар
+
+          //- F-main block
+          .f-main__block(title="inter, msk")
+            .f-main__header
+              .f-main__header-img(style="background-image: url('img/f-list/f-list-img-3.jpg');")
+              .f-main__header-date
+                time.date 15
+                  small июня
+            .f-main__content
+              .f-main__content-wrap
+                .f-main__name
+                  | Технологии изучения 
+                  br
+                  | иностранных языков
+                .f-main__desc Проведет один из известнейших в России и странах СНГ экспертов по технологиям эффективного обучения и изучения иностранных языков Николай Ягодкин.
+              .f-main__data
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--int Очно
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--tech Технологии обучения
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--pl Москва
+
+          //- F-main block
+          .f-main__block(title="inter, online, child, spb")
+            .f-main__header
+              .f-main__header-img(style="background-image: url('img/f-list/f-list-img-4.jpg');")
+              .f-main__header-date
+                time.date 15
+                  small июня
+            .f-main__content
+              .f-main__content-wrap
+                .f-main__name
+                  | Как выучить английский 
+                  br
+                  | за 3 месяца
+                .f-main__desc Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек
+              .f-main__data
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--int Очно
+                  span.f-main__data-desc.f-main__data-desc--online Онлайн
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--lang Детские курсы
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--pl Санкт-Петербург
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--free Бесплатный вебинар
+
+          //- F-main block
+          .f-main__block(title="inter, online, spb")
+            .f-main__header
+              .f-main__header-img(style="background-image: url('img/f-list/f-list-img-5.jpg');")
+              .f-main__header-date
+                time.date 15
+                  small июня
+            .f-main__content
+              .f-main__content-wrap
+                .f-main__name
+                  | Как выучить английский 
+                  br
+                  | за 3 месяца
+                .f-main__desc Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек
+              .f-main__data
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--int Очно
+                  span.f-main__data-desc.f-main__data-desc--online Онлайн
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--lang Иностранные языки
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--pl Санкт-Петербург
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--free Бесплатный вебинар
+
+          //- F-main block
+          .f-main__block(title="inter, online, spb")
+            .f-main__header
+              .f-main__header-img(style="background-image: url('img/f-list/f-list-img-6.jpg');")
+              .f-main__header-date
+                time.date 15
+                  small июня
+            .f-main__content
+              .f-main__content-wrap
+                .f-main__name
+                  | Как выучить английский 
+                  br
+                  | за 3 месяца
+                .f-main__desc Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек
+              .f-main__data
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--int Очно
+                  span.f-main__data-desc.f-main__data-desc--online Онлайн
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--lang Иностранные языки
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--pl Санкт-Петербург
+                .f-main__data-col
+                  span.f-main__data-desc.f-main__data-desc--free Бесплатный вебинар
+                  
+            //- a.button.jumb__link(href='http://advance-club.ru/eng_standart/') Узнать подробнее
+script.
+    $('.js-filterBtn').click(function() {
+      $('.f-main').toggleClass('f-main--fixed-filter');
+    })
+
+      var obj = {
+        test: function(some) {
+          var blocks = document.getElementsByClassName('f-main__block'),
+                newSome = some.sort().join(', ');
+
+          for(var i = 0; i < blocks.length; i++) {
+            console.log(blocks[i].getAttribute('data-filter'));
+          }
+        }
+      }
+
+    //- Filter
+    var checkedFilter= [],
+          pseudoFilter;
+    $('.filter__cb').each(function(index, elem){
+      var checkData = $(this).data('filter'),
+            dataString;
+
+      //- Checkbox click
+      $(elem).click(function(){
+
+          //- Проверка на checked
+          //- if ($(this).is(':checked')) {
+          //-   checkedFilter.push(checkData);
+          //- }
+          //- else if (!($(this).is(':checked'))){
+          //-    pseudoFilter = checkedFilter.indexOf(checkData);
+          //-    checkedFilter.splice(pseudoFilter, 1);
+          //- }
+          //- obj.test(checkedFilter);
+      });
+            
+
+    });

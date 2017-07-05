@@ -1,36 +1,59 @@
-//- Input
-mixin inputBlock(inputClass, inputType, inputName, inputPlaceholder, inputTitle)
-  input.input(class=inputClass, type=inputType name=inputName, placeholder=inputPlaceholder, title=inputTitle, required oninvalid="this.setCustomValidity('#{inputTitle}')" oninput="setCustomValidity('')")
+//- Meta
+mixin meta(Title)
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  // === Iphone no phone number
+  meta(name='format-detection', content='telephone=no')
+  meta(name='description', content='')
+  meta(name='keywords', content='')
+  title= Title
+  link(rel='stylesheet', href='css/style.css')
+  //- link(rel='stylesheet', href='css/flipster.css')
+  //- link(rel='stylesheet', href='css/slick.css')
+  base(target="_blank")
+  link(rel='icon', type='image/png', href='http://advance-club.ru/images/favicon.png')
+  script(src='js/jquery.min.js')
+  script(src='js/preloader.js')
+  //
+    | [if lt IE 9]
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    script(src='js/scriptIE.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')
+    |     [endif]
 
-//- Checkbox
-mixin checkBox(checkboxId, text)
-  .checkbox
-    input.checkbox__input(type="checkbox" id=checkboxId)
-    label.checkbox__label(for=checkboxId)=text
+//- //- Input
+//- mixin inputBlock(inputClass, inputType, inputName, inputPlaceholder, inputTitle)
+//-   input.input(class=inputClass, type=inputType name=inputName, placeholder=inputPlaceholder, title=inputTitle, required oninvalid="this.setCustomValidity('#{inputTitle}')" oninput="setCustomValidity('')")
 
-//- crumbsLink
-mixin crumbsLink(crumbsLinkClass, crumbsAddress, crumbsTitle, crumbsSlash)
-  .crumbs__block
-    a(class=crumbsLinkClass, href=crumbsAddress)=crumbsTitle
-    span.crumbs__link-slash=crumbsSlash
+//- //- Checkbox
+//- mixin checkBox(checkboxId, text)
+//-   .checkbox
+//-     input.checkbox__input(type="checkbox" id=checkboxId)
+//-     label.checkbox__label(for=checkboxId)=text
 
-//- navLink
-mixin navLink(navLinkClass, navAddress, navTitle, navModActive)
-  .crumbs__nav-block(class=navModActive)
-    a(class=navLinkClass, href=navAddress)=navTitle
+//- //- crumbsLink
+//- mixin crumbsLink(crumbsLinkClass, crumbsAddress, crumbsTitle, crumbsSlash)
+//-   .crumbs__block
+//-     a(class=crumbsLinkClass, href=crumbsAddress)=crumbsTitle
+//-     span.crumbs__link-slash=crumbsSlash
 
-//- navLinkCounter
-mixin navLinkCounter(navCountClass, navLinkClass, navAddress, navTitle, navCount, navModActive)
-  .crumbs__nav-block(class=navModActive)
-    a(class=navLinkClass, href=navAddress)=navTitle
-    span(class=navCountClass)=navCount
+//- //- navLink
+//- mixin navLink(navLinkClass, navAddress, navTitle, navModActive)
+//-   .crumbs__nav-block(class=navModActive)
+//-     a(class=navLinkClass, href=navAddress)=navTitle
 
-//- News
-mixin newsBlock(imgUrl, title, date)
-  .news__block
-    a.news__img-link(href="news-page.html")
-      .news__img-block
-        img(src="img/news/#{imgUrl}.jpg" alt="news" )
-    .news__desc
-      a.news__title(href="news-page.html")=title
-      titme.news__date=date
+//- //- navLinkCounter
+//- mixin navLinkCounter(navCountClass, navLinkClass, navAddress, navTitle, navCount, navModActive)
+//-   .crumbs__nav-block(class=navModActive)
+//-     a(class=navLinkClass, href=navAddress)=navTitle
+//-     span(class=navCountClass)=navCount
+
+//- //- News
+//- mixin newsBlock(imgUrl, title, date)
+//-   .news__block
+//-     a.news__img-link(href="news-page.html")
+//-       .news__img-block
+//-         img(src="img/news/#{imgUrl}.jpg" alt="news" )
+//-     .news__desc
+//-       a.news__title(href="news-page.html")=title
+//-       titme.news__date=date

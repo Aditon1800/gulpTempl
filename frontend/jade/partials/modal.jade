@@ -1,0 +1,36 @@
+//- // Modal lesson
+//- .modal.modal-lesson(hidden='hidden')
+//-   span.m-student__close Закрыть
+//-   h2.m-lesson__heading
+//-     | Благодарим Вас за интерес к технологиям
+//-     br
+//-     | эффективного обучения Николая Ягодкина!
+//-   p.m-lesson__desc
+//-     | И прежде, чем мы проконсультируем Вас –
+//-     br
+//-     |  попробуйте методики Advance на себе
+//-   a.btn.m-lesson__btn(href='') Пройти уроки бесплатно
+// Modals 3
+.modal.modal-main.js-modal(hidden='hidden')
+  span.modal__close.js-modal-close Закрыть
+  .modal__form
+    .modal__name Оставить заявку
+    //- h2.modal__heading.js-modalTitle
+    div#subscr-block-1007
+      form(method='POST', action='#~' target="_self" data-hash="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl" id="subscr-form-1007" onsubmit="if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) this.removeAttribute('target'); return jc_chkscrfrm(this, true, true, false, false, false, false, true, true, true, true, false, false, [], [], [])")
+        input(type="hidden" name="hash" value="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl")
+        input.input(type='text', name="lead_name" placeholder='Ваше имя', required='required')
+        input.input(type='text', name="lead_email" placeholder='Ваш e-mail', required='required')
+        input.input.phone-mask(type='text'  pattern="\+[0-9]{1} \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="lead_phone" placeholder='Ваш телефон', required='required')
+        button.button.modal__btn Оставить заявку
+        script(language="JavaScript" src="http://justclick.ru/media/subscribe/helper2.js.php")
+        script(language="JavaScript").
+          jc_setfrmfld()
+        input(name="activation" type="hidden" value="true")
+        script(language="JavaScript").
+          $(function(){$(".lgroup_datepicker").datepicker($.datepicker.regional["ru"]); $(".lgroup_datepicker").datepicker("option", "yearRange", "-100:+20"); $(".lgroup_datepicker").blur();});
+
+include ../components/overlay
+
+//- HTML pattern
+//- pattern="\+[0-9]{1} \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}"

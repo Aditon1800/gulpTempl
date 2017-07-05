@@ -1,0 +1,243 @@
+@import 'partials/jumb';
+@import 'partials/timer/timer';
+@import 'partials/7Tech/feedback';
+
+.jumb {
+  text-align: center;
+  color: $white;
+
+  &--vacation {
+    @media(min-width: 1600px) {
+      background-position: center;
+    }
+    background-image: url('../img/eng/eng_vacation/bg-eng-tourism.jpg');
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 300;
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  &__desc {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 60px;
+      line-height: 1.1;
+    }
+    @media(max-width: 480px) {
+      font-size: 48px;
+      line-height: 1.1;
+    }
+    display: inline-block;
+    font-family: $lemon;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    padding-top: 25px;
+  }
+
+  .btn-block {
+    margin-top: 70px;
+  }
+
+  &__btn {
+    @media(max-width: 480px) {
+      font-size: 16px;
+    }
+    display: inline-block;
+    width: 100%;
+    max-width: 570px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 60px;
+    border: 2px solid $white;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+      background-color: $red;
+      border-color: $red;
+      color: $white;
+    }
+  }
+}
+
+// Helper
+
+.helper {
+
+  &__title {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    @media (max-width: 480px) {
+      font-size: 42px;
+    }
+    font-size: 60px;
+    font-weight: 300;
+    text-transform: none;
+    text-align: center;
+    color: $red;
+    margin-bottom: 60px;
+  }
+
+  .row{
+    @include justify-content-md(center);
+  }
+
+  .col{
+    @include col();
+    @include col-4();
+    @include col-md-5();
+    @include col-sm-8();
+    @include col-xs-11();
+  }
+
+  &__block {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+
+    img {
+      max-width: 55%;
+      padding-top: 24px;
+    }
+
+    &--sp {
+
+      img {
+        max-width: 35%;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &__name {
+    @media (max-width: 480px) {
+      br {
+        display: none;
+      }
+    }
+    font-size: 18px;
+    font-weight: 300;
+
+    strong {
+      display: inline-block;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 400;
+      color: $red;
+    }
+  }
+
+  .btn-block {
+    margin-top: 60px;
+  }
+
+  &__btn {
+    @include btn-red(570px)
+  }
+}
+
+// About
+
+.about {
+  background: url('../img/eng/eng_vacation/bg-books.jpg') center no-repeat;
+  background-size: cover;
+
+  &__title {
+    @extend .helper__title;
+    color: $l-black;
+  }
+
+  &__list {
+
+    li {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 24px;
+      padding-left: 34px;
+    }
+      position: relative;
+      font-size: 30px;
+      font-weight: 300;
+      padding-left: 45px;
+      margin-bottom: 20px;
+
+      &:before {
+        @media (max-width: $sm-screen - 1) {
+          width: 24px;
+          height: 23px;
+          background-size: cover;
+          top: 5px;
+        }
+        position: absolute;
+        content: '';
+        display: block;
+        width: 30px;
+        height: 29px;
+        top: 0;
+        left: 0;
+        background: url('../img/eng/eng_vacation/check.png') center no-repeat;
+      }
+    }
+  }
+}
+
+// Special
+
+.spec {
+  text-align: center;
+
+  &__title {
+    @extend .helper__title;
+  }
+
+  &__desc {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 26px;
+    }
+    font-size: 30px;
+    font-weight: 300;
+    margin: 35px 0 35px;
+  }
+
+  &__name {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 38px;
+    }
+    font-family: $lemon;
+    font-size: 48px;
+    font-weight: 400;
+    margin-top: 55px;
+    color: $red;
+  }
+
+  &__cost {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    font-size: 60px;
+    font-weight: 400;
+    margin-top: 40px;
+  }
+
+  .btn-block {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    @extend .helper__btn;
+  }
+}

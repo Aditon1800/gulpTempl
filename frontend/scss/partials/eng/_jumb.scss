@@ -1,0 +1,58 @@
+.jumb {
+
+  &--eng {
+    background-image: url('../img/eng/london-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .jumb__main-desc {
+      max-width: 100%;
+    }
+
+    .sec-title {
+      @media (max-width: $sm-screen - 1) {
+        font-size: 48px;
+        line-height: 1.1;
+      }
+      font-size: 60px;
+      text-transform: none;
+      padding-top: 32px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__untitle {
+    display: inline-block;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 45px;
+  }
+
+  &__desc--lem {
+      @media (max-width: $sm-screen - 1) {
+        font-size: 42px;
+      }
+    font-family: $lemon;
+    font-size: 54px;
+    font-weight: 400;
+    color: #3f3e5c;
+    margin-bottom: 46px;
+    letter-spacing: 2px;
+  }
+
+  &__eng-date {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 38px;
+    }
+    font-size: 48px;
+    color: $l-black;
+    margin-bottom: 20px;
+  }
+
+  &__eng-btn {
+    @extend .jumb__btn;
+    max-width: 545px;
+  }
+}
+

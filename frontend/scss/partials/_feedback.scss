@@ -1,0 +1,15 @@
+.feedback {
+  text-align: center;
+
+  &__desc {
+    font-size: 18px;
+    color: #353535;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    @include btn-red(none);
+    display: inline-block;
+    padding: 13px 0;
+  }
+}

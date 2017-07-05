@@ -1,0 +1,35 @@
+//=== HEADER
+header.header
+  button.header__toggle
+    span
+  .container
+    .header__content-wrap
+      a.header__logo(href='index.html')
+        img(src='img/main-logo.png', alt='logo')
+      .header__content
+        h1.header__title
+          | Центр образовательных технологий
+          br
+          | Николая Ягодкина
+        p.header__desc
+          a(href='http://advance-club.ru/fulllist/?link=spb') Санкт-Петербург
+          span  • 
+          a(href='http://advance-club.ru/fulllist/?link=msk') Москва
+          span  • 
+          a(href='http://advance-club.ru/fulllist/?link=online') Онлайн весь мир
+      .header__informer
+        ul.action__follow.follow
+          li.follow__item.follow__item_vk
+            a(href='https://vk.com/advanceclub')
+          li.follow__item.follow__item_fb
+            a(href='https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts')
+          li.follow__item.follow__item_inst
+            a(href='https://www.instagram.com/advance_eng/')
+          li.follow__item.follow__item_ok
+            a(href='http://ok.ru/group/52611362652241')
+          li.follow__item.follow__item_yt
+            a(href='https://www.youtube.com/user/advanceclub?sub_confirmation=1')
+        // === Login in
+        a.action__personal(href='http://advanglish.ru/%D0%B2%D1%85%D0%BE%D0%B4/') Вход в личный кабинет
+  //- Header nav
+  include ../components/nav

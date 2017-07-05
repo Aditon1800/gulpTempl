@@ -1,0 +1,219 @@
+.footer {
+  padding: 22px 0;
+  background-color: #000;
+
+  &__inner-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  &__informer {
+    @media screen and (max-width: 991px) {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__informer:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .footer__follow {
+    @media (max-width: 768px) {
+      float: none;
+      margin-bottom: 25px;
+      display: inline-block;
+    }
+    float: left;
+    margin-left: 0;
+  }
+
+  &__follow .follow__item {
+    width: 40px;
+    height: 40px;
+    border-color: #9a9a9a;
+  }
+
+  &__follow .follow__item_vk {
+    border-left: 1px solid #9a9a9a;
+    background-position: 1px center;
+  }
+
+  &__follow .follow__item_vk:hover {
+    background-position: 1px 0;
+  }
+
+  &__follow .follow__item_fb {
+    background-position: -39px center;
+  }
+
+  &__follow .follow__item_fb:hover {
+    background-position: -39px 0;
+  }
+
+  &__follow .follow__item_in {
+    background-position: -77px center;
+  }
+
+  &__follow .follow__item_in:hover {
+    background-position: -77px 0;
+  }
+
+  &__follow .follow__item_inst {
+    background-position: -117px center;
+  }
+
+  &__follow .follow__item_inst:hover {
+    background-position: -117px 0;
+  }
+
+  &__follow .follow__item_ok {
+    background-position: -157px center;
+  }
+
+  &__follow .follow__item_ok:hover {
+    background-position: -157px 0;
+  }
+
+  &__follow .follow__item_yt {
+    background-position: -194px center;
+  }
+
+  &__follow .follow__item_yt:hover {
+    background-position: -194px 0;
+  }
+
+  &__follow .follow__item.follow__item_vk {
+    background-position: 1px 0;
+  }
+
+  &__follow .follow__item.follow__item_vk:hover {
+    background-position: 1px bottom;
+  }
+
+  &__follow .follow__item.follow__item_fb {
+    background-position: -39px 0;
+  }
+
+  &__follow .follow__item.follow__item_fb:hover {
+    background-position: -39px bottom;
+  }
+
+  &__follow .follow__item.follow__item_in {
+    background-position: -77px 0;
+  }
+
+  &__follow .follow__item.follow__item_in:hover {
+    background-position: -77px bottom;
+  }
+
+  &__follow .follow__item.follow__item_inst {
+    background-position: -117px 0;
+  }
+
+  &__follow .follow__item.follow__item_inst:hover {
+    background-position: -117px bottom;
+  }
+
+  &__follow .follow__item.follow__item_ok {
+    background-position: -157px 0;
+  }
+
+  &__follow .follow__item.follow__item_ok:hover {
+    background-position: -157px bottom;
+  }
+
+  &__follow .follow__item.follow__item_yt {
+    background-position: -194px 0;
+  }
+
+  &__follow .follow__item.follow__item_yt:hover {
+    background-position: -194px bottom;
+  }
+
+  &__copy {
+    @media screen and (max-width: 991px) {
+      float: none;
+      width: 100%;
+      padding-top: 1.5em;
+      text-align: center;
+      clear: both;
+
+      br {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
+
+    float: right;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    text-align: right;
+    margin: 0;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.informer {
+
+&__tel_bottom {
+  @media (max-width: 768px) {
+    float: none;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-left: 0;
+  }
+    float: left;
+    padding-left: 15px;
+  }
+
+  &__tel_bottom .tel {
+  @media (max-width: 768px) {
+    display: inline-block;
+    vertical-align: top;
+  }
+  @media (max-width: 390px) {
+    display: block;
+
+    &:first-of-type {
+      padding-bottom: 0.7em;
+    }
+  }
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &__tel_bottom .tel a:visited {
+    color: inherit;
+  }
+
+  &__tel_bottom .tel b {
+  @media (max-width: 768px) {
+    opacity: 1;
+  }
+  @media (max-width: 390px) {
+    display: none;
+  }
+    opacity: 0;
+    font-weight: normal;
+  }
+}

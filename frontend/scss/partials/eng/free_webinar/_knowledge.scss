@@ -1,0 +1,76 @@
+// Knowledge
+
+.knowledge {
+
+  .row {
+    @include justify-content-md(center)
+  }
+
+  .col {
+    @include col()
+    @include col-4();
+    @include col-md-7();
+    @include col-sm-8();
+    @include col-xs-10();
+  }
+
+  &__block {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    p {
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    &-sub {
+      padding-top: 20px;
+    }
+  }
+
+  &__img {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    img {
+      width: 60px;
+      height: 70px;
+    }
+  }
+
+  .row-sub {
+    @include justify-content-lg(center);
+  }
+
+  .col-sub {
+    @include col();
+    @include col-3();
+    @include col-lg-5();
+    @include col-md-5();
+    @include col-sm-8();
+    @include col-xs-9();
+  }
+
+  &__block-sub {
+
+    p {
+      font-size: 20px;
+
+    }
+  }
+
+  .btn-block {
+    @media(max-width: $sm-screen - 1) {
+      padding-top: 40px;
+    }
+    padding-top: 60px;
+  }
+
+  &__btn {
+    @include btn-red(570px);
+  }
+}

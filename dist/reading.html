@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script src="//advance-club.justclick.ru/jsapi/click.js"></script>
+  </head>
+  <body>
+    <!--=== Preloader-->
+    <div id="preloader">
+      <div class="icon"></div>
+    </div>
+    <div class="container-fluid">
+      <!--=== HEADER-->
+      <header class="header">
+        <button class="header__toggle"><span></span></button>
+        <div class="container">
+          <div class="header__content-wrap"><a href="index.html" class="header__logo"><img src="img/main-logo.png" alt="logo"/></a>
+            <div class="header__content">
+              <h1 class="header__title">Центр образовательных технологий<br/>Николая Ягодкина</h1>
+              <p class="header__desc"><a href="http://advance-club.ru/fulllist/?link=spb">Санкт-Петербург</a><span> • </span><a href="http://advance-club.ru/fulllist/?link=msk">Москва</a><span> • </span><a href="http://advance-club.ru/fulllist/?link=online">Онлайн весь мир</a></p>
+            </div>
+            <div class="header__informer">
+              <ul class="action__follow follow">
+                <li class="follow__item follow__item_vk"><a href="https://vk.com/advanceclub"></a></li>
+                <li class="follow__item follow__item_fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+                <li class="follow__item follow__item_inst"><a href="https://www.instagram.com/advance_eng/"></a></li>
+                <li class="follow__item follow__item_ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+                <li class="follow__item follow__item_yt"><a href="https://www.youtube.com/user/advanceclub?sub_confirmation=1"></a></li>
+              </ul>
+              <!-- === Login in--><a href="http://advanglish.ru/%D0%B2%D1%85%D0%BE%D0%B4/" class="action__personal">Вход в личный кабинет</a>
+            </div>
+          </div>
+        </div>
+        <!--=== header nav-->
+        <nav class="header__nav">
+          <div class="container">
+            <ul class="header__nav-list">
+              <li><a href="http://advance-club.ru/" class="header__nav-list--main">Главная</a></li>
+              <li><a href="http://advance-club.ru/izuchenie-yazykov" class="header__nav-list--lang">Иностранные языки</a></li>
+              <li><a href="http://advance-club.ru/razvitie-pamyati" class="header__nav-list--effect">Повышение эффективности</a></li>
+              <li><a href="http://advance-club.ru/obuchenie-detey" class="header__nav-list--child">Обучение детей</a></li>
+              <li><a href="http://advance-club.ru/fulllist" class="header__nav-list--sched">Расписание</a></li>
+              <li><a href="http://advance-club.ru/knowledge" class="header__nav-list--base">База знаний</a></li>
+              <li><a href="http://advance-club.ru/about" class="header__nav-list--about">Об Advance</a></li>
+              <li><a href="http://advance-club.ru/contact" class="header__nav-list--contact">Контакты</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--=== Jumbotron-->
+      <div class="jumb">
+        <div class="container">
+          <div class="jumb__flag">Впервые в Advance!</div>
+          <div class="jumb__content">
+            <h1 class="jumb__title">Очный курс <br/><span>“Эффективное чтение”</span></h1>
+            <time datetime="" class="jumb__date">10 июля - 18 августа 2017</time>
+            <div class="btn-block">
+              <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=1494410207.503668175&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn jumb__btn js-getModal">Записаться на курс</button>
+            </div>
+          </div>
+          <h3 class="jumb__list-name">Благодаря курсу “Эффективное чтение” вы сможете:</h3>
+          <ul class="jumb__list">
+            <li>улучшить концентрацию и скорость восприятия информации;</li>
+            <li>запомнить бóльший объем информации;</li>
+            <li>увеличить словарный запас и дикцию;</li>
+            <li>развить внимание, память и лексикон.</li>
+          </ul>
+        </div>
+      </div>
+      <!--=== Timer-->
+      <script>
+        var now = new Date();
+            year = 2017;
+            month = 05; // месяц указывает на 1 меньше( например, 03 - это апрель)
+            day = 12;
+            hour = 17; // по Гринвичу
+            minute = 00;
+            sec = 0;
+            dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
+        
+            function CountBox() {
+                dateNow = new Date();
+                amount = dateFuture.getTime() - dateNow.getTime() + 5;
+                delete dateNow;
+                if (amount < 0) {
+                    out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
+                    var list = document.getElementsByClassName("countbox");
+                    for (var i = 0; i < list.length; i++) {
+                        list[i].innerHTML = out;
+                    }
+        
+                } else {
+                    days = 0;
+                    hours = 0;
+                    mins = 0;
+                    secs = 0;
+                    out = "";
+                    amount = Math.floor(amount / 1e3);
+                    days = Math.floor(amount / 86400);
+                    amount = amount % 86400;
+                    hours = Math.floor(amount / 3600);
+                    amount = amount % 3600;
+                    mins = Math.floor(amount / 60);
+                    amount = amount % 60;
+                    secs = Math.floor(amount);
+                    out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
+                    var list = document.getElementsByClassName("countbox");
+                    for (var i = 0; i < list.length; i++) {
+                        list[i].innerHTML = out;
+                    }
+                    setTimeout("CountBox()", 1e3)
+                }
+            }
+        
+      </script>
+      <article class="timer sec">
+        <div class="container">
+          <div class="timer__content">
+            <h2 class="timer__title">До начала вебинара осталось:</h2>
+            <div class="timer__counter">
+              <div class="countbox"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!--=== Add-->
+      <article class="add sec">
+        <div class="container">
+          <h2 class="add__title">8 уникальных методик скорочтения, </h2>
+          <p class="add__desc">объединенных с техниками, направленными на расширение кругозора, улучшение внимания, дикции и памяти, обогащение лексикона и синхронизацию работы обоих полушарий мозга. По итогам курса обучения вы сможете запоминать больше и лучше обрабатывать полученную информацию, научитесь выделять главное, избавитесь от регрессии и проговаривания при чтении.  </p>
+        </div>
+      </article>
+      <!--=== Offer-->
+      <section class="offer sec">
+        <div class="container">
+          <h2 class="offer__title">Длительность курса:</h2>
+          <div class="offer__content">
+            <div class="row">
+              <div class="col">
+                <div class="offer__block">
+                  <div class="offer__name"><span>18</span><br/>занятий за курс</div>
+                  <p class="offer__block-desc">с 10 июля по 18 августа 2017 года</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="offer__block">
+                  <div class="offer__name"><span>48</span><br/>академических часов</div>
+                  <p class="offer__block-desc">каждое занятие по 2,5 академических часа</p>
+                </div>
+              </div>
+              <div class="col">
+                <div class="offer__block">
+                  <div class="offer__name"><span>3</span><br/>занятия в неделю</div>
+                  <p class="offer__block-desc">понедельник, среда, пятница с 19:00 до 21:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--=== bottom offer block-->
+        </div>
+        <div class="offer__bottom">
+          <div class="container">
+            <p>Курс “Эффективное чтение” позволит вам увеличить скорость чтения <strong>минимум в 2 раза</strong>, при этом значительно улучшив навыки запоминания и понимания информации. </p>
+          </div>
+        </div>
+      </section>
+      <!--=== About-->
+      <section class="about sec">
+        <div class="container">
+          <div class="about__content">
+            <h2 class="about__title">На нашем курсе НЕ будет:</h2>
+            <ul class="about__list">
+              <li>бессмысленной воды и пустых разговоров;</li>
+              <li>методик, которые учат читать быстро,<br/>но при этом не учитывают смысл<br/>и осознанность в работе с текстом;</li>
+              <li>бессистемного набора инструментов,<br/>применить которые в обычной жизни<br/>не представляется возможным.</li>
+            </ul>
+          </div>
+          <div class="about__info">
+            <p>Для обновленного курса “Эффективное чтение” мы учли и проработали многие недочеты<br/>и спорные моменты, которые возникали при прохождении предыдущих курсов по скорочтению - <strong>надеемся, вам понравится!</strong></p>
+          </div>
+          <div class="btn-block">
+            <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=1494410207.503668175&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn about__btn js-getModal">Хочу развиваться</button>
+          </div>
+        </div>
+      </section>
+      <!--=== Teachers-->
+      <section class="teacher sec">
+        <div class="container">
+          <h2 class="teacher__title">Наши преподаватели:</h2>
+          <!--=== Teacher slider-->
+          <div class="teacher__content">
+            <div class="row">
+              <!--=== Slide block-->
+              <div class="col">
+                <div style="background-image: url('img/reading/teacher/Mamontova.jpg');" class="teacher__block">
+                  <div class="teacher__name">Ольга Мамонтова</div>
+                  <div class="teacher__about">Разработчик курса<br/>«Эффективное чтение»<br/>для учеников 7-8 классов</div>
+                  <div class="teacher__about">Преподаватель курсов<br/>«Учись учиться», «Стань гением»<br/>и «Эффективное чтение» </div>
+                  <div class="teacher__about">Опыт работы с детскими <br/>и взрослыми группами.</div>
+                </div>
+              </div>
+              <!--=== Slide block-->
+              <div class="col">
+                <div style="background-image: url('img/reading/teacher/Komarova.jpg');" class="teacher__block">
+                  <div class="teacher__name">Ольга Комарова</div>
+                  <div class="teacher__about">Преподаватель курсов<br/>«Эффективное чтение»<br/>и «Учись учиться»</div>
+                  <div class="teacher__about">Преподаватель русского языка<br/>и литературы</div>
+                  <div class="teacher__about">Опыт работы с детьми<br/>любого возраста</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=== Map-->
+      <section id="map" class="map">
+        <div class="map__block">
+          <div class="map__frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.4030955657504!2d30.375070715667004!3d59.94204636878629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631974d72df53%3A0xb691bdd2c77142ae!2z0KLQsNCy0YDQuNGH0LXRgdC60LDRjyDRg9C7LiwgMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTAxNQ!5e0!3m2!1sru!2sru!4v1497021565281" frameborder="0" style="border:0" allowfullscreen="allowfullscreen"></iframe>
+            <div class="container">
+              <div class="map__info">
+                <ul class="map__info-list">
+                  <li class="map__info--name"><small>Экспресс-тренинг</small><br/>«Техника запоминания <br/>500 иностранных слов в день»</li>
+                  <li class="map__info--time">24 и 25 июня с 11:00 до 19:00</li>
+                  <li class="map__info--place">Санкт-Петербург, <br/>ул. Таврическая, 2</li>
+                </ul>
+                <div class="btn-block">
+                  <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=1494410207.503668175&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn map__info-btn js-getModal">Занять место</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--=== Feedback-->
+      <section class="feedback sec">
+        <div class="container">
+          <h2 class="sec-title">Остались вопросы? Закажите обратный звонок!</h2>
+          <div class="form">
+            <form method="POST" target="_self" action="http://shop.advance-club.ru/subscribe/process/?rid[0]=full_sub&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_full_sub&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2F/thanks_uni_manager/">
+              <input type="text" name="lead_name" placeholder="Введите Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_phone" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите Ваш телефон" required="required" class="input phone-mask"/>
+              <button class="btn feedback__btn">Заказать звонок</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner-wrap">
+            <div class="footer__informer informer">
+              <ul class="footer__follow follow">
+                <li class="follow__item follow__item_vk"><a href="https://vk.com/advanceclub"></a></li>
+                <li class="follow__item follow__item_fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+                <li class="follow__item follow__item_inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
+                <li class="follow__item follow__item_ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+                <li class="follow__item follow__item_yt"><a href="https://www.youtube.com/user/advanceclub?sub_confirmation=1"></a></li>
+              </ul>
+              <div class="informer__tel_bottom"><span class="tel">+7 (812) 363-43-53 <b>|</b></span><span class="tel"><b>|</b> 8 (800) 700-53-42</span></div>
+              <p class="footer__copy"><a href="http://advance-club.justclick.ru/agreement">Advance © 2017. Соглашение об обработке персональных данных </a><br/><a href="http://advance-club.ru/partner/">Партнёрская программа | </a><a href="http://advance-club.justclick.ru/conf">Политика конфиденциальности </a><br/>По вопросам сотрудничества yagodkin.n@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Modals 3-->
+      <div hidden="hidden" class="modal modal-main js-modal"><span class="modal__close js-modal-close">Закрыть</span>
+        <div class="modal__form">
+          <div class="modal__name">Оставить заявку</div>
+          <div id="subscr-block-1007">
+            <form method="POST" action="#~" target="_self" data-hash="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl" id="subscr-form-1007" onsubmit="if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) this.removeAttribute('target'); return jc_chkscrfrm(this, true, true, false, false, false, false, true, true, true, true, false, false, [], [], [])">
+              <input type="hidden" name="hash" value="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl"/>
+              <input type="text" name="lead_name" placeholder="Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_email" placeholder="Ваш e-mail" required="required" class="input"/>
+              <input type="text" pattern="+[0-9]{1} ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="lead_phone" placeholder="Ваш телефон" required="required" class="input phone-mask"/>
+              <button class="button modal__btn">Оставить заявку</button>
+              <script language="JavaScript" src="http://justclick.ru/media/subscribe/helper2.js.php"></script>
+              <script language="JavaScript">jc_setfrmfld()</script>
+              <input name="activation" type="hidden" value="true"/>
+              <script language="JavaScript">
+                $(function(){$(".lgroup_datepicker").datepicker($.datepicker.regional["ru"]); $(".lgroup_datepicker").datepicker("option", "yearRange", "-100:+20"); $(".lgroup_datepicker").blur();});
+                
+              </script>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Overlay-->
+      <div id="overlay"></div>
+      <!-- Scroll top-->
+      <div class="top_btn"><span>^</span></div>
+      <script src="js/jquery.flipster.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+      <script src="js/script.js"></script>
+    </div>
+  </body>
+</html>

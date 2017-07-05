@@ -1,0 +1,119 @@
+.programm {
+
+  .row {
+    @include justify-content-md(center);
+  }
+
+  .col {
+    @include col();
+    @include col-6();
+    @include col-md-7();
+    @include col-sm-12();
+  }
+
+  &__block {
+    @media (max-width: 480px) {
+      padding-left: 0;
+      margin-bottom: 40px;
+    }
+    padding-left: 100px;
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    @media (max-width: 480px) {
+      text-align: center;
+      font-size: 26px;
+      padding-top: 80px;
+
+      br {
+        display: none;
+      }
+    }
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+    &:before {
+      @media (max-width: 480px) {
+
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: -100px;
+      width: 70px;
+      height: 70px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title-1:before {
+    background-image: url('../img/7Tech/programm/icon-1.svg');
+  }
+
+  &__title-2:before {
+    background-image: url('../img/7Tech/programm/icon-2.svg');
+  }
+
+  &__title-3:before {
+    background-image: url('../img/7Tech/programm/icon-3.svg');
+  }
+
+  &__title-4:before {
+    background-image: url('../img/7Tech/programm/icon-4.svg');
+  }
+
+  .programm__list {
+
+    li {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      padding-left: 10px;
+      margin-bottom: 25px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 9px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        background-color: $red;
+        border-radius: 50%;
+      }
+
+      span {
+        font-weight: 400;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    background-color: $red;
+    color: $white;
+    border: 2px solid $red;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $red;
+      border: 2px solid $red;
+    }
+  }
+}

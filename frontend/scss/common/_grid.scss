@@ -3,11 +3,13 @@
 }
 
 .container-fluid {
+  min-width: 320px;
   width: 100%;
   overflow-x: hidden;
 }
 
 .container {
+  min-width: 320px;
   position: relative;
   margin-right: auto;
   margin-left: auto;

@@ -1,0 +1,53 @@
+// About
+.about {
+
+  .sec-title {
+    margin-bottom: 70px;
+  }
+
+  .row {
+    @include justify-content-lg(center);
+  }
+
+  .col {
+    @include col();
+    @include col-3();
+    @include col-lg-5();
+    @include col-sm-12();
+  }
+
+  &__block {
+    text-align: center;
+    margin-bottom: 40px;
+
+    p {
+      font-size: 24px;
+
+      strong {
+        display: inline-block;
+        width: 100%;
+        font-weight: 500;
+        color: $red;
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 25px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .btn-block {
+    @media(max-width: $sm-screen - 1) {
+      padding-top: 0;
+    }
+    padding-top: 40px;
+  }
+
+  &__btn {
+    @include btn-red(570px);
+  }
+}

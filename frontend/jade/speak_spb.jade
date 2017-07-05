@@ -1,0 +1,18 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Очный курс «Разговорный английский» по технологиям Николая Ягодкина')
+
+block main
+  main
+    include partials/eng/speak_spb/jumb
+    include partials/Timer/timer
+    include partials/eng/speak_spb/block
+    include partials/eng/speak_spb/why
+    include partials/tabs
+    include partials/eng/speak_spb/cost
+    include partials/reviews
+    include partials/7Tech/recommend
+    include partials/map/mapBlock
+    include partials/7Tech/feedback

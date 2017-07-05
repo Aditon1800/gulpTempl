@@ -1,0 +1,89 @@
+.author {
+  background-color: $l-gray;
+
+  .col-first {
+    @include col-4();
+    @include col-md-5();
+  }
+
+  .col-last {
+    @include col-8();
+    @include col-md-7();
+  }
+
+  .col {
+    @include col();
+    @include col-sm-12();
+  }
+
+
+
+  &__block {
+    @media (max-width: $md-screen - 1) {
+      text-align: center;
+
+      img {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__block-name {
+    @media (max-width: 480px) {
+      font-size: 36px;
+    }
+    font-size: 48px;
+    color: $red;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  &__block-desc {
+    @media (max-width: 480px) {
+      font-size: 22px;
+    }
+    font-size: 24px;
+    font-weight: 500;
+    padding-right: 15px;
+  }
+
+  .author__list {
+    @media (max-width: $md-screen - 1) {
+      text-align: left;
+    }
+    padding-right: 15px;
+    margin-top: 25px;
+
+    li {
+      position: relative;
+      font-size: 18px;
+      font-weight: 400;
+      padding-left: 40px;
+      margin-bottom: 15px;
+
+      strong {
+        font-weight: 500;
+      }
+
+      &:after {
+        @media (max-width: $md-screen - 1) {
+          top: 0;
+          transform: translateY(0);
+        }
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 29px;
+        background: url('../img/7Tech/check.png') center no-repeat;
+      }
+
+      b {
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Как за 2 месяца заговорить на английском')
+
+block main
+  main
+    include partials/eng/auto_eng/jumb
+    include partials/eng/auto_eng/know
+    include partials/7Tech/author
+    include partials/7Tech/recommend
+    include partials/7Tech/feedback

@@ -1,0 +1,51 @@
+//=== Timer
+script.
+  var now = new Date();
+      year = 2017;
+      month = 05; // месяц указывает на 1 меньше( например, 03 - это апрель)
+      day = 12;
+      hour = 17; // по Гринвичу
+      minute = 00;
+      sec = 0;
+      dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
+
+      function CountBox() {
+          dateNow = new Date();
+          amount = dateFuture.getTime() - dateNow.getTime() + 5;
+          delete dateNow;
+          if (amount < 0) {
+              out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
+              var list = document.getElementsByClassName("countbox");
+              for (var i = 0; i < list.length; i++) {
+                  list[i].innerHTML = out;
+              }
+
+          } else {
+              days = 0;
+              hours = 0;
+              mins = 0;
+              secs = 0;
+              out = "";
+              amount = Math.floor(amount / 1e3);
+              days = Math.floor(amount / 86400);
+              amount = amount % 86400;
+              hours = Math.floor(amount / 3600);
+              amount = amount % 3600;
+              mins = Math.floor(amount / 60);
+              amount = amount % 60;
+              secs = Math.floor(amount);
+              out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
+              var list = document.getElementsByClassName("countbox");
+              for (var i = 0; i < list.length; i++) {
+                  list[i].innerHTML = out;
+              }
+              setTimeout("CountBox()", 1e3)
+          }
+      }
+
+article.timer.sec
+  .container
+    .timer__content
+      h2.timer__title До начала вебинара осталось:
+      .timer__counter
+        .countbox

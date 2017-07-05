@@ -1,0 +1,89 @@
+.map {
+
+  &__frame {
+    @media(max-width: $lg-screen - 1) {
+      height: 760px;
+
+      .container {
+        position: static;
+      }
+    }
+    position: relative;
+    height: 450px;
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__info {
+    @media(max-width: $lg-screen - 1){
+      float: none;
+      max-width: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-right: 0;
+    }
+    @media(max-width: 480px) {
+      padding: 15px 15px 20px;
+    }
+    float: right;
+    max-width: 570px;
+    background-color: rgba($black, .6);
+    padding: 30px 40px 40px;
+    color: $white;
+    margin-top: 4em;
+    margin-right: 15px;
+  }
+
+  &__info-list {
+    @media(max-width: $lg-screen - 1) {
+      max-width: 430px;
+      margin: 0 auto;
+    }
+    @media(max-width: 480px) {
+      font-size: 26px;
+    }
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 50px;
+
+    li {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 20px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 42px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  &__info--name:before {
+    background-image: url('../img/map/open-book.svg');
+  }
+
+  &__info--time:before {
+    background-image: url('../img/map/clock.svg');
+  }
+
+  &__info--place:before {
+    background-image: url('../img/map/placeholder.svg');
+  }
+
+  &__info-btn {
+    @include btn-red(430px);
+  }
+}

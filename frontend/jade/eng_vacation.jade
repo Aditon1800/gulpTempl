@@ -1,0 +1,14 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Как за 2 месяца заговорить на английском')
+
+block main
+  main
+    include partials/eng/eng_vacation/jumb
+    include partials/Timer/timer
+    include partials/eng/eng_vacation/helper
+    include partials/eng/eng_vacation/about
+    include partials/eng/eng_vacation/spec
+

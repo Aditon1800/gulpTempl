@@ -1,0 +1,37 @@
+// Jumbotron
+
+.jumb {
+
+  &--free-webinar {
+    @extend .jumb--tech;
+
+    .logo {
+      margin-bottom: 85px;
+    }
+
+    .sec-title {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 42px;
+      }
+      font-size: 48px;
+
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        text-transform: none;
+      }
+    }
+
+    .jumb__desc {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 26px;
+      }
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .jumb__btn {
+      max-width: 570px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Комплексное тестирование на определение уровня языка перед курсом «Детский английский»')
+
+block main
+  main
+    include partials/eng/eng_testing/jumb
+    include partials/Timer/timer
+    include partials/eng/eng_testing/block
+    include partials/eng/eng_testing/about
+    include partials/eng/eng_testing/work
+    include partials/eng/eng_testing/place

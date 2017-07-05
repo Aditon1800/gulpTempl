@@ -1,0 +1,11 @@
+// === Feedback
+section.feedback.sec
+  .container
+    h2.sec-title Присоединиться к студентам Advance
+    p.feedback__desc
+      | Наши гении с радостью проконсультируют вас по всем программам и запишут на курс. Заполните поля, чтобы мы могли связаться с вами. Обещаем звонить только по делу, так как мы против информационного шума в любых его проявлениях.
+    form(method='POST', target="_self" action='http://shop.advance-club.ru/subscribe/process/?rid[0]=full_sub&doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_full_sub&activation=1&doneurl2=http%3A%2F%2Fadvance-club.ru%2F/thanks_uni_manager/')
+      .feedback__form-wrap
+        input.input.feedback__input(type='text', name="lead_name" placeholder='Имя', required='required')
+        input.input.feedback__input.phone-mask(type='text', name="lead_phone" placeholder='Телефон', pattern='\+?7 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}', required='required')
+        button.btn.feedback__button Оставить заявку

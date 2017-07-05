@@ -1,0 +1,42 @@
+.about {
+
+  &.sec {
+      padding-bottom: 0;
+  }
+
+  .sec-title {
+    margin-bottom: 60px;
+  }
+
+  .row {
+    @include justify-content-md(center);
+  }
+
+  .col {
+    @include col();
+    @include col-3();
+    @include col-md-5();
+    @include col-sm-12();
+  }
+
+  &__block {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 70px;
+
+    h3 {
+      color: $red;
+      text-transform: uppercase;
+    }
+
+    p {
+
+    }
+  }
+
+  &__img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 30px;
+  }
+}

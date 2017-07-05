@@ -1,0 +1,78 @@
+.cost {
+  text-align: center;
+
+  .sec-title {
+    position: relative;
+    color: $red;
+    padding-top: 40px;
+    margin-bottom: 0;
+
+    &:before {
+      position: relative;
+      content: '';
+      display: block;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 60px;
+      background: url('../img/cost/wallet.svg') center no-repeat;
+    }
+  }
+
+  .sec-untitle {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 32px;
+      line-height: 1.1;
+    }
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  &__block {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  &__old,
+  &__new {
+    @media (max-width: 480px) {
+      display: block;
+    }
+    display: inline-block;
+  }
+
+  &__old {
+    @media (max-width: 480px) {
+      margin-right: 0;
+    }
+    text-decoration: line-through;
+    margin-right: 25px;
+  }
+
+  &__new {
+    color: $red;
+  }
+
+  &__rf {
+    font-family: 'Fira Sans';
+  }
+
+  &__btn {
+    @extend .lesson__btn;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $red;
+    }
+  }
+}

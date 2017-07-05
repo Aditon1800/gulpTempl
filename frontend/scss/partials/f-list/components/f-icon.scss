@@ -1,0 +1,82 @@
+.f-main {
+
+  &__data {
+    @media (max-width: 480px) {
+      display: block;
+    }
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    left: 20px; 
+    font-size: 0;
+    display: table;
+    width: calc(100% - 40px);
+  }
+
+  &__data-col {
+    @media (max-width: 480px) {
+      display: block;
+      width: 100%;
+    }
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    width: 50%;
+    color: $l-black;
+    margin-bottom: 10px;
+  }
+
+  &__data-desc {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    padding-left: 18px;
+    padding-right: 10px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      width: 15px;
+      height: 15px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--free,
+    &--tech {
+      padding-right: 0;
+    }
+
+    &--int:before {
+      background-image: url('../img/f-list/icons/icon-int.png');
+    }
+
+    &--online:before {
+      background-image: url('../img/f-list/icons/icon-online.png');
+    }
+
+    &--lang:before {
+      background-image: url('../img/f-list/icons/icon-lang.png');
+    }
+
+    &--pl:before {
+      background-image: url('../img/f-list/icons/icon-pl.png');
+    }
+
+    &--free:before {
+      background-image: url('../img/f-list/icons/icon-free.png');
+    }
+
+    &--ch:before {
+      background-image: url('../img/f-list/icons/icon-ch.png');
+    }
+
+    &--tech:before {
+      background-image: url('../img/f-list/icons/icon-tech.png');
+    }
+  }
+}

@@ -1,17 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500');
 
 // normalize at smart-grid mixin
 @import 'common/smart-grid';
-@include normalize();
 
 // mixins and variables
 @import 'helpers/mixin';
 @import 'helpers/variables'; 
+@include normalize();
 
 // common
-@import 'common/fonts';
+@import 'common/fonts/frank';
+// @import 'common/fonts/lemon';
 // @import 'common/grid';
-@import 'common/global';
+// @import 'common/global';
 
-// layouts
+// components
+@import 'components/preloader';
+// @import 'components/baner';
+@import 'components/scrollTop';
+
+// lib
+// @import 'lib/flipster';
+// @import 'lib/slick';
+
+// LAYOUTS
+// @import 'layouts/index/index';
 @import 'layouts/main';
+
+// PARTIALS
+// @import 'partials/header';
+// @import 'partials/f-list/f-main';
+
+//=== 7TEHCNIQUES
+// @import 'partials/7Tech/jumb';
+// @import 'partials/timer/timer';
+// @import 'partials/7Tech/about';
+// @import 'partials/7Tech/author';
+// @import 'partials/eng/free_webinar/style';
+// @import 'partials/10Secrets/style';
+// @import 'partials/eng/auto_eng/style';
+// @import 'partials/7Tech/programms';
+// @import 'partials/7Tech/recommend';
+// @import 'partials/7Tech/feedback';
+// @import 'partials/eng/eng_vacation/style';
+// @import 'partials/slova/style';
+// @import 'partials/eng/eng_children/style';
+// @import 'partials/eng/eng_school_offline/style';
+// @import 'partials/eng/eng_children_programm/style';
+@import 'partials/eng/eng_testing/style';
+
+//=== ENG
+// @import 'partials/eng/style';
+// @import 'partials/cost';
+// @import 'partials/faq';
+
+//=== MAIN
+// @import 'partials/jumb';
+// @import 'partials/programms';
+// @import 'partials/advanteges';
+// @import 'partials/author';
+// @import 'partials/feedback';
+// @import 'partials/reviews';
+@import 'partials/footer';
+@import 'partials/modal';
+@import 'components/scrollTop';
+
+
 

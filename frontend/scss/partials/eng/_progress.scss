@@ -1,0 +1,77 @@
+.progress {
+  background: url('../img/eng/bg-advance.jpg') center no-repeat;
+  background-size: cover;
+
+  &.sec {
+    padding-bottom: 50px;
+  }
+
+  .sec-title {
+    margin-bottom: 70px;
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-md-12();
+  }
+
+  &__block {
+    @extend .about__block;
+
+    p {
+      font-size: 24px;
+      color: $ex-black;
+
+      strong {
+        display: inline-block;
+        width: 100%;
+        font-weight: 500;
+        color: $red;
+      }
+    }
+  }
+
+  &__img {
+    @extend .about__img;
+  }
+
+  // Progress sub
+
+  &__sub {
+
+    .row {
+      @include justify-content(center);
+    }
+
+    .col {
+      @include col();
+      @include col-2();
+      @include col-lg-4();
+      @include col-sm-6();
+      @include col-xs-10();
+    }
+  }
+
+  &__block-sub {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 50px;
+
+    p {
+
+      strong {
+        display: inline-block;
+        width: 100%;
+        color: $red;
+      }
+    }
+
+  }
+
+  &__img-sub {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+  }
+}

@@ -1,46 +1,343 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compitable" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <ink rel="icon" href="favicon.ico" type="image/x-icon"></ink>
-    <!-- [if lt IE 9]>
-    <script src="js/sctiptIE.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-    -->
-    <!-- [endif]-->
+    <script language="JavaScript" type="text/javascript" src="//advance-club.justclick.ru/jsapi/click.js"></script>
+    <script>
+      //=== Google Tag Manager
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NWR77CZ');
+      //=== End Google Tag Manager
+    </script>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- === Iphone no phone number-->
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <title>Advance</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <base target="_blank"/>
+        <link rel="icon" type="image/png" href="http://advance-club.ru/images/favicon.png"/>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/preloader.js"></script>
+        <!--
+        | [if lt IE 9]
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        script(src='js/scriptIE.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')
+        |     [endif]
+        
+        -->
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="item">
-            <h1>TItle</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae perspiciatis nisi recusandae quas assumenda ab eum totam! Quis fuga aliquid, minima explicabo. Quaerat repellendus laboriosam fugit magni ducimus ratione, facere.</p><a href="#~" class="btn">Click me</a>
+    <noscript>
+      <!--=== Google Tag Manager (noscript)-->
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWR77CZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <!--=== End Google Tag Manager (noscript)-->
+    </noscript>
+    <!--=== Yandex.Metrika counter-->
+    <script>
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter28317546 = new Ya.Metrika({
+                      id:28317546,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+      
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+      
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/28317546" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!--=== Yandex.Metrika counter-->
+    <!--=== Google analitics-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-84477847-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!--=== Google analitics -->
+    <!--=== Preloader-->
+    <div id="preloader">
+      <div class="icon"></div>
+    </div>
+    <div class="container-fluid">
+      <main>
+        <main class="f-main">
+          <!--=== FIlter-->
+          <div class="filter f-main__filter">
+            <div class="container">
+              <ul class="filter__list f-main__list">
+                <li class="filter__f-box">
+                  <input id="cb-1" type="checkbox" data-filter="inter" class="filter__cb"/>
+                  <label for="cb-1" class="filter__cl">Живое участие</label>
+                </li>
+                <li class="filter__f-box">
+                  <input id="cb-2" type="checkbox" data-filter="online" class="filter__cb"/>
+                  <label for="cb-2" class="filter__cl">Онлайн трансляция</label>
+                </li>
+                <li class="filter__f-box">
+                  <input id="cb-3" type="checkbox" data-filter="spb" class="filter__cb"/>
+                  <label for="cb-3" class="filter__cl">Санкт-Петербург</label>
+                </li>
+                <li class="filter__f-box">
+                  <input id="cb-4" type="checkbox" data-filter="msk" class="filter__cb"/>
+                  <label for="cb-4" class="filter__cl">Москва</label>
+                </li>
+                <li class="filter__f-box">
+                  <input id="cb-5" type="checkbox" data-filter="grown" class="filter__cb"/>
+                  <label for="cb-5" class="filter__cl">Взрослые</label>
+                </li>
+                <li class="filter__f-box">
+                  <input id="cb-6" type="checkbox" data-filter="child" class="filter__cb"/>
+                  <label for="cb-6" class="filter__cl">Для детей</label>
+                </li>
+              </ul>
+              <button class="btn f-main__filter-btn js-filterBtn">Показать фильтр</button>
+            </div>
           </div>
-          <div class="item">
-            <h1>TItle</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae sapiente voluptates totam autem eius ipsa ad illo laborum soluta hic, quis molestias vel, voluptatibus dolore a magnam inventore laboriosam.</p>
-            <button class="btn">Click me</button>
+          <script></script>
+          
+          
+          <section class="f-main__blocks">
+            <div class="container">
+              <div class="row">
+                <div data-filter="inter, onlie, msk" class="f-main__block">
+                  <div class="f-main__header">
+                    <div style="background-image: url('img/f-list/f-list-img-1.jpg');" class="f-main__header-img"></div>
+                    <div class="f-main__header-date">
+                      <time class="date">15<small>июня</small></time>
+                    </div>
+                  </div>
+                  <div class="f-main__content">
+                    <div class="f-main__content-wrap">
+                      <div class="f-main__name">Как выучить английский <br/>за 3 месяца</div>
+                      <div class="f-main__desc">Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек</div>
+                    </div>
+                    <div class="f-main__data">
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--int">Очно</span><span class="f-main__data-desc f-main__data-desc--online">Онлайн</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--lang">Иностранные языки</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--pl">Санкт-Петербург</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--free">Бесплатный семинар</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div data-filter="inter, spb" class="f-main__block">
+                  <div class="f-main__header">
+                    <div style="background-image: url('img/f-list/f-list-img-2.jpg');" class="f-main__header-img"></div>
+                    <div class="f-main__header-date">
+                      <time class="date">15<small>июня</small></time>
+                    </div>
+                  </div>
+                  <div class="f-main__content">
+                    <div class="f-main__content-wrap">
+                      <div class="f-main__name">Пробные уроки <br/>иностранных языков</div>
+                      <div class="f-main__desc">Полноценное 3х-часовое занятие по авторским технологиям ускоренного обучения Николая Ягодкина</div>
+                    </div>
+                    <div class="f-main__data">
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--int">Очно</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--lang">Иностранные языки</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--pl">Санкт-Петербург</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--free">Бесплатный вебинар</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div title="inter, msk" class="f-main__block">
+                  <div class="f-main__header">
+                    <div style="background-image: url('img/f-list/f-list-img-3.jpg');" class="f-main__header-img"></div>
+                    <div class="f-main__header-date">
+                      <time class="date">15<small>июня</small></time>
+                    </div>
+                  </div>
+                  <div class="f-main__content">
+                    <div class="f-main__content-wrap">
+                      <div class="f-main__name">Технологии изучения <br/>иностранных языков</div>
+                      <div class="f-main__desc">Проведет один из известнейших в России и странах СНГ экспертов по технологиям эффективного обучения и изучения иностранных языков Николай Ягодкин.</div>
+                    </div>
+                    <div class="f-main__data">
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--int">Очно</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--tech">Технологии обучения</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--pl">Москва</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div title="inter, online, child, spb" class="f-main__block">
+                  <div class="f-main__header">
+                    <div style="background-image: url('img/f-list/f-list-img-4.jpg');" class="f-main__header-img"></div>
+                    <div class="f-main__header-date">
+                      <time class="date">15<small>июня</small></time>
+                    </div>
+                  </div>
+                  <div class="f-main__content">
+                    <div class="f-main__content-wrap">
+                      <div class="f-main__name">Как выучить английский <br/>за 3 месяца</div>
+                      <div class="f-main__desc">Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек</div>
+                    </div>
+                    <div class="f-main__data">
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--int">Очно</span><span class="f-main__data-desc f-main__data-desc--online">Онлайн</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--lang">Детские курсы</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--pl">Санкт-Петербург</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--free">Бесплатный вебинар</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div title="inter, online, spb" class="f-main__block">
+                  <div class="f-main__header">
+                    <div style="background-image: url('img/f-list/f-list-img-5.jpg');" class="f-main__header-img"></div>
+                    <div class="f-main__header-date">
+                      <time class="date">15<small>июня</small></time>
+                    </div>
+                  </div>
+                  <div class="f-main__content">
+                    <div class="f-main__content-wrap">
+                      <div class="f-main__name">Как выучить английский <br/>за 3 месяца</div>
+                      <div class="f-main__desc">Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек</div>
+                    </div>
+                    <div class="f-main__data">
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--int">Очно</span><span class="f-main__data-desc f-main__data-desc--online">Онлайн</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--lang">Иностранные языки</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--pl">Санкт-Петербург</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--free">Бесплатный вебинар</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div title="inter, online, spb" class="f-main__block">
+                  <div class="f-main__header">
+                    <div style="background-image: url('img/f-list/f-list-img-6.jpg');" class="f-main__header-img"></div>
+                    <div class="f-main__header-date">
+                      <time class="date">15<small>июня</small></time>
+                    </div>
+                  </div>
+                  <div class="f-main__content">
+                    <div class="f-main__content-wrap">
+                      <div class="f-main__name">Как выучить английский <br/>за 3 месяца</div>
+                      <div class="f-main__desc">Семинар самого известного в России специалиста по эффективному обучению, который посетили более 10 000 человек</div>
+                    </div>
+                    <div class="f-main__data">
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--int">Очно</span><span class="f-main__data-desc f-main__data-desc--online">Онлайн</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--lang">Иностранные языки</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--pl">Санкт-Петербург</span></div>
+                      <div class="f-main__data-col"><span class="f-main__data-desc f-main__data-desc--free">Бесплатный вебинар</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <script>
+          $('.js-filterBtn').click(function() {
+            $('.f-main').toggleClass('f-main--fixed-filter');
+          })
+          
+            var obj = {
+              test: function(some) {
+                var blocks = document.getElementsByClassName('f-main__block'),
+                      newSome = some.sort().join(', ');
+          
+                for(var i = 0; i < blocks.length; i++) {
+                  console.log(blocks[i].getAttribute('data-filter'));
+                }
+              }
+            }
+          
+          //- Filter
+          var checkedFilter= [],
+                pseudoFilter;
+          $('.filter__cb').each(function(index, elem){
+            var checkData = $(this).data('filter'),
+                  dataString;
+          
+            //- Checkbox click
+            $(elem).click(function(){
+          
+                //- Проверка на checked
+                //- if ($(this).is(':checked')) {
+                //-   checkedFilter.push(checkData);
+                //- }
+                //- else if (!($(this).is(':checked'))){
+                //-    pseudoFilter = checkedFilter.indexOf(checkData);
+                //-    checkedFilter.splice(pseudoFilter, 1);
+                //- }
+                //- obj.test(checkedFilter);
+            });
+                  
+          
+          });
+        </script>
+      </main>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner-wrap">
+            <div class="footer__informer informer">
+              <ul class="footer__follow follow">
+                <li class="follow__item follow__item_vk"><a href="https://vk.com/advanceclub"></a></li>
+                <li class="follow__item follow__item_fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+                <li class="follow__item follow__item_inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
+                <li class="follow__item follow__item_ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+                <li class="follow__item follow__item_yt"><a href="https://www.youtube.com/user/advanceclub?sub_confirmation=1"></a></li>
+              </ul>
+              <div class="informer__tel_bottom"><span class="tel">+7 (812) 363-43-53 <b>|</b></span><span class="tel"><b>|</b> 8 (800) 700-53-42</span></div>
+              <p class="footer__copy"><a href="http://advance-club.justclick.ru/agreement">Advance © 2017. Соглашение об обработке персональных данных </a><br/><a href="http://advance-club.ru/partner/">Партнёрская программа | </a><a href="http://advance-club.justclick.ru/conf">Политика конфиденциальности </a><br/>По вопросам сотрудничества yagodkin.n@gmail.com</p>
+            </div>
           </div>
-          <div class="item">
-            <h1>TItle</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde ut optio earum ad architecto perspiciatis, eius odit sapiente ratione, ullam rem placeat totam ducimus quod quos fugiat sit et soluta.</p>
-            <button class="btn">Click me</button>
-          </div>
-          <div class="item">
-            <h1>TItle</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita tempore fugiat suscipit perferendis ut ex facere quibusdam voluptatem voluptatum nulla minima cumque accusamus iste quo tenetur quod, dignissimos delectus officiis.</p>
-            <button class="btn">Click me</button>
+        </div>
+      </footer>
+      <!-- Modals 3-->
+      <div hidden="hidden" class="modal modal-main js-modal"><span class="modal__close js-modal-close">Закрыть</span>
+        <div class="modal__form">
+          <div class="modal__name">Оставить заявку</div>
+          <div id="subscr-block-1007">
+            <form method="POST" action="#~" target="_self" data-hash="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl" id="subscr-form-1007" onsubmit="if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) this.removeAttribute('target'); return jc_chkscrfrm(this, true, true, false, false, false, false, true, true, true, true, false, false, [], [], [])">
+              <input type="hidden" name="hash" value="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl"/>
+              <input type="text" name="lead_name" placeholder="Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_email" placeholder="Ваш e-mail" required="required" class="input"/>
+              <input type="text" pattern="+[0-9]{1} ([0-9]{3}) [0-9]{3}-[0-9]{2}-[0-9]{2}" name="lead_phone" placeholder="Ваш телефон" required="required" class="input phone-mask"/>
+              <button class="button modal__btn">Оставить заявку</button>
+              <script language="JavaScript" src="http://justclick.ru/media/subscribe/helper2.js.php"></script>
+              <script language="JavaScript">jc_setfrmfld()</script>
+              <input name="activation" type="hidden" value="true"/>
+              <script language="JavaScript">
+                $(function(){$(".lgroup_datepicker").datepicker($.datepicker.regional["ru"]); $(".lgroup_datepicker").datepicker("option", "yearRange", "-100:+20"); $(".lgroup_datepicker").blur();});
+                
+              </script>
+            </form>
           </div>
         </div>
       </div>
-    </header>
+      <!-- Overlay-->
+      <div id="overlay"></div>
+      <!-- Scroll top-->
+      <div class="top_btn"><span>^</span></div>
+      <script src="js/jquery.flipster.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+      <script src="js/script.js"></script>
+    </div>
   </body>
 </html>

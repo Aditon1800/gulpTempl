@@ -1,0 +1,17 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Программа для учеников 8–11 классов "Английский для школьников"')
+
+block main
+  main
+    include partials/eng/eng_children_programm/jumb
+    include partials/Timer/timer
+    include partials/eng/eng_children_programm/blocks
+    include partials/eng/eng_children_programm/author
+    include partials/eng/eng_children_programm/cost
+    include partials/slova/tabs
+    include partials/eng/eng_children_programm/effect
+    include partials/reviews
+    include partials/7Tech/recommend

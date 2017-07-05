@@ -1,0 +1,18 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Экспресс-курс Техника запоминания 500 иностранных слов в день')
+
+block main
+  main
+    include partials/slova/jumb
+    include partials/Timer/timer
+    include partials/slova/block
+    include partials/slova/about
+    include partials/slova/tabs
+    include partials/slova/cost
+    include partials/reviews
+    include partials/7Tech/recommend
+    include partials/map/mapBlock
+    include partials/7Tech/feedback

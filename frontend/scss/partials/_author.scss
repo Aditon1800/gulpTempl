@@ -1,0 +1,445 @@
+@keyframes h6_show {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes img_show {
+
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  80% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes svg_line_show {
+
+  0% {
+    stroke-dashoffset: 200;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+@keyframes svg_line_show_mini {
+
+  0% {
+    stroke-dashoffset: 130;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.author {
+  position: relative;
+  background: url("../img/author_bg.jpg");
+
+  .sec-title {
+    @media (max-width: 480px) {
+      margin-bottom: 40px;
+    }
+    text-transform: none;
+    margin-bottom: 70px;
+  }
+}
+
+.author__photo {
+  @media (max-width: 480px) {
+    height: 230px;
+  }
+  height: 300px;
+  margin-bottom: 30px;
+  background: url("../img/author.png") no-repeat center;
+  background-size: contain;
+}
+
+.author_block .block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.author_block .block.left h6 {
+  text-align: right;
+  margin: 0;
+  margin-right: 20px;
+  color: #353535;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.author_block .block.right h6 {
+  text-align: left;
+  margin: 0;
+  margin-left: 20px;
+  color: #353535;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.author_block .block.right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.author_block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  height: 510px;
+  margin: auto;
+  position: absolute;
+  top: 95px;
+  left: 0;
+  right: 0;
+  padding-left: 40px;
+
+  &--eng {
+    top: 120px;
+  }
+}
+
+.block.one,
+.block.five {
+  margin-bottom: 70px;
+  height: 64px;
+}
+
+.block.three,
+.block.seven {
+  margin-bottom: 55px;
+  margin-top: 20px;
+  height: 64px;
+}
+
+.block.six {
+  margin-bottom: 40px;
+  height: 63px;
+}
+
+.block.two.left {
+  height: 105px;
+}
+
+.block.four.left {
+  height: 84px;
+}
+
+.block.eight.right {
+  height: 105px;
+}
+
+.author_block .block h6 {
+  opacity: 0;
+}
+
+svg.svg_line {
+  width: 120px;
+  height: 130px;
+  stroke: #0a7989;
+  fill: transparent;
+  stroke-width: 1px;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+svg.svg_line.four {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+svg.svg_line.three {
+  -webkit-transform: rotateX(180deg) rotateY(180deg) rotateX(180deg);
+  transform: rotateX(180deg) rotateY(180deg) rotateX(180deg);
+}
+
+svg.svg_line.five {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+svg.svg_line.six {
+  -webkit-transform: rotateY(180deg) translateY(-15px) rotateY(180deg) rotateX(180deg);
+  transform: rotateY(180deg) translateY(-15px) rotateY(180deg) rotateX(180deg);
+  margin-top: 20px;
+}
+
+.svg_lines {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 420px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  width: 410px;
+  margin: auto;
+  background: url(../img/author.png) no-repeat center 110px;
+  padding-bottom: 100px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+svg.svg_line.two,
+svg.svg_line.three,
+svg.svg_line.six,
+svg.svg_line.seven {
+  height: 60px;
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+}
+
+svg.svg_line.one {
+  -webkit-transform: rotateY(180deg) rotateX(180deg);
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
+svg.svg_line.two {
+  -webkit-transform: translateY(-15px) rotateY(180deg) rotateX(180deg);
+  transform: translateY(-15px) rotateY(180deg) rotateX(180deg);
+  margin-top: 20px;
+}
+
+.animate .author_block .block img {
+  -webkit-animation: img_show .8s linear;
+  animation: img_show .8s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.animate svg.svg_line {
+  -webkit-animation: svg_line_show .4s linear;
+  animation: svg_line_show .4s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.animate svg.svg_line.two,
+.animate svg.svg_line.three,
+.animate svg.svg_line.six,
+.animate svg.svg_line.seven {
+  -webkit-animation: svg_line_show_mini .4s linear;
+  animation: svg_line_show_mini .4s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.animate .author_block .block h6 {
+  -webkit-animation: h6_show .8s linear;
+  animation: h6_show .8s linear;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.author_block .block img {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+@media screen and (min-width: 1200px) {
+
+  .author__photo {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1199px) and (max-width: 480px) {
+
+  .author_block .block.left h6 {
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+
+  .author_block .block {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .author_block .block:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .author_block .block img {
+    float: left;
+    width: 62px;
+  }
+
+  .author_block .block.left h6 {
+    float: right;
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+    margin-right: 0;
+    font-family: 'Muller';
+    text-align: left;
+  }
+
+  .author_block .block.left h6 br {
+    display: none;
+  }
+
+  .author_block .block.right h6 {
+    float: right;
+    width: -webkit-calc(100% - 100px);
+    width: calc(100% - 100px);
+    margin-left: 0;
+    font-family: 'Muller';
+    text-align: left;
+  }
+
+  .author_block .block.right h6 br {
+    display: none;
+  }
+
+  .author_block {
+    position: static;
+    display: block;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .block.one,
+  .block.five {
+    margin-bottom: 25px;
+    height: auto;
+  }
+
+  .block.three,
+  .block.seven {
+    margin-bottom: 25px;
+    height: auto;
+  }
+
+  .block.six {
+    margin-bottom: 25px;
+    height: auto;
+  }
+
+  .block.two.left {
+    height: auto;
+  }
+
+  .block.four.left {
+    height: auto;
+  }
+
+  .block.eight.right {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .author_block .block h6 {
+    opacity: 1;
+  }
+
+  svg.svg_line {
+    display: none;
+  }
+
+  .svg_lines {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: $lg-screen - 1) {
+
+  .author_block .block img {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+
+  .author_block .block img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .author_block .block.left h6 {
+    font-size: 14px;
+  }
+
+  .author_block .block.right h6,
+  .author_block .block.left h6  {
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+    font-size: 14px;
+  }
+}
