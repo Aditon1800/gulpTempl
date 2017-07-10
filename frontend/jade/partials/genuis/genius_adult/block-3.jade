@@ -1,0 +1,50 @@
+//=== Block 3
+section.block-3
+  .container
+    .tabs-block
+      //=== tab-list
+      ul.tabs-block__header
+        li.tabs-block__list.tabs-block__list--active
+          i.tabs-icon.tabs-icon--1
+          span.tabs-list__header Вы сотрудник по найму?
+        li.tabs-block__list
+          i.tabs-icon.tabs-icon--2
+          span.tabs-list__header Вы бизнесмен или работаете на себя?
+        li.tabs-block__list
+          i.tabs-icon.tabs-icon--3
+          span.tabs-list__header Вы студент?
+      //=== tab-content
+      .tabs-block__cont-wrap
+        //=== tab-block content
+        .tabs-block__cont.tabs-block__cont--active
+          ul.block-list
+            li Занимаясь по вечерам или выходным, сможете получать по #[span 1-2] дополнительной квалификации в месяц, и #[strong продуктивность возрастет] в несколько раз;
+            li #[strong Стоимость на рынке труда увеличится] в разы, а продвижение по карьерной лестнице станет #[span в 3-5] раз быстрее;
+            li Обретете #[strong профессиональную уверенность] и станете человеком, с которым невозможно конкурировать;
+            li Сможете #[strong легко сменить] сферу деятельности.
+          .block-info То, что вы освоите или сделаете за считанные недели с удовольствием, ваши коллеги будут добиваться месяцы и годы!
+        //=== tab-block content
+        .tabs-block__cont
+          ul.block-list
+            li В разы вырастет #[strong личная продуктивность] и улучшится результат работы;
+            li Вы станете #[strong "профессионалом бизнеса"], готовым к быстрому принятию правильных решений;
+            li С натренированной памятью и внимательностью вы станете #[strong мастером переговоров];
+            li Делая привычный объем работы, #[strong вы освободите время] для отдыха и изучения иностранных языков;
+          .block-info То свободное время, которое раньше казалось роскошью, станет неотъемлемой частью дня!
+        //=== tab-block content
+        .tabs-block__cont
+          ul.block-list
+            li #[strong Сможете экстерном закончить ВУЗ], как сделал преподаватель курса;
+            li #[strong Станете профессионалом] в своей области, используя правильные инструменты в обучении;
+            li Легко получите #[strong дополнительные квалификации] и пройдете курсы, о которых давно мечтали;
+            li Сможете получать повышенную стипендию, тратя на обучение по #[span 1-3 недели] в семестр;
+            li В освободившееся время сможете работать и собрать #[strong профессиональный багаж навыков] уже в студенческие годы!
+          .block-info Это позволит вам далеко обойти своих сверстников и добиться намеченных целей гораздо раньше!
+
+script.
+  $('.tabs-block__list').click(function(e) {
+    var tabIndex  = $(this).index(),
+          tabBlock =$('.tabs-block__cont');
+    $(this).addClass('tabs-block__list--active').siblings().removeClass('tabs-block__list--active');
+    tabBlock.eq(tabIndex).addClass('tabs-block__cont--active').siblings().removeClass('tabs-block__cont--active');
+  });

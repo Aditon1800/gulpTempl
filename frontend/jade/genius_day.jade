@@ -1,0 +1,17 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Практический урок для взрослых по технологиям эффективного обучения “ПОЧУВСТВУЙ СЕБЯ ГЕНИЕМ”')
+
+block main
+  main
+    include partials/genuis/genius_day/jumb
+    +timer('До начала пробного урока:', '06', '15', '08', '00')
+    include partials/genuis/genius_day/about
+    include partials/genuis/genius_day/cost
+    include partials/slova/tabs
+    .btn-block
+      button.btn.more__btn.js-getModal(data-action="") Хочу попробовать технологии Advance
+    include partials/genuis/genius_day/map
+    include partials/7Tech/recommend

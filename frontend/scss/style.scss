@@ -20,7 +20,7 @@
 @import 'components/scrollTop';
 
 // lib
-// @import 'lib/flipster';
+@import 'lib/flipster';
 // @import 'lib/slick';
 
 // LAYOUTS
@@ -47,7 +47,9 @@
 // @import 'partials/eng/eng_children/style';
 // @import 'partials/eng/eng_school_offline/style';
 // @import 'partials/eng/eng_children_programm/style';
-@import 'partials/eng/eng_testing/style';
+// @import 'partials/eng/eng_testing/style';
+// @import 'partials/genius/genius_day/style';
+@import 'partials/genius/genius_adult/style';
 
 //=== ENG
 // @import 'partials/eng/style';
@@ -60,7 +62,7 @@
 // @import 'partials/advanteges';
 // @import 'partials/author';
 // @import 'partials/feedback';
-// @import 'partials/reviews';
+@import 'partials/reviews';
 @import 'partials/footer';
 @import 'partials/modal';
 @import 'components/scrollTop';

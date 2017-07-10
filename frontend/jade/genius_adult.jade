@@ -1,0 +1,19 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Курс-интенсив “Стань Гением')
+
+block main
+  main
+    include partials/genuis/genius_adult/jumb
+    +timer('До старта курса осталось::', '06', '29', '08', '00')
+    include partials/genuis/genius_adult/result
+    include partials/genuis/genius_adult/block-2
+    include partials/genuis/genius_adult/block-3
+    include partials/genuis/genius_adult/block-4
+    include partials/slova/tabs
+    include partials/genuis/genius_adult/calendar
+    include partials/genuis/genius_adult/cost
+    include partials/reviews
+    include partials/map/mapBlock

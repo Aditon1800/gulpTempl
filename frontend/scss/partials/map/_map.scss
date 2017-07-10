@@ -54,6 +54,7 @@
 
     li {
       position: relative;
+      line-height: 1;
       padding-left: 60px;
       margin-bottom: 20px;
 
@@ -85,5 +86,6 @@
 
   &__info-btn {
     @include btn-red(430px);
+    line-height: 1;
   }
 }

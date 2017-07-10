@@ -129,6 +129,21 @@
     font-weight: 300;
   }
 
+  &__address {
+
+    a {
+      display: inline-block;
+      color: inherit;
+      border-bottom: 1px dashed $white;
+      line-height: 1;
+      transition: all .3s;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
   // &__list-name {
   //   @media(max-width: $sm-screen - 1) {
   //     font-size: 26px;

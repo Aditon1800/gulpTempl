@@ -77,12 +77,6 @@ $(document).ready(function(){
     });
   }());
 
-  // Masked phone
-
-  $('.phone-mask').each(function() {
-    $(this).mask("+9 (999) 999-99-99", {autoclear: false});
-  });
-
   // Модальные окна
   (function() {
 
