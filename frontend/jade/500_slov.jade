@@ -2,17 +2,19 @@ extends layout
 
 block meta
   include helpers/mixin
-  +meta('Экспресс-курс Техника запоминания 500 иностранных слов в день')
+  +meta('Экспресс-курс Техника запоминания 1000 иностранных слов за неделю')
 
 block main
   main
     include partials/slova/jumb
-    include partials/Timer/timer
-    include partials/slova/block
+    +timer('До старта курса осталось:', '07', '04', '09', '00')
+    include partials/slova/block-2
+    include partials/slova/calendar
     include partials/slova/about
-    include partials/slova/tabs
+    include partials/slova/block-3
     include partials/slova/cost
+    include partials/slova/tabs
     include partials/reviews
-    include partials/7Tech/recommend
+    include partials/slova/block
+    //- include partials/7Tech/recommend
     include partials/map/mapBlock
-    include partials/7Tech/feedback

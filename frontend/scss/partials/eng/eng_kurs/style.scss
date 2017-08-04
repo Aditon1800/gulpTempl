@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import 'partials/jumb';
+
+.jumb {
+
+  &__eng-kurs {
+    @media(max-width: $md-screen - 1) {
+      background-image: url('../img/eng/eng_kurs/mob/bg-podgotovka-1-md.jpg');
+    }
+    @media(max-width: $sm-screen - 1) {
+      background-image: url('../img/eng/eng_kurs/mob/bg-podgotovka-1-sm.jpg');
+    }
+    position: relative;
+    background-image: url('../img/eng/eng_kurs/bg-podgotovka-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 70px;
+
+    &:before {
+      @media(max-width: $lg-screen - 1) {
+        display: none;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0 auto;
+      transform: translateX(340px);
+      background: url('../img/eng/eng_kurs/eng-book-1.png');
+      width: 525px;
+      height: 595px;
+    }
+
+    .jumb__content {
+      @media(max-width: $lg-screen - 1) {
+        max-width: none;
+      }
+      max-width: 780px;
+      color: $white;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .jumb__over-title {
+      @media(max-width: $md-screen - 1) {
+        font-size: 56px;
+
+        br {
+          display: none;
+        }
+      }
+      @media(max-width: $sm-screen - 1) {
+        font-size: 42px;
+      }
+      font-size: 72px;
+      line-height: 1;
+      margin-bottom: 22px;
+    }
+
+    .jumb__title {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 22px;
+
+        br {
+          display: none;
+        }
+      }
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .jumb__untitle {
+      @media(max-width: $md-screen - 1) {
+        font-size: 42px;
+      }
+      @media(max-width: $sm-screen - 1) {
+        font-size: 36px;
+      }
+      font-family: 'Marck Script';
+      font-size: 48px;
+      color: $red;
+      margin: 50px 0;
+    }
+
+    .jumb__date {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 28px;
+      }
+      font-size: 36px;
+      font-weight: 400;
+    }
+
+    .btn-block {
+      margin-top: 25px;
+    }
+
+    .jumb__btn {
+      @include btn-red(571px);
+      font-size: 28px;
+      text-transform: none;
+      border: 2px dotted $white;
+    }
+  }
+}
+
+@import 'partials/timer/timer';
+
+
+/*=== BLOCK-1 ===*/
+
+.block-1 {
+
+  .row {
+    @include justify-content(center);
+    padding-top: 40px;
+  }
+
+  .col {
+    @include col();
+    @include col-5();
+    @include col-lg-6();
+    @include col-md-10();
+    @include col-sm-11();
+    @include col-xs-12();
+  }
+
+  .block-wrap {
+    @media(max-width: $md-screen - 1){
+      margin-bottom: 60px;
+    }
+  }
+
+  &__name {
+    position: relative;
+    font-size: 42px;
+    font-weight: 100;
+    color: $red;
+    padding-left: 100px;
+    margin-bottom: 20px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 70px;
+      height: 70px;
+    }
+
+    &--1 {
+
+      &:before {
+        background-image: url('../img/eng/eng_kurs/book.svg');
+      }
+    }
+
+    &--2 {
+
+      &:before {
+        background-image: url('../img/eng/eng_kurs/control.svg');
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 18px;
+    font-weight: 100;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+}
+
+/*=== BLOCK-2 ===*/
+
+.block-2 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/eng/eng_kurs/mob/bg-podgotovka-2-md.jpg');
+  }
+  @media(max-width: $sm-screen - 1) {
+    background-image: url('../img/eng/eng_kurs/mob/bg-podgotovka-2-sm.jpg');
+  }
+  background-image: url('../img/eng/eng_kurs/bg-podgotovka-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .row {
+    @include justify-content-lg(center);
+  }
+
+  .col {
+    @include col();
+    @include col-3();
+    @include col-lg-5();
+    @include col-sm-11();
+  }
+
+  .block-wrap {
+    text-align: center;
+  }
+
+  .block__img {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+
+    img {
+      max-width: 45%;
+      margin: 0 auto;
+    }
+  }
+
+  .block__desc {
+    @media(max-width: $lg-screen - 1) {
+      margin-bottom: 40px;
+    }
+    @media(max-width: $sm-screen - 1) {
+
+      br {
+        display: none;
+      }
+    }
+    font-size: 18px;
+    font-weight: 300;
+
+    strong {
+      display: inline-block;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 300;
+      color: $red;
+    }
+  }
+}
+
+/*=== BLOCK-3 ===*/
+
+.block-3 {
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col();
+    @include col-5();
+    @include col-md-10();
+  }
+
+  .block-wrap {
+    @media(max-width: $md-screen - 1){
+      margin: 0 0 40px;
+    }
+  }
+
+  .block__img {
+    text-align: center;
+  }
+
+  .block-name {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .block-list {
+    @media(max-width: $md-screen - 1){
+      max-width: none;
+    }
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  .list-item {
+    position: relative;
+    font-size: 24px;
+    font-weight: 100;
+    padding-left: 45px;
+    margin-bottom: 40px;
+
+    strong {
+      font-weight: 400;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 3px;
+      left: 0;
+      width: 30px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--plus {
+
+      &:before {
+        background-image: url('../img/eng/eng_kurs/da-small.png');
+      }
+    }
+
+    &--minus {
+
+      &:before {
+        background-image: url('../img/eng/eng_kurs/net-small.png');
+      }
+    }
+  }
+}
+
+/*=== TAB BLOCK ===*/
+
+/*=== TEACHER ===*/
+
+
+.teacher {
+
+  &.sec {
+    padding-bottom: 30px;
+  }
+
+  .sec-title {
+    text-transform: uppercase;
+  }
+
+  &__wrap {
+
+    .name {
+      @media(max-width: $md-screen - 1) {
+        font-size: 42px;
+        text-align: center;
+      }
+      @media(max-width: $sm-screen - 1) {
+        font-size: 36px;
+      }
+      font-size: 48px;
+      color: $red;
+      line-height: 1;
+    }
+
+    .desc {
+    @media(max-width: $md-screen - 1) {
+      text-align: center;
+    }
+      @media(max-width: $sm-screen - 1) {
+        font-size: 18px;
+      }
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .col {
+    @include cf();
+    margin-top: 25px;
+  }
+
+  &__self,
+  &__info {
+    @media(max-width: $md-screen - 1) {
+      float: none;
+    }
+    float: left;
+  }
+
+  &__self {
+    @media(max-width: $md-screen - 1) {
+      width: 100%;
+      text-align: center;
+    }
+    width: 30%;
+  }
+
+  &__info {
+    @media(max-width: $md-screen - 1) {
+      width: 100%;
+    }
+    width: 70%;
+  }
+
+  &__row-first,
+  &__row-second {
+    @include cf();
+  }
+
+  &__row-first {
+    @media(max-width: $md-screen - 1) {
+      padding-bottom: 30px;
+    }
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .row-inner {
+    @media(max-width: $sm-screen - 1) {
+      float: none;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    float: left;
+    width: 50%;
+    font-size: 18px;
+    padding: 0 20px;
+
+    .title {
+      font-weight: 500;
+      color: $red;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+
+    ul {
+      font-weight: 300;
+
+      li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 2px;
+          left: 0;
+          width: 20px;
+          height: 19px;
+          background: url('../img/eng/eng_children/check2.png') center no-repeat;
+        }
+      }
+    }
+  }
+
+  &__more {
+    max-width: 1020px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    margin: 50px auto 40px;
+  }
+
+  &__btn {  
+    @include btn-red(570px);
+  }
+}
+
+.tab-block {
+  background-image: radial-gradient(circle 1625px at center, #50a4d3 0%, #1d6a96 100%);
+}
+
+.tab-title {
+  @media(max-width: $md-screen - 1) {
+    font-size: 42px;
+  }
+  @media(max-width: $sm-screen - 1) {
+    font-size: 36px;
+  }
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  color: $white;
+}
+
+.tab-desc {
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  color: $white
+}
+
+.table-main {
+  overflow-x: auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.table-wrap {
+  @include cf();
+}
+
+.table-block {
+  @media(max-width: $lg-screen - 1) {
+    float: none;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  position: relative;
+  float: left;
+  width: 33.3333%;
+  background-color: $white;
+  font-weight: 300;
+  text-align: center;
+  z-index: 1;
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba($black, .8);
+    z-index: 10;
+  }
+
+  .line {
+    @media(max-width: $lg-screen - 1) {
+      display: block;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 18px 10px;
+
+    .mob {
+      @media(max-width: $lg-screen - 1) {
+        display: inline-block;
+        width: 100%;
+      }
+      display: none;
+    }
+
+    b {
+      font-weight: 500;
+    }
+
+    &:first-child {
+      @media(max-width: $lg-screen - 1) {
+        height: auto;
+      }
+      height: 75px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      @media(max-width: $lg-screen - 1) {
+        height: auto;
+      }
+      height: 50px;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5) {
+      @media(max-width: $lg-screen - 1) {
+        height: auto;
+        padding: 25px 10px;
+      }
+      height: 100px;
+    }
+  }
+
+  .first-name {
+    font-size: 24px;
+    font-weight: 500;
+    color: $red;
+
+    b {
+      font-size: 18px;
+      color: $l-black;
+    }
+  }
+
+  &__first {
+  @media(max-width: $lg-screen - 1) {
+    display: none;
+  }
+
+    &:hover {
+      box-shadow: none;
+    }
+    
+    .line {
+      justify-content: start;
+      font-weight: 400;
+    }
+  }
+
+
+  .line:nth-child(even) {
+    background-color: #e6e6e6;
+  }
+}
+
+.table__btn {
+  @include btn-trans(300px);
+  border: 2px dotted $l-black;
+  font-size: 18px;
+  color: $l-black;
+  padding: 12px 0;
+
+  &:visited {
+    color: $l-black;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+/*=== BLOCK-4 ===*/
+
+.block-4 {
+  background-image: url('../img/eng/eng_kurs/bg-advance.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .block-list {
+    max-width: 970px;
+    margin: 0 auto;
+  }
+
+  .list-item {
+    @media(max-width: $sm-screen - 1) {
+      padding: 15px 0 15px 60px;
+      font-size: 20px;
+    }
+    position: relative;
+    font-size: 24px;
+    font-weight: 100;
+    border-bottom: 1px solid rgba($l-black, .2);
+    padding: 20px 0 20px 100px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:before {
+      @media(max-width: $sm-screen - 1) {
+        top: 16px;
+        width: 50px;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      top: 26px;
+      left: 0;
+      width: 70px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--1 {
+
+      &:before {
+        @media(max-width: $sm-screen - 1) {
+          height: 56px;
+        }
+        background-image: url('../img/eng/eng_kurs/goal.svg');
+        height: 77px;
+      }
+    }
+
+    &--2 {
+
+      &:before {
+        @media(max-width: $sm-screen - 1) {
+          height: 44px;
+        }       
+        background-image: url('../img/eng/eng_kurs/good-review.svg');
+        height: 58px;
+      }
+    }
+
+    &--3 {
+
+      &:before {
+        @media(max-width: $sm-screen - 1) {
+          height: 42px;
+        }
+        background-image: url('../img/eng/eng_kurs/analytics.svg');
+        height: 55px;
+      }
+    }
+
+    &--4 {
+
+      &:before {
+        @media(max-width: $sm-screen - 1) {
+          height: 45px;
+        }
+        background-image: url('../img/eng/eng_kurs/team.svg');
+        height: 59px;
+      }
+    }
+  }
+}
+
+@import 'partials/map/map';
+@import 'partials/reviews';

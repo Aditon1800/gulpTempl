@@ -1,0 +1,29 @@
+//=== Jumb
+section.jumb
+  .container
+    .jumb__content
+      .jumb__flag
+      h2.jumb__over-title Онлайн пакет 
+      h1.jumb__title “Английский с нуля”
+      p.jumb__untitle + #[span.online #[span.onair] живые] занятия по английскому
+      .online-pack
+        .online-pack__name В состав онлайн-пакета входит:
+        ul.online-pack__list
+          li.online-pack__item-1 Фонетика
+            br
+            |английского
+          li.online-pack__item-2 Английский
+            br
+            |словарный запас
+          li.online-pack__item-3 Английский
+            br
+            |репетитор
+      .more-info Постройте фундамент Вашего английского!
+      .btn-block
+         button.btn.jumb__btn Купить за  #[del 25 000 #[span.cost__rf ₽]]  17 500 #[span.cost__rf ₽]
+  script.
+    $(".online .onair").hide();
+      setTimeout(function(){
+              $(".online .onair").show(); setInterval(function(){
+                     $(".online .onair").toggle();},1000)},3000);
+      

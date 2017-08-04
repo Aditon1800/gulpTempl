@@ -17,7 +17,6 @@
 // components
 @import 'components/preloader';
 // @import 'components/baner';
-@import 'components/scrollTop';
 
 // lib
 @import 'lib/flipster';
@@ -28,7 +27,7 @@
 @import 'layouts/main';
 
 // PARTIALS
-// @import 'partials/header';
+@import 'partials/header';
 // @import 'partials/f-list/f-main';
 
 //=== 7TEHCNIQUES
@@ -40,7 +39,6 @@
 // @import 'partials/10Secrets/style';
 // @import 'partials/eng/auto_eng/style';
 // @import 'partials/7Tech/programms';
-// @import 'partials/7Tech/recommend';
 // @import 'partials/7Tech/feedback';
 // @import 'partials/eng/eng_vacation/style';
 // @import 'partials/slova/style';
@@ -49,8 +47,15 @@
 // @import 'partials/eng/eng_children_programm/style';
 // @import 'partials/eng/eng_testing/style';
 // @import 'partials/genius/genius_day/style';
-@import 'partials/genius/genius_adult/style';
-
+// @import 'partials/genius/genius_adult/style';
+@import 'partials/genius/genius_online/style';
+// @import 'partials/eng/eng_start_online/style';
+// @import 'partials/eng/eng_tech/style';
+// @import 'partials/7Tech/recommend';
+// @import 'partials/personal_effect/style';
+// @import 'partials/eng/eng_free/style';
+// @import 'partials/eng/eng_kurs/style';
+// @import 'partials/eng/eng_mini/style';
 //=== ENG
 // @import 'partials/eng/style';
 // @import 'partials/cost';
@@ -62,7 +67,7 @@
 // @import 'partials/advanteges';
 // @import 'partials/author';
 // @import 'partials/feedback';
-@import 'partials/reviews';
+// @import 'partials/reviews';
 @import 'partials/footer';
 @import 'partials/modal';
 @import 'components/scrollTop';

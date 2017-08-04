@@ -1,0 +1,18 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Курс "Подготовка к ОГЭ по английскому"')
+
+block main
+  main
+    include partials/eng/eng_kurs/jumb
+    +timer('До начала пробного урока:', '08', '11', '08', '00')
+    include partials/eng/eng_kurs/block-1
+    include partials/eng/eng_kurs/block-2
+    include partials/eng/eng_kurs/block-3
+    include partials/eng/eng_kurs/tab-block
+    include partials/eng/eng_children/teacher
+    include partials/eng/eng_kurs/block-4
+    include partials/map/mapBlock
+    include partials/reviews

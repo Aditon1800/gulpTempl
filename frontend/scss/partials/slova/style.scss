@@ -1,27 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
 // Jumb
 @import 'partials/jumb';
 .jumb {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(21, 15, 17, 0) 0%, #150f11 50%, rgba(21, 15, 17, 0) 100%);
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .container {
+    z-index: 5;
+  }
 
   &__slova {
     @media(max-width: $md-screen - 1) {
-      background-image: url('../img/slova/mob/bg-dictionary-sm.jpg');
-      background-size: cover;
+      background-image: url('../img/slova/mob/bg-1000slov-1-md.jpg');
     }
-    @media(max-width: $md-screen - 1) {
-      background-image: url('../img/slova/bg-dictionary.jpg');
-      background-size: cover;
+    @media(max-width: $sm-screen - 1) {
+      background-image: url('../img/slova/mob/bg-1000slov-1-sm.jpg');
     }
     height: auto;
     max-height: none;
-    background-image: url('../img/slova/bg-dictionary-line.jpg');
+    background-image: url('../img/slova/bg-1000slov-1.jpg');
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center;
+    background-size: cover;
 
     &.sec {
       @media(max-width: $md-screen - 1) {
         padding-bottom: 40px;
       }
-      padding: 0;
+      padding: 0 0 70px;
     }
 
     .jumb__content {
@@ -49,18 +70,67 @@
       }
       @media(max-width: 480px) {
         font-size: 42px;
+        margin: 0 auto 40px;
       }
-      font-size: 58px;
+      max-width: 940px;
+      font-size: 72px;
       font-weight: 300;
       margin-top: 15px;
+      line-height: .9;
+      margin: 0 auto 55px;
+    }
+
+    .jumb__warn {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 32px;
+      }
+      @media(max-width: 480px) {
+        font-size: 26px;
+      }
+      position: relative;
+      font-family: 'Marck Script';
+      font-size: 48px;
+      font-weight: 400;
+      color: $red;
       margin-bottom: 45px;
+
+      &:before {
+        @media(max-width: $sm-screen - 1) {
+          width: 430px;
+          height: 50px;
+        }
+        @media(max-width: 480px) {
+          width: 300px;
+          height: 34px;
+        }
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 586px;
+        height: 67px;
+        background: url('../img/slova/white-brush.png') center no-repeat;
+        background-size: cover;
+        z-index: 1;
+      }
+
+      span {
+        position: relative;
+        z-index: 5;
+      }
     }
 
     .jumb__date {
       @media(max-width: $sm-screen - 1) {
-        font-size: 32px;
+        font-size: 48px;
       }
-      font-size: 36px;
+      @media(max-width: 480px) {
+        font-size: 42px;
+      }
+      width: 100%;
+      font-size: 60px;
       font-weight: 300;
     }
 
@@ -85,135 +155,193 @@
     }
 
     .jumb__btn {
-      @include btn-trans(570px);
+      @include btn-red(571px);
       font-size: 30px;
-      font-weight: 300;
+      font-weight: 400;
+      border: 2px dotted $white;
       text-transform: none;
       @media(max-width: $sm-screen - 1) {
         font-size: 22px;
       }
     }
+  }
+}
 
-    .jumb__bonus-block {
-      @media(max-width: $md-screen - 1) {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        padding: 0;
-        margin-top: 40px;
-      }
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      max-width: 1035px;
-      text-align: left;
-      padding: 0 30px 40px 30px;
-      margin: 145px auto 0;
+.cost-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  .cost__old,
+  .cost__new {
+    @media(max-width: $sm-screen - 1){
+      font-size: 48px;
     }
+    @media(max-width: 48px){
+      font-size: 36px;
+    }
+    font-size: 60px;
+    margin: 0 20px;
+  }
 
-    .jumb__bonus-name {
-      @media(max-width: $md-screen - 1) {
-        margin-right: 0;
-        margin-bottom: 20px;
+  .cost__old {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 4px;
+      background-color: $white;
+    }
+  }
+
+  .cost__new {
+    font-weight: 500;
+  }
+
+  .cost__rf {
+    font-weight: 400;
+  }
+}
+
+@import 'partials/block';
+
+/*=== BLOCK-2 ===*/
+
+.block-2 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/slova/mob/bg-1000slov-2-md.jpg');
+  }
+  @media(max-width: $sm-screen - 1) {
+    background-image: url('../img/slova/mob/bg-1000slov-2-sm.jpg');
+  }
+  background-image: url('../img/slova/bg-1000slov-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrap {
+    @include cf();
+  }
+
+  &__content {
+    @media(max-width: $md-screen - 1) {
+      float: none;
+      max-width: none;
+    }
+    float: right;
+    width: 100%;
+    max-width: 780px;
+  }
+
+  &__title {
+    @media(max-width: $md-screen - 1) {
+      text-align: center;
+    }
+    @extend .sec-title;
+    color: $red;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  &__desc {
+    @media(max-width: $md-screen - 1) {
+      text-align: center;
+    }
+    font-size: 36px;
+    font-weight: 100;
+    margin-bottom: 45px;
+  }
+
+  .col {
+    @include col();
+    @include col-6();
+    @include col-sm-12();
+  }
+
+  .col-full {
+    @include col-12();
+  }
+
+  .block {
+
+    &__wrap {
+      @media(max-width: $sm-screen - 1) {
+        br {
+          display: none;
+        }
       }
       position: relative;
-      font-size: 24px;
-      font-weight: 700;
-      font-style: italic;
-      color: $white;
-      line-height: 1;
-      margin-right: 80px;
+      padding-left: 65px;
+      margin-bottom: 50px;
 
       &:before {
         position: absolute;
         content: '';
         display: block;
-        top: -12px;
-        left: -38px;
-        width: 203px;
-        height: 48px;
-        background: url('../img/speak_spb/bonus-bg.png') center no-repeat;
-        z-index: 2;
+        top: 4px;
+        left: 0;
+        width: 52px;
+        height: 52px;
+        background-repeat: no-repeat;
+        background-position: center;
       }
 
-      span {
-        @media(max-width: $sm-screen - 1) {
-        }
-        position: relative;
-        display: inline-block;
-        text-transform: uppercase;
+      &--1:before {
+        background-image: url('../img/slova/icons/algorithm-bw.svg');
+      }
+
+      &--2:before {
+        background-image: url('../img/slova/icons/stopwatch.svg');
+      }
+
+      &--3:before {
+        background-image: url('../img/slova/icons/tasks.svg');
+      }
+
+      &--4:before {
+        background-image: url('../img/slova/icons/manager.svg');
+      }
+
+      &--5:before {
+        background-image: url('../img/slova/icons/clipboard.svg');
+      }
+
+      .name,
+      .text {
+        display: inline;
+        font-size: 24px;
+        font-weight: 100;
+      }
+
+      .name {
+        padding-right: 6px;
         color: $red;
-        z-index: 10;
       }
     }
+  }
 
-    .jumb__bonus {
-      @media(max-width: $sm-screen - 1) {
-        font-size: 18px;
-      }
-      font-size: 24px;
-      font-weight: 400;
+  .btn-block {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    @media(max-width: $md-screen - 1) {
+      margin: 0 auto;
     }
+    @include btn-red(571px);
+    margin: 0;
   }
 }
 
-.speak-block {
-
-  &__wrap {
-    @media (max-width: $md-screen - 1) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .iframe-block {
-    @media (max-width: $md-screen - 1) {
-      width: 100%;
-      max-width: 760px;
-      margin-right: 0;
-    }
-    width: 770px;
-    height: 435px;
-    margin-right: 30px;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__iframe-desc {
-    @media (max-width: $md-screen - 1) {
-      background: none;
-      width: auto;
-      max-width: none;
-      height: auto;
-    }
-    width: 100%;
-    max-width: 380px;
-    height: 435px;
-    background:  url('../img/eng/speak_spb/txt2.png') center no-repeat;;
-
-    span {
-      @media (max-width: $md-screen - 1) {
-        display: inline-block;
-        width: 100%;
-        margin-top: 25px;
-      }
-      @media(max-width: $sm-screen - 1) {
-        font-size: 26px;
-      }
-      display: none;
-      font-size: 32px;
-      line-height: 1.1;
-      text-align: center;
-    }
-  }
-}
+@import 'partials/calendar';
 
 // Why
 
@@ -230,14 +358,8 @@
     padding-bottom: 20px;
   }
 
-  &__title {
-    @media(max-width: $sm-screen - 1) {
-      font-size: 42px;
-    }
-    font-size: 48px;
-    font-weight: 100;
-    text-align: center;
-    margin-bottom: 45px;
+  .sec-title {
+    color: $red;
   }
 
   .row {
@@ -250,6 +372,44 @@
     @include col-md-10();
     @include col-sm-10();
     @include col-xs-11();
+  }
+
+  .block__name {
+    @media(max-width: $md-screen - 1) {
+      br {
+        display: none;
+      }
+    }
+    font-weight: 100;
+
+    strong {
+      display: inline-block;
+      width: 100%;
+      font-weight: 300;
+    }
+  }
+}
+
+/*=== BLOCK-3 ===*/
+
+.block-3 {
+
+  &__content {
+    background: url('../img/slova/landmarks.png') center top no-repeat;
+    padding-bottom: 70px;
+    margin-top: 30px;
+  }
+
+  .sec-title {
+    padding-top: 150px;
+  }
+
+  &__desc {
+    max-width: 1030px;
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
@@ -275,17 +435,23 @@
   color: $white;
   text-align: center;
 
-  &__title {
+  &__title,
+  &__over-title {
     @media(max-width: $sm-screen - 1) {
       font-size: 28px;
     }
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 100;
     margin-bottom: 5px;
 
     span {
+      font-size: 36px;
       font-weight: 400;
     }
+  }
+
+  &__over-title {
+    margin-bottom: 30px;
   }
 
   &__block {
@@ -331,7 +497,7 @@
 @import 'partials/timer/timer';
 @import 'partials/7Tech/author';
 @import 'partials/reviews';
-@import 'partials/7Tech/recommend';
+// @import 'partials/7Tech/recommend';
 @import 'partials/map/map';
 
 .map__info {
@@ -341,5 +507,3 @@
 .map__info-list {
   font-size: 26px;
 }
-
-@import 'partials/7Tech/feedback';

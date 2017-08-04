@@ -216,9 +216,9 @@
             <div class="container">
               <div class="map__info">
                 <ul class="map__info-list">
-                  <li class="map__info--name"><small>Курс-интенсив</small><br/> “Стань гением”</li>
-                  <li class="map__info--time">29 июля -19 августа 2017</li>
-                  <li class="map__info--place">Санкт-Петербург, <br/>ул. Таврическая, 2</li>
+                  <li class="map__info--name">Курс “Подготовка к ОГЭ по английскому”</li>
+                  <li class="map__info--time">с 11 сентября 2017 года</li>
+                  <li class="map__info--place">Санкт-Петербург,  ул. Таврическая, 2</li>
                 </ul>
                 <div class="btn-block">
                   <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=1494410207.503668175&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn map__info-btn js-getModal">Занять место</button>
@@ -286,9 +286,25 @@
       <!-- Scroll top-->
       <div class="top_btn"><span>^</span></div>
       <script src="js/jquery.flipster.js"></script>
-      <script src="js/slick.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
       <script src="js/script.js"></script>
+      <script src="../main/js/intlTelInput.min.js"></script>
+      <script>
+        var telephone = $("#phone");
+        telephone.intlTelInput({
+        utilsScript: 'http://advance-club.ru/main/js/utils.js',
+        autoHideDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: true,
+        autoFormat: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+          selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+          var l = selectedCountryData['dialCode'].length;
+            return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+        },
+        preferredCountries: ['ru', 'by', 'ua'],
+                    // initialCountry: "ru"
+        })
+      </script>
     </div>
   </body>
 </html>

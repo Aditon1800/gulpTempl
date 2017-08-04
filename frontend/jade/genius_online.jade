@@ -1,0 +1,16 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Online тренинг “Курс развития памяти”')
+
+block main
+  main
+    include partials/genuis/genius_online/jumb
+    +timer('До начала пробного урока:', '09', '01', '08', '00')
+    include partials/genuis/genius_online/block-1
+    include partials/genuis/genius_online/block-2
+    include partials/genuis/genius_online/block-3
+    include partials/genuis/genius_online/block-4
+    include partials/genuis/genius_online/cost
+    include partials/reviews

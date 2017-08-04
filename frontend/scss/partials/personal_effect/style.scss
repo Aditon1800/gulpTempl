@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+// Jumb
+@import 'partials/jumb';
+.jumb {
+  position: relative;
+
+  &__personal {
+    @media(max-width: $md-screen - 1) {
+      background-image: url('../img/personal/mob/bg-header-md.jpg');
+    }
+    @media(max-width: $sm-screen - 1) {
+      background-image: url('../img/personal/mob/bg-header-sm.jpg');
+    }
+    height: auto;
+    max-height: none;
+    background-image: url('../img/personal/bg-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &.sec {
+      @media(max-width: $md-screen - 1) {
+        padding-bottom: 40px;
+      }
+      padding: 0 0 70px;
+    }
+
+    .jumb__content {
+      @media(max-width: $md-screen - 1) {
+        padding-top: 0;
+      }
+      line-height: 1.1;
+      color: $white;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .jumb__over-title {
+      @media(max-width: $sm-screen - 1) {
+          font-size: 26px;
+        }
+      font-size: 48px;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+
+    .jumb__title {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 46px;
+
+        br {
+          display: none;
+        }
+      }
+      @media(max-width: 480px) {
+        font-size: 32px;
+        margin: 0 auto 40px;
+      }
+      font-size: 60px;
+      font-weight: 400;
+      margin-top: 15px;
+      line-height: .9;
+      margin: 0 auto 55px;
+    }
+
+    .jumb__date {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 48px;
+      }
+      @media(max-width: 480px) {
+        font-size: 38px;
+        padding-left: 0;
+        padding-top: 60px;
+        margin: 20px 0 45px;
+      }
+      position: relative;
+      font-size: 60px;
+      font-weight: 300;
+      color: $red;
+      padding-left: 100px;
+      margin: 40px 0 65px;
+
+      span {
+        font-weight: 400;
+      }
+
+      &:before {
+      @media(max-width: 480px) {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+      }
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 70px;
+        height: 70px;
+        background: url('../img/personal/icons/calendar.svg');
+      }
+    }
+
+    .jumb__info {
+      @media(max-width: 480px) {
+        font-size: 20px;
+      }
+      background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.03) 8%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.02) 92%, rgba(255,255,255,0) 97%);
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.03) 8%,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0.02) 92%,rgba(255,255,255,0) 97%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.03) 8%,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0.02) 92%,rgba(255,255,255,0) 97%);
+      font-size: 24px;
+      padding: 30px 0 20px;
+          
+      .info {
+        @media(max-width: $sm-screen - 1) {
+          max-width: 410px;
+          margin: 0 auto 25px;
+        }
+        @media(max-width: 480px) {
+          max-width: 320px;
+          padding-left: 70px;
+        }
+        position: relative;
+        font-style: italic;
+        padding-left: 100px;
+        line-height: 1.25;
+        margin-bottom: 25px;
+        text-align: left;
+    
+        &:before {
+          @media(max-width: 480px) {
+            width: 56px;
+            height: 66px;
+          }
+          position: absolute;
+          content: '';
+          display: block;
+          top: 4px;
+          left: 0;
+          width: 70px;
+          height: 82px;
+          background: url('../img/personal/icons/sadness.svg');
+        }
+      }
+    
+      .warn {
+        width: 100%;
+        color: $red;
+      }
+    }
+
+    .btn-block {
+      padding-top: 50px;
+    }
+
+    .jumb__btn {
+      @include btn-red(571px);
+      font-size: 30px;
+      font-weight: 400;
+      border: 2px dotted $white;
+      text-transform: none;
+      @media(max-width: $sm-screen - 1) {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.block {
+  @media(max-width: $md-screen - 1){
+    background-image: url('../img/personal/mob/bg-effective-md.jpg');
+  }
+  background-image: url('../img/personal/bg-effective.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-lg-5();
+    @include col-md-6();
+    @include col-xs-11();
+  }
+
+  .col-full {
+
+    &:nth-child(3) {
+      @include col-md-8();
+      @include col-xs-11();
+    }
+  }
+
+  .col-min {
+    @include col-3();
+    @include col-lg-4();
+    @include col-md-5();
+    @include col-sm-6();
+    @include col-xs-10();
+  }
+
+  .col-min {
+
+    .block-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+    }
+  }
+
+  .col-full .block-wrap {
+    @media(max-width: $lg-screen - 1) {
+      min-height: 225px;
+
+      br {
+        display: none;
+      }
+    }
+    min-height: 300px;
+    padding: 20px 15px 10px;
+  }
+
+  .col-sm .block-wrap {
+    min-height: 115px;
+  }
+
+  .col-md .block-wrap {
+    min-height: 135px;
+  }
+
+  &-wrap {
+    background-color: $white;
+    margin-bottom: 30px;
+  }
+
+  &-name {
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    padding-left: 60px;
+
+    &--red {
+      color: $red;
+      font-weight: 400;
+      margin: 15px 0 30px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--1 {
+      
+      &:before {
+        top: 50%;
+      width: 45px;
+      height: 45px;
+      background-image: url('../img/personal/icons/planning.svg');
+      margin-top: -22.5px;
+      }
+    }
+
+    &--2 {
+      
+      &:before {
+        top: 50%;
+      width: 40px;
+      height: 45px;
+      background-image: url('../img/personal/icons/trophy.svg');
+      margin-top: -22.5px;
+      }
+    }
+
+    &--3 {
+      
+      &:before {
+      width: 41px;
+      height: 45px;
+      background-image: url('../img/personal/icons/management.svg');
+      }
+    }
+
+    &--4 {
+      
+      &:before {
+      width: 39px;
+      height: 45px;
+      background-image: url('../img/personal/icons/overtime.svg');
+      }
+    }
+
+    &--5 {
+      
+      &:before {
+      width: 35px;
+      height: 45px;
+      background-image: url('../img/personal/icons/analytics.svg');
+      }
+    }
+
+    &--6 {
+      
+      &:before {
+      width: 45px;
+      height: 45px;
+      background-image: url('../img/personal/icons/transfer.svg');
+      }
+    }
+
+    &--7 {
+      
+      &:before {
+      width: 45px;
+      height: 38px;
+      background-image: url('../img/personal/icons/user.svg');
+      }
+    }
+
+    &--8 {
+      
+      &:before {
+      width: 37px;
+      height: 45px;
+      background-image: url('../img/personal/icons/care.svg');
+      }
+    }
+
+    &--9 {
+      
+      &:before {
+      width: 45px;
+      height: 45px;
+      background-image: url('../img/personal/icons/tie.svg');
+      }
+    }
+
+    &--10 {
+      
+      &:before {
+      width: 45px;
+      height: 45px;
+      background-image: url('../img/personal/icons/handshake.svg');
+      }
+    }
+
+    &--11 {
+      
+      &:before {
+      width: 45px;
+      height: 45px;
+      background-image: url('../img/personal/icons/balance.svg');
+      }
+    }
+
+  }
+
+  &-list {
+    font-size: 16px;
+    font-weight: 100;
+
+    li {
+      position: relative;
+      line-height: 1;
+      padding-left: 10px;
+      margin-bottom: 10px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 6px;
+        left: 0;
+        background-color: $red;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@import 'partials/timer/timer';
+@import 'partials/7Tech/author';
+
+.author {
+
+  .sec-title {
+    font-weight: 400;
+  }
+
+  &__block-name {
+    color: #ed1c24;
+  }
+}
+
+.block-2 {
+  @media(max-width: $md-screen - 1){
+    background-image: url('../img/personal/mob/bg-block-2-md.jpg');
+    padding: 90px 0;
+  }
+  @media(max-width: $sm-screen - 1){
+    padding: 60px 0;
+  }
+  background-image: url('../img/personal/bg-block-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  padding: 120px 0;
+
+  &__title {
+  @media(max-width: $sm-screen - 1){
+    font-size: 32px;
+    line-height: 1;
+  }
+  font-size: 36px;
+  margin-bottom: 40px;
+  }
+
+  &__btn {
+    @include btn-red(571px);
+    border: 2px dotted $white;
+  }
+}
+
+@import 'partials/7Tech/recommend';

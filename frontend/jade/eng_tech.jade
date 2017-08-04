@@ -1,0 +1,18 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Бесплатный семинар Николая Ягодкина "Продвинутые технологии изучения иностранных языков"')
+
+block main
+  main
+    include partials/eng/eng_tech/jumb
+    +timer('До начала семинара осталось:', '06', '29', '14', '00')
+    include partials/eng/eng_tech/block
+    include partials/7Tech/author
+    include partials/eng/eng_tech/about
+    include partials/eng/eng_tech/block-2
+    include partials/reviews
+    .btn-block.btn-block--more
+      button.btn.more-btn.js-getModal Оставить заявку
+    include partials/7Tech/recommend

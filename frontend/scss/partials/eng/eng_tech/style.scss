@@ -1,0 +1,355 @@
+// Mark Script
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+@import 'partials/jumb';
+
+.jumb {
+
+  &--eng-tech {
+    @media(max-width: $md-screen - 1){
+      background-image: url('../img/eng/eng_tech/mob/bg-main-md.jpg');
+    }
+    @media(max-width: $sm-screen - 1){
+      background-image: url('../img/eng/eng_tech/mob/bg-main-sm.jpg');
+    }
+    background-image: url('../img/eng/eng_tech/bg-main.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $l-black;
+    padding-bottom: 50px;
+  }
+
+  &__main-desc {
+    @media(max-width: $md-screen - 1){
+      max-width: none;
+    }
+    max-width: 820px;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  &__over-title {
+    @media(max-width: $sm-screen - 1){
+      font-size: 32px;
+    }
+    @media(max-width: 480px){
+      font-size: 26px;
+    }
+    font-size: 36px;
+    font-weight: 300;
+    color: $red;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    @media(max-width: $sm-screen - 1){
+      font-size: 48px;
+    }
+    @media(max-width: 480px){
+      font-size: 36px;
+    }
+    font-size: 56px;
+    line-height: 1;
+  }
+
+  &__desc {
+    @media(max-width: $sm-screen - 1){
+      font-size: 32px;
+    }
+    font-family: 'Marck Script';
+    font-size: 36px;
+    padding: 30px 0;
+  }
+
+  &__date {
+    @media(max-width: $sm-screen - 1){
+      font-size: 48px;
+    }
+    @media(max-width:480px){
+      font-size: 36px;
+    }
+    font-size: 60px;
+    font-weight: 300;
+    color: $red;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  &__address {
+    @media(max-width: $sm-screen - 1){
+      font-size: 20px;
+    }
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    margin: 15px 0 25px;
+
+    i {
+      display: inline-block;
+      padding-right: 5px;
+      width: 23px;
+      height: 23px;
+      background: url('../img/eng/eng_tech/placeholder.svg') center no-repeat;
+      vertical-align: middle;
+    }
+  }
+
+  &__btn {
+    @include btn-red(571px);
+    border: 2px dotted $white;
+  }
+}
+
+@import 'partials/timer/timer';
+
+/*=== BLOCK ===*/
+
+.block {
+    @media(max-width: $md-screen - 1){
+      text-align: center;
+    }
+
+  .row{
+    @media(max-width: $md-screen - 1){
+      justify-content: center;
+    }
+    margin: 0 -30px;
+  }
+
+  .col {
+    @media(max-width: $md-screen - 1){
+      width: 100%;
+    }
+    width: calc(100%/2 - 20px);
+    padding: 0 20px;
+  }
+
+  .iframe-block {
+    @media(max-width: $md-screen - 1){
+      max-width: 720px;
+      margin: 0 auto 45px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+    }
+  }
+
+  .block-title {
+    font-size: 44px;
+    line-height: .8;
+    color: $red;
+    margin-bottom: 20px;
+  }
+
+  .block-list {
+    @media(max-width: $md-screen - 1){
+      display: inline-block;
+      text-align: left;
+    }
+
+    li {
+      @media(max-width: $sm-screen - 1){
+        font-size: 20px;
+      }
+      position: relative;
+      font-size: 24px;
+      font-weight: 300;
+      padding-left: 70px;
+      margin-top: 35px;
+
+      strong {
+        font-weight: 500;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 3px;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      &:first-child {
+
+        &:before {
+          background-image: url('../img/eng/eng_tech/analysis.svg');
+        }
+      }
+
+      &:nth-child(2) {
+
+        &:before {
+          background-image: url('../img/eng/eng_tech/file.svg');
+        }
+      }
+
+      &:last-child {
+
+        &:before {
+          background-image: url('../img/eng/eng_tech/compass.svg');
+        }
+      }
+    }
+  }
+}
+
+/*=== ABOUT ===*/
+
+.about {
+    background-image: url('../img/eng/eng_tech/bg-question.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  .sec-title {
+    font-weight: 300;
+    color: $red;
+    text-transform: none;
+  }
+
+  .row {
+    @include justify-content(center);
+    @include justify-content-lg(flex-start);
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-lg-6();
+    @include col-sm-10();
+    @include col-xs-12();
+  }
+
+  &__block-name {
+    @media(max-width: $lg-screen - 1) {
+
+      br {
+        display: none;
+      }
+    }
+    position: relative;
+    font-size: 23px;
+    font-weight: 300;
+    padding-left: 60px;
+    margin-bottom: 40px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 4px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: #000;
+    }
+
+    &--1:before {
+      background-image: url('../img/eng/eng_tech/about/ear.svg');
+    }
+
+    &--2:before {
+      background-image: url('../img/eng/eng_tech/about/warning.svg');
+    }
+
+    &--3:before {
+      background-image: url('../img/eng/eng_tech/about/test-day.svg');
+    }
+
+    &--4:before {
+      background-image: url('../img/eng/eng_tech/about/dictionary.svg');
+    }
+
+    &--5:before {
+      background-image: url('../img/eng/eng_tech/about/graph.svg');
+    }
+
+    &--6:before {
+      background-image: url('../img/eng/eng_tech/about/note.svg');
+    }
+
+    &--7:before {
+      background-image: url('../img/eng/eng_tech/about/promotion.svg');
+    }
+  }
+
+  .btn-block {
+    margin-top: 40px;
+  }
+
+  &__btn {
+    @include btn-red(571px)
+  }
+}
+
+/*=== BLOCK-2 ===*/
+
+.block-2 {
+  @media(max-width: $sm-screen - 1){
+    background-image: url('../img/eng/eng_tech/mob/beg-md.jpg');
+  }
+  background-image: url('../img/eng/eng_tech/bg-beg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .block-content {
+    @media(max-width: $sm-screen - 1){
+      max-width: none;
+    }
+    max-width: 470px;
+  }
+
+  &__title {
+    @media(max-width: $sm-screen - 1){
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+    @media(max-width: 480px){
+      font-size: 42px;
+    }
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 45px;
+  }
+  &__desc {
+    @media(max-width: $sm-screen - 1){
+      font-size: 26px;
+    }
+    font-size: 30px;
+    font-weight: 300;
+    color: $white;
+  }
+}
+
+@import 'partials/7Tech/author';
+
+.author {
+
+  .sec-title {
+    font-weight: 400;
+  }
+}
+
+.btn-block--more {
+  background-color: #e6e6e6;
+  padding: 10px 10px 60px;
+
+}
+
+.more-btn {
+  @include btn-red(571px);
+}

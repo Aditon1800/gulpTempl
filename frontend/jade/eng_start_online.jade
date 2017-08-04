@@ -1,0 +1,13 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Онлайн пакет "Английский с нуля"')
+
+block main
+  main
+    include partials/eng/eng_start_online/jumb
+    +timer('Скидка действует до 1 сентября:', '09', '01', '09', '00')
+    include partials/eng/eng_start_online/about
+    include partials/eng/eng_start_online/block
+    include partials/7Tech/recommend

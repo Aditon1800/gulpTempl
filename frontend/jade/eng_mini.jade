@@ -1,0 +1,17 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Мини-курс "Английский для начинающих"')
+
+block main
+  main
+    include partials/eng/eng_mini/jumb
+    +timer('До старта курса осталось:', '07', '19', '08', '00')
+    include partials/eng/eng_mini/block-1
+    include partials/eng/eng_mini/block-2
+    include partials/eng/eng_mini/list
+    include partials/eng/eng_mini/cost
+    include partials/reviews
+    include partials/map/mapBlock
+    

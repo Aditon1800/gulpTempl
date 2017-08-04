@@ -1,0 +1,17 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Пробные уроки английского языка')
+
+block main
+  main
+    include partials/eng/eng_free/jumb
+    +timer('До начала пробного урока:', '07', '12', '08', '00')
+    include partials/eng/eng_free/block-1
+    include partials/eng/eng_free/block-2
+    include partials/eng/eng_free/block-3
+    include partials/eng/eng_free/block-4
+    include partials/reviews
+    include partials/map/mapBlock
+    include partials/7Tech/recommend

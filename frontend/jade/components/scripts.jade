@@ -1,4 +1,19 @@
 script(src='js/jquery.flipster.js')
-script(src='js/slick.min.js')
-script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js')
 script(src='js/script.js')
+script(src='../main/js/intlTelInput.min.js')
+script.
+  var telephone = $("#phone");
+  telephone.intlTelInput({
+  utilsScript: 'http://advance-club.ru/main/js/utils.js',
+  autoHideDialCode: true,
+  nationalMode: false,
+  autoPlaceholder: true,
+  autoFormat: true,
+  customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+    selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+    var l = selectedCountryData['dialCode'].length;
+      return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+  },
+  preferredCountries: ['ru', 'by', 'ua'],
+              // initialCountry: "ru"
+  })

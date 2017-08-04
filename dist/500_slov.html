@@ -17,8 +17,9 @@
         <meta name="format-detection" content="telephone=no"/>
         <meta name="description" content=""/>
         <meta name="keywords" content=""/>
-        <title>Экспресс-курс Техника запоминания 500 иностранных слов в день</title>
+        <title>Экспресс-курс Техника запоминания 1000 иностранных слов за неделю</title>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../main/css/intlTelInput.css"/>
         <base target="_blank"/>
         <link rel="icon" type="image/png" href="http://advance-club.ru/images/favicon.png"/>
         <script src="js/jquery.min.js"></script>
@@ -38,53 +39,6 @@
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWR77CZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!--=== End Google Tag Manager (noscript)-->
     </noscript>
-    <!--=== Yandex.Metrika counter-->
-    <script>
-      (function (d, w, c) {
-          (w[c] = w[c] || []).push(function() {
-              try {
-                  w.yaCounter28317546 = new Ya.Metrika({
-                      id:28317546,
-                      clickmap:true,
-                      trackLinks:true,
-                      accurateTrackBounce:true,
-                      webvisor:true
-                  });
-              } catch(e) { }
-          });
-      
-          var n = d.getElementsByTagName("script")[0],
-              s = d.createElement("script"),
-              f = function () { n.parentNode.insertBefore(s, n); };
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://mc.yandex.ru/metrika/watch.js";
-      
-          if (w.opera == "[object Opera]") {
-              d.addEventListener("DOMContentLoaded", f, false);
-          } else { f(); }
-      })(document, window, "yandex_metrika_callbacks");
-      
-    </script>
-    <noscript>
-      <div><img src="https://mc.yandex.ru/watch/28317546" style="position:absolute; left:-9999px;" alt=""/></div>
-    </noscript>
-    <!--=== Yandex.Metrika counter-->
-    <!--=== Google analitics-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-84477847-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <!--=== Google analitics -->
-    <!--=== Preloader-->
-    <div id="preloader">
-      <div class="icon"></div>
-    </div>
     <div class="container-fluid">
       <!--=== HEADER-->
       <header class="header">
@@ -128,108 +82,225 @@
               <div class="logo"><img src="img/jumb-logo.png" alt="logo"/></div><span class="jumb__logo-author">Центр образовательных технологий<br/>Николая Ягодкина</span><span class="jumb__logo-tel">8 800 700-53-42</span>
             </div>
             <div class="jumb__content">
-              <div class="jumb__over-title">Экспресс-курс</div>
-              <h1 class="jumb__title">Техника запоминания<br/>500 иностранных слов в день</h1>
-              <time datetime="2017-07-04" class="jumb__date">Очно 24 и 25 июня с 11:00 до 19:00</time>
+              <div class="jumb__over-title">Курс-интенсив</div>
+              <h1 class="jumb__title">
+                Запоминание 1000
+                иностранных слов за неделю
+              </h1>
+              <div class="cost-block">
+                <div class="cost__old">9 900 <span class="cost__rf">&#8381;</span></div>
+                <div class="cost__new">6 900 <span class="cost__rf">&#8381;</span></div>
+              </div>
+              <div class="jumb__warn"><span>Хватит забывать слова!</span></div>
+              <time datetime="2017-07-04" class="jumb__date">Старт 4 августа</time>
               <div class="jumb__address">Санкт-Петербург, <a href="#map" data-target="#map" target="_self">ул. Таврическая, 2</a></div>
               <div class="btn-block">
-                <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=    &amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn jumb__btn js-getModal">Выучить 500 слов за 1 день</button>
-              </div>
-              <div class="jumb__bonus-block">
-                <h3 class="jumb__bonus-name"><span>+Бонус</span></h3><span class="jumb__bonus">Всем участникам экспресс-тренинга предоставляется скидка на интенсив-погружение «Разговорный английский» <span>4-10 июля</span> <span class="cost__rf">- 5900 ₽</span></span>
+                <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=    &amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn jumb__btn js-getModal">Занять место на курсе</button>
               </div>
             </div>
           </div>
         </div>
-        <!--=== Timer-->
-        <script>
-          var now = new Date();
-              year = 2017;
-              month = 05; // месяц указывает на 1 меньше( например, 03 - это апрель)
-              day = 12;
-              hour = 17; // по Гринвичу
-              minute = 00;
-              sec = 0;
-              dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
-          
-              function CountBox() {
-                  dateNow = new Date();
-                  amount = dateFuture.getTime() - dateNow.getTime() + 5;
-                  delete dateNow;
-                  if (amount < 0) {
-                      out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
-                      var list = document.getElementsByClassName("countbox");
-                      for (var i = 0; i < list.length; i++) {
-                          list[i].innerHTML = out;
+            <!--=== Timer-->
+            <script>
+              var now = new Date();
+                  year = 2017;
+                  month = 07; // месяц указывает на 1 меньше( например, 03 - это апрель)
+                  day = 04;
+                  hour = 09; // по Гринвичу
+                  minute = 00;
+                  sec = 0;
+                  dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
+              
+                  function CountBox() {
+                      dateNow = new Date();
+                      amount = dateFuture.getTime() - dateNow.getTime() + 5;
+                      delete dateNow;
+                      if (amount < 0) {
+                          out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
+                          var list = document.getElementsByClassName("countbox");
+                          for (var i = 0; i < list.length; i++) {
+                              list[i].innerHTML = out;
+                          }
+              
+                      } else {
+                          days = 0;
+                          hours = 0;
+                          mins = 0;
+                          secs = 0;
+                          out = "";
+                          amount = Math.floor(amount / 1e3);
+                          days = Math.floor(amount / 86400);
+                          amount = amount % 86400;
+                          hours = Math.floor(amount / 3600);
+                          amount = amount % 3600;
+                          mins = Math.floor(amount / 60);
+                          amount = amount % 60;
+                          secs = Math.floor(amount);
+                          out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
+                          var list = document.getElementsByClassName("countbox");
+                          for (var i = 0; i < list.length; i++) {
+                              list[i].innerHTML = out;
+                          }
+                          setTimeout("CountBox()", 1e3)
                       }
-          
-                  } else {
-                      days = 0;
-                      hours = 0;
-                      mins = 0;
-                      secs = 0;
-                      out = "";
-                      amount = Math.floor(amount / 1e3);
-                      days = Math.floor(amount / 86400);
-                      amount = amount % 86400;
-                      hours = Math.floor(amount / 3600);
-                      amount = amount % 3600;
-                      mins = Math.floor(amount / 60);
-                      amount = amount % 60;
-                      secs = Math.floor(amount);
-                      out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
-                      var list = document.getElementsByClassName("countbox");
-                      for (var i = 0; i < list.length; i++) {
-                          list[i].innerHTML = out;
-                      }
-                      setTimeout("CountBox()", 1e3)
                   }
-              }
-          
-        </script>
-        <article class="timer sec">
+              
+            </script>
+            <article class="timer sec">
+              <div class="container">
+                <div class="timer__content">
+                  <h2 class="timer__title">До старта курса осталось:</h2>
+                  <div class="timer__counter">
+                    <div class="countbox"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+        <!--=== Block-2-->
+        <section class="block-2 sec">
           <div class="container">
-            <div class="timer__content">
-              <h2 class="timer__title">До начала вебинара осталось:</h2>
-              <div class="timer__counter">
-                <div class="countbox"></div>
+            <div class="block-2__wrap">
+              <div class="block-2__content">
+                <h2 class="block-2__title">Что дает курс?</h2>
+                <p class="block-2__desc">За время курса участники:</p>
+                <div class="row">
+                  <div class="col">
+                    <div class="block__wrap block__wrap--1"><span class="name">Получат надежную технику</span><br/><span class="text">запоминания иностранных слов</span></div>
+                  </div>
+                  <div class="col">
+                    <div class="block__wrap block__wrap--2"><span class="name">Научатся усваивать</span><br/><span class="text">новый иностранный язык в разы быстрее</span></div>
+                  </div>
+                  <div class="col">
+                    <div class="block__wrap block__wrap--3"><span class="name">Существенно увеличат</span><br/><span class="text">свой словарный запас</span></div>
+                  </div>
+                  <div class="col">
+                    <div class="block__wrap block__wrap--4"><span class="name">Разовьют</span><span class="text">навык запоминания для любой новой сферы</span></div>
+                  </div>
+                  <div class="col col-full">
+                    <div class="block__wrap block__wrap--5"><span class="name"> Выучат по несколько сотен</span><span class="text">английских и испанских слов (можно принести собственные списки слов и выучить их навсегда)</span></div>
+                  </div>
+                </div>
+                <div class="btn-block">
+                  <button data-action="" class="btn block-2__btn js-getModal">Выучить 1000 слов</button>
+                </div>
               </div>
             </div>
           </div>
-        </article>
-        <!--=== Block-->
-        <section class="block sec">
+        </section>
+        <!--===  calendar-->
+        <section class="calendar sec">
           <div class="container">
-            <div class="ifram-wrap">
-              <div class="iframe-block">
-                <iframe src="https://www.youtube.com/embed/GDgCTArTqII" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-              </div>
+            <h2 class="sec-title">Расписание</h2>
+            <div class="calendar__table calendar__table--shadow">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>понедельник</th>
+                    <th>вторник</th>
+                    <th>среда</th>
+                    <th>четверг</th>
+                    <th>пятница</th>
+                    <th>суббота</th>
+                    <th>воскресенье</th>
+                  </tr>
+                  <!--=== Week-->
+                  <tr class="calendar__week">
+                    <td class="calendar__day"><span class="date">31</span><span class="month">июля</span></td>
+                    <td class="calendar__day"><span class="date">1</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">2</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">3</span><span class="month">августа</span></td>
+                    <td class="calendar__day calendar__day--theory-day">
+                      <div class="td-inner"><span class="date">4</span><span class="month">августа</span><span class="time">19:00-22:00</span></div>
+                    </td>
+                    <td class="calendar__day calendar__day--theory-day">
+                      <div class="td-inner"><span class="date">5</span><span class="month">августа</span><span class="time">11:00-19:00</span></div>
+                    </td>
+                    <td class="calendar__day calendar__day--theory-day">
+                      <div class="td-inner"><span class="date">6</span><span class="month">августа</span><span class="time">11:00-19:00</span></div>
+                    </td>
+                  </tr>
+                  <!--=== Week-->
+                  <tr class="calendar__week">
+                    <td class="calendar__day"><span class="date">7</span><span class="month">августа</span></td>
+                    <td class="calendar__day calendar__day--practice-day">
+                      <div class="td-inner"><span class="date">8</span><span class="month">августа</span><span class="time">19:00-22:00</span></div>
+                    </td>
+                    <td class="calendar__day calendar__day--practice-day">
+                      <div class="td-inner"><span class="date">9</span><span class="month">августа</span><span class="time">19:00-22:00</span></div>
+                    </td>
+                    <td class="calendar__day calendar__day--practice-day">
+                      <div class="td-inner"><span class="date">10</span><span class="month">августа</span><span class="time">19:00-22:00</span></div>
+                    </td>
+                    <td class="calendar__day"><span class="date">11</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">12</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">13</span><span class="month">августа</span></td>
+                  </tr>
+                  <!--=== Week-->
+                  <tr class="calendar__week">
+                    <td class="calendar__day"><span class="date">7</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">8</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">9</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">10</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">11</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">12</span><span class="month">августа</span></td>
+                    <td class="calendar__day"><span class="date">13</span><span class="month">августа</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--=== calendar info-->
+            <div class="cal-info">
+              <div class="cal-info__block cal-info__block--theory"><span class="cal-info__color"></span><span class="cal-info__name">теория</span></div>
+              <div class="cal-info__block cal-info__block--practice"><span class="cal-info__color"></span><span class="cal-info__name">практика</span></div>
             </div>
           </div>
         </section>
         <!--=== About-->
         <section class="about sec">
           <div class="container">
-            <h2 class="sec-title">За время тренинга Вы:</h2>
+            <h2 class="sec-title">За время курса Вы:</h2>
             <div class="row">
               <div class="col">
                 <div class="block">
-                  <div class="block__img"><img src="img/slova/icons/tasks.svg" alt="about"/></div>
-                  <p class="block__name"><strong class="red-class">Узнаете и проработаете</strong><br/>“Технику запоминания <br/>300 иностранных слов<br/>в день”</p>
+                  <div class="block__img"><img src="img/slova/icons/doc-clock.svg" alt="doc-clock"/></div>
+                  <p class="block__name"><strong class="red-class">Узнаете и проработаете</strong> “Технику запоминания <br/>100 иностранных слов<br/>в день”</p>
                 </div>
               </div>
               <div class="col">
                 <div class="block">
-                  <div class="block__img"><img src="img/slova/icons/teacher.svg" alt="about"/></div>
-                  <p class="block__name"><strong class="red-class">Потренируете новый навык</strong><br/>с преподавателем Advance <br/>и будете готовы применять <br/>его самостоятельно</p>
+                  <div class="block__img"><img src="img/slova/icons/consulting.svg" alt="consulting"/></div>
+                  <p class="block__name"><strong class="red-class">Потренируете новый навык</strong> с преподавателем Advance <br/>и будете готовы применять <br/>его самостоятельно</p>
                 </div>
               </div>
               <div class="col">
                 <div class="block">
-                  <div class="block__img"><img src="img/slova/icons/guarantee.svg" alt="about"/></div>
-                  <p class="block__name"><strong class="red-class">Гарантированно выучите</strong><br/>минимум 500 новых <br/>иностранных слов или <br/>мы вернем Вам деньги!</p>
+                  <div class="block__img"><img src="img/slova/icons/test-300.svg" alt="test-300"/></div>
+                  <p class="block__name"><strong class="red-class">Гарантированно выучите</strong> минимум 500 новых <br/>иностранных слов или <br/>мы вернем Вам деньги!</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-3-->
+        <section class="block-3">
+          <div class="container">
+            <div class="block-3__content">
+              <h2 class="sec-title">На какой язык рассчитан курс?</h2>
+              <p class="block-3__desc">В рамках курса мы отрабатываем технологии на примере слов из английского и испанского языков. Однако, Вы можете учить слова любого иностранного языка, на котором Вы можете уверенно читать. Поэтому предлагаем Вам принести списки необходимых слов с собой</p>
+            </div>
+          </div>
+        </section>
+        <!--=== Cost-->
+        <section class="cost sec">
+          <div class="container">
+            <p class="cost__over-title">Приходите и получите надежную базу для ускоренного освоения любого языка!</p>
+            <h2 class="cost__title">Курс-интенсив<br/><span>«Запоминание 1000 иностранных слов <span>за неделю</span>»</span></h2>
+            <div class="cost-block">
+              <div class="cost__old">9 900 <span class="cost__rf">&#8381;</span></div>
+              <div class="cost__new">6 900 <span class="cost__rf">&#8381;</span></div>
+            </div>
+            <div class="btn-block">
+              <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=   &amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn cost__btn js-getModal">Занять место на курсе</button>
             </div>
           </div>
         </section>
@@ -327,19 +398,6 @@
             siblingsElem.slideUp(300);
           });
         </script>
-        <!--=== Cost-->
-        <section class="cost sec">
-          <div class="container">
-            <h2 class="cost__title">Экспресс-тренинг<br/><span>«Техника запоминания 500 иностранных слов в день»</span></h2>
-            <div class="cost__block">
-              <div class="cost__new">5 900 <span class="cost__rf">&#8381;</span></div>
-              <div class="cost__bonus"><strong>+ бонус:</strong> скидка на интенсив-погружение <a href="http://advance-club.ru/speak_spb/">«Разговорный английский»</a></div>
-            </div>
-            <div class="btn-block">
-              <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=   &amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn cost__btn js-getModal">Выучить 500 слов за 1 день</button>
-            </div>
-          </div>
-        </section>
         <!--=== Reviews-->
         <section class="reviews-slider sec">
           <h2 class="sec-title">Почему 30 000 человек уже прошли наши программы?<br/><span>Емкое и в то же время лаконичное собрание полезных технологий</span></h2>
@@ -352,7 +410,7 @@
                       <h6><b>Александр Шурцов</b></h6>
                     </div>
                     <div class="child">
-                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»!</span></h6>
+                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
                     </div>
                   </div>
                 </li>
@@ -380,19 +438,14 @@
             </div>
           </div>
         </section>
-        <!--=== Recommend us-->
-        <section class="recommend sec">
+        <!--=== Block-->
+        <section class="block sec">
+          <h2 class="sec-title">Почему Advance</h2>
           <div class="container">
-            <div class="recommend__main-desc">
-              <h2 class="sec-title">Порекомендуйте нас друзьям, и получите видео по запоминанию 100 слов в час бесплатно!</h2>
-            </div>
-            <div class="recommend__links">
-              <ul class="recommend__list">
-                <li class="recommend__item recommend__item--vk"><a href="https://vk.com/advanceclub"></a></li>
-                <li class="recommend__item recommend__item--fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
-                <li class="recommend__item recommend__item--ok"><a href="http://ok.ru/group/52611362652241"></a></li>
-                <li class="recommend__item recommend__item--inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
-              </ul>
+            <div class="ifram-wrap">
+              <div class="iframe-block">
+                <iframe src="https://www.youtube.com/embed/7gBLKnPgocE" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+              </div>
             </div>
           </div>
         </section>
@@ -404,28 +457,15 @@
               <div class="container">
                 <div class="map__info">
                   <ul class="map__info-list">
-                    <li class="map__info--name"><small>Курс-интенсив</small><br/> “Стань гением”</li>
-                    <li class="map__info--time">29 июля -19 августа 2017</li>
-                    <li class="map__info--place">Санкт-Петербург, <br/>ул. Таврическая, 2</li>
+                    <li class="map__info--name">Курс “Подготовка к ОГЭ по английскому”</li>
+                    <li class="map__info--time">с 11 сентября 2017 года</li>
+                    <li class="map__info--place">Санкт-Петербург,  ул. Таврическая, 2</li>
                   </ul>
                   <div class="btn-block">
                     <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=1494410207.503668175&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn map__info-btn js-getModal">Занять место</button>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <!--=== Feedback-->
-        <section class="feedback sec">
-          <div class="container">
-            <h2 class="sec-title">Остались вопросы? Закажите обратный звонок!</h2>
-            <div class="form">
-              <form method="POST" target="_self" action="http://shop.advance-club.ru/subscribe/process/?rid[0]=full_sub&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_full_sub&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2F/thanks_uni_manager/">
-                <input type="text" name="lead_name" placeholder="Введите Ваше имя" required="required" class="input"/>
-                <input type="text" name="lead_phone" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Введите Ваш телефон" required="required" class="input phone-mask"/>
-                <button class="btn feedback__btn">Заказать звонок</button>
-              </form>
             </div>
           </div>
         </section>
@@ -475,9 +515,25 @@
       <!-- Scroll top-->
       <div class="top_btn"><span>^</span></div>
       <script src="js/jquery.flipster.js"></script>
-      <script src="js/slick.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
       <script src="js/script.js"></script>
+      <script src="../main/js/intlTelInput.min.js"></script>
+      <script>
+        var telephone = $("#phone");
+        telephone.intlTelInput({
+        utilsScript: 'http://advance-club.ru/main/js/utils.js',
+        autoHideDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: true,
+        autoFormat: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+          selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+          var l = selectedCountryData['dialCode'].length;
+            return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+        },
+        preferredCountries: ['ru', 'by', 'ua'],
+                    // initialCountry: "ru"
+        })
+      </script>
     </div>
   </body>
 </html>

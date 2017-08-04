@@ -9,6 +9,28 @@
     }
     max-width: 770px;
     margin: 0 auto;
+
+    &--shadow {
+      position: relative;
+
+      &:after {
+        @media(max-width: $sm-screen - 1) {
+          height: 65px;
+        }
+        position: absolute;
+        content: '';
+        display: block;
+        right: 0;
+        bottom: 0;
+        left: 0px;
+        width: 101%;
+        height: 80px;
+        background: -moz-linear-gradient(top, rgba(255,255,255,0.01) 0%, rgba(255,255,255,0.01) 1%, rgba(255,255,255,1) 77%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.01) 1%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,0.01) 0%,rgba(255,255,255,0.01) 1%,rgba(255,255,255,1) 77%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#03ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+      }
+    }
   }
 
   table {
@@ -50,7 +72,9 @@
 
   td.calendar__day--work,
   td.calendar__day--week,
-  td.calendar__day--record-day {
+  td.calendar__day--record-day,
+  td.calendar__day--practice-day,
+  td.calendar__day--theory-day {
     position: relative;
 
     &:before {
@@ -63,7 +87,6 @@
       width: 100%;
       height: 100%;
       border-radius: 5px;
-      border:1px solid #ff5a5a;
     }
   }
 
@@ -79,11 +102,23 @@
     }
   }
 
-  td.calendar__day--record-day {
+  td.calendar__day--record-day,
+  td.calendar__day--practice-day {
     color: $white;
 
     &:before {
       background-color: #ff5a5a;
+      border:1px solid #ff5a5a;
+      z-index: 5;
+    }
+  }
+
+  td.calendar__day--theory-day {
+    color: $white;
+
+    &:before {
+      background-color: #0669b2;
+      border:1px solid #0669b2;
       z-index: 5;
     }
   }
@@ -118,5 +153,62 @@
     color: #ff5a5a;
     font-weight: 400;
     padding: 5px 0 0;
+  }
+}
+
+.cal-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px 0;
+
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__color {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  &__block {
+    @media(max-width: $sm-screen - 1){
+      margin: 0 50px;
+    }
+    @media(max-width: 480px){
+      margin: 0 10px;
+    }
+    margin: 0 70px;
+
+    &--theory {
+
+      .cal-info__color {
+        background-color: #0669b2;
+      }
+
+      .cal-info__name {
+        color: #0669b2;
+      }
+    }
+
+    &--practice {
+
+      .cal-info__color {
+        background-color: #f7554f;
+      }
+
+      .cal-info__name {
+        color: #f7554f;
+      }
+    }
   }
 }

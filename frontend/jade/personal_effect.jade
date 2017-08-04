@@ -1,0 +1,14 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Бесплатный вебинар Личная эффективность для менеджеров и руководителей')
+
+block main
+  main
+    include partials/personal_effect/jumb
+    +timer('До старта курса осталось:', '06', '26', '17', '00')
+    include partials/personal_effect/block
+    include partials/7Tech/author
+    include partials/personal_effect/block-2
+    include partials/7Tech/recommend

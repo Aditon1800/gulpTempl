@@ -125,12 +125,12 @@
                 <h3 class="author__block-name">Николай Ягодкин</h3>
                 <p class="author__block-desc">Самый известный в России специалист по технологии обучения и изучения языков</p>
                 <ul class="author__list">
-                  <li><strong>Закончил 2 высших образования: <span>математическое и</span> педагогическое, специалист по инновационным методикам обучения</strong></li>
+                  <li><strong>Получил 2 высших образования: <span>математическое и</span> педагогическое, специалист по инновационным методикам обучения</strong></li>
                   <li><strong>Основатель и владелец образовательной компании Advance, </strong> полные программы которого прошли более <span>50 000</span> человек по всему миру</li>
                   <li><strong>Отзывов о результатах применения его технологий только ВКонтакте больше <span>10 000</span></strong></li>
                   <li>Репортажи о его технологиях и результатах их применения показывали <strong>по Первому каналу, НТВ</strong> и д.р.</li>
                   <li><strong>Консультирует министров образования и обучает парламенты зарубежных стран</strong></li>
-                  <li>Среди частных учеников <strong>министры, депутаты, ректора и профессоры, президенты правления крупнейших компаний и банков и их дети</strong></li>
+                  <li>Среди частных учеников: <strong>министры, депутаты, ректора и профессоры, президенты правления крупнейших компаний и банков и их дети</strong></li>
                 </ul>
               </div>
             </div>
@@ -223,7 +223,7 @@
                     <h6><b>Александр Шурцов</b></h6>
                   </div>
                   <div class="child">
-                    <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»!</span></h6>
+                    <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
                   </div>
                 </div>
               </li>
@@ -309,9 +309,25 @@
       <!-- Scroll top-->
       <div class="top_btn"><span>^</span></div>
       <script src="js/jquery.flipster.js"></script>
-      <script src="js/slick.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
       <script src="js/script.js"></script>
+      <script src="../main/js/intlTelInput.min.js"></script>
+      <script>
+        var telephone = $("#phone");
+        telephone.intlTelInput({
+        utilsScript: 'http://advance-club.ru/main/js/utils.js',
+        autoHideDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: true,
+        autoFormat: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+          selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+          var l = selectedCountryData['dialCode'].length;
+            return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+        },
+        preferredCountries: ['ru', 'by', 'ua'],
+                    // initialCountry: "ru"
+        })
+      </script>
     </div>
   </body>
 </html>

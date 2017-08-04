@@ -19,6 +19,7 @@
         <meta name="keywords" content=""/>
         <title>Бесплатный семинар-консультация для родителей Английский для школьников</title>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../main/css/intlTelInput.css"/>
         <base target="_blank"/>
         <link rel="icon" type="image/png" href="http://advance-club.ru/images/favicon.png"/>
         <script src="js/jquery.min.js"></script>
@@ -38,53 +39,6 @@
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWR77CZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!--=== End Google Tag Manager (noscript)-->
     </noscript>
-    <!--=== Yandex.Metrika counter-->
-    <script>
-      (function (d, w, c) {
-          (w[c] = w[c] || []).push(function() {
-              try {
-                  w.yaCounter28317546 = new Ya.Metrika({
-                      id:28317546,
-                      clickmap:true,
-                      trackLinks:true,
-                      accurateTrackBounce:true,
-                      webvisor:true
-                  });
-              } catch(e) { }
-          });
-      
-          var n = d.getElementsByTagName("script")[0],
-              s = d.createElement("script"),
-              f = function () { n.parentNode.insertBefore(s, n); };
-          s.type = "text/javascript";
-          s.async = true;
-          s.src = "https://mc.yandex.ru/metrika/watch.js";
-      
-          if (w.opera == "[object Opera]") {
-              d.addEventListener("DOMContentLoaded", f, false);
-          } else { f(); }
-      })(document, window, "yandex_metrika_callbacks");
-      
-    </script>
-    <noscript>
-      <div><img src="https://mc.yandex.ru/watch/28317546" style="position:absolute; left:-9999px;" alt=""/></div>
-    </noscript>
-    <!--=== Yandex.Metrika counter-->
-    <!--=== Google analitics-->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-84477847-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-    <!--=== Google analitics -->
-    <!--=== Preloader-->
-    <div id="preloader">
-      <div class="icon"></div>
-    </div>
     <div class="container-fluid">
       <!--=== HEADER-->
       <header class="header">
@@ -281,9 +235,6 @@
               </div>
             </div>
             <div class="teacher__more">Огородова Светлана преподаватель-методист с большим опытом работы, которая привыкла достигать высоких результатов. Она никогда не останавливается на достигнутом и всегда занимается саморазвитием, постоянно совершенствуя как свой уровень владения английским языком, так и свою методическую работу. Она привыкла поддерживать высокий стандарт обучения, изучая и применяя новейшие международные технологии и внедряя их в современные Российские реалии.</div>
-            <div class="btn-block">
-              <button data-action="http://shop.advance-club.ru/subscribe/process/?rid[0]=-&amp;doneurl=http%3A%2F%2Fadvance-club.ru%2Fconf_uni&amp;activation=1&amp;doneurl2=http%3A%2F%2Fadvance-club.ru%2Fthanks_uni" class="btn teacher__btn js-getModal">Буду смотреть вебинар</button>
-            </div>
           </div>
         </section>
         <!--=== Reviews-->
@@ -298,7 +249,7 @@
                       <h6><b>Александр Шурцов</b></h6>
                     </div>
                     <div class="child">
-                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»!</span></h6>
+                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
                     </div>
                   </div>
                 </li>
@@ -401,9 +352,25 @@
       <!-- Scroll top-->
       <div class="top_btn"><span>^</span></div>
       <script src="js/jquery.flipster.js"></script>
-      <script src="js/slick.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
       <script src="js/script.js"></script>
+      <script src="../main/js/intlTelInput.min.js"></script>
+      <script>
+        var telephone = $("#phone");
+        telephone.intlTelInput({
+        utilsScript: 'http://advance-club.ru/main/js/utils.js',
+        autoHideDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: true,
+        autoFormat: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+          selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+          var l = selectedCountryData['dialCode'].length;
+            return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+        },
+        preferredCountries: ['ru', 'by', 'ua'],
+                    // initialCountry: "ru"
+        })
+      </script>
     </div>
   </body>
 </html>

@@ -11,6 +11,10 @@
     position: relative;
     height: 450px;
 
+    .container {
+      height: 100%;
+    }
+
     iframe {
       position: absolute;
       width: 100%;
@@ -20,35 +24,37 @@
 
   &__info {
     @media(max-width: $lg-screen - 1){
-      float: none;
       max-width: none;
       position: absolute;
+      top: auto;
       bottom: 0;
       left: 0;
       right: 0;
+      transform: translateY(0);
       margin-right: 0;
     }
     @media(max-width: 480px) {
       padding: 15px 15px 20px;
     }
-    float: right;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
     max-width: 570px;
     background-color: rgba($black, .6);
-    padding: 30px 40px 40px;
+    padding: 50px 40px 50px;
     color: $white;
-    margin-top: 4em;
-    margin-right: 15px;
   }
 
   &__info-list {
     @media(max-width: $lg-screen - 1) {
-      max-width: 430px;
+      max-width: 490px;
       margin: 0 auto;
     }
     @media(max-width: 480px) {
       font-size: 26px;
     }
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 300;
     margin-bottom: 50px;
 
@@ -56,7 +62,7 @@
       position: relative;
       line-height: 1;
       padding-left: 60px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
 
       &:before {
         position: absolute;
