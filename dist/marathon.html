@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script language="JavaScript" type="text/javascript" src="//advance-club.justclick.ru/jsapi/click.js"></script>
+    <script>
+      //=== Google Tag Manager
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NWR77CZ');
+      //=== End Google Tag Manager
+    </script>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- === Iphone no phone number-->
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <title>Онлайн-марафон &quot;Технология запоминания 100 иностранных слов в час&quot;</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../main/css/intlTelInput.css"/>
+        <base target="_blank"/>
+        <link rel="icon" type="image/png" href="http://advance-club.ru/images/favicon.png"/>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/preloader.js"></script>
+        <!--
+        | [if lt IE 9]
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        script(src='js/scriptIE.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')
+        |     [endif]
+        
+        -->
+  </head>
+  <body>
+    <noscript>
+      <!--=== Google Tag Manager (noscript)-->
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWR77CZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <!--=== End Google Tag Manager (noscript)-->
+    </noscript>
+    <!--=== Preloader-->
+    <div id="preloader">
+      <div class="icon"></div>
+    </div>
+    <div class="container-fluid">
+      <main>
+        <!--=== TOP NAV-->
+        <header class="header">
+          <div class="container">
+            <div class="header__logo-wrap">
+              <div class="logo"><a href="http://advance-club.ru"><img src="img/jumb-logo.png" alt="logo"/></a></div><span class="header__logo-author">Центр образовательных технологий<br/>Николая Ягодкина</span><span class="header__logo-tel">8 800 700-53-42</span>
+            </div>
+            <div class="menu header__menu">
+              <div class="header-title">Онлайн-марафон Advance</div>
+              <ul class="menu__list">
+                <li class="menu__item"><a href="http://advance-club.ru/marathon_children"><span>22 августа</span><br/>Мотивация детей<br/>на обучение</a></li>
+                <li class="menu__item"><a href="http://advance-club.ru/marathon_intellect"><span>23 августа</span><br/>Развитие интеллектуальных<br/>способностей</a></li>
+                <li class="menu__item header-menu__item--active"><a href="http://advance-club.ru/marathon_100_slov"><span>24 августа</span><br/>Запоминание<br/>иностранных слов</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+            <section style="background-image: url(img/marathon/part3/bg-part3.jpg);" class="jumb">
+              <div class="container">
+                <div class="jumb__main-desc">
+                  <div class="jumb__over-title">Присоединяйтесь к бесплатному <br/>онлайн-марафону 23 августа и узнайте</div>
+                  <h1 class="jumb__title">Технология запоминания 100 иностранных слов в час</h1>
+                  <div class="jumb__desc">Прямое включение с Николаем Ягодкиным на весь мир<br/><span>Начало в 20:00</span></div>
+                  <button class="btn jumb__btn js-getModal">Принять участие</button>
+                </div>
+              </div>
+            </section>
+            <!--=== Timer-->
+            <script>
+              var now = new Date();
+                  year = 2017;
+                  month = 07; // месяц указывает на 1 меньше( например, 03 - это апрель)
+                  day = 23;
+                  hour = 08; // по Гринвичу
+                  minute = 00;
+                  sec = 0;
+                  dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
+              
+                  function CountBox() {
+                      dateNow = new Date();
+                      amount = dateFuture.getTime() - dateNow.getTime() + 5;
+                      delete dateNow;
+                      if (amount < 0) {
+                          out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
+                          var list = document.getElementsByClassName("countbox");
+                          for (var i = 0; i < list.length; i++) {
+                              list[i].innerHTML = out;
+                          }
+              
+                      } else {
+                          days = 0;
+                          hours = 0;
+                          mins = 0;
+                          secs = 0;
+                          out = "";
+                          amount = Math.floor(amount / 1e3);
+                          days = Math.floor(amount / 86400);
+                          amount = amount % 86400;
+                          hours = Math.floor(amount / 3600);
+                          amount = amount % 3600;
+                          mins = Math.floor(amount / 60);
+                          amount = amount % 60;
+                          secs = Math.floor(amount);
+                          out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
+                          var list = document.getElementsByClassName("countbox");
+                          for (var i = 0; i < list.length; i++) {
+                              list[i].innerHTML = out;
+                          }
+                          setTimeout("CountBox()", 1e3)
+                      }
+                  }
+              
+            </script>
+            <article class="timer sec">
+              <div class="container">
+                <div class="timer__content">
+                  <h2 class="timer__title">До старта марафона осталось:</h2>
+                  <div class="timer__counter">
+                    <div class="countbox"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+        <!--=== You get-->
+        <section class="block-1">
+          <div class="container">
+            <h2 class="sec-title sec-title--red">Вы получите:</h2>
+            <div class="row">
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/marathon/part3/get/tasks.svg" alt="tasks"/></div>
+                  <div class="block__desc">Самую полную <br/>на сегодняшний день <br/>технологию запоминания <br/>иностранных слов. </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/marathon/part3/get/workflow.svg" alt="workflow"/></div>
+                  <div class="block__desc">Алгоритм доведения <br/>полученных знаний <br/>до автоматизированного <br/>навыка.</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/marathon/part3/get/question.svg" alt="question"/></div>
+                  <div class="block__desc">Ответы на все вопросы <br/>по запоминанию, <br/>сохранению <br/>и восстановлению слов.</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/marathon/part3/get/planning.svg" alt="planning"/></div>
+                  <div class="block__desc">Руководство <br/>для самостоятельного <br/>качественного запоминания <br/>иностранных слов.</div>
+                </div>
+              </div>
+            </div>
+            <div class="more-info">
+              <div class="title">Более того</div>
+              <div class="desc">Прямо на вебинаре мы запомним несколько десятков сложных слов английского языка, чтобы Вы могли сразу на практике применить технологию.</div>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-2-3-->
+        <section class="block-2">
+          <div class="container">
+            <h2 class="sec-title sec-title--red">Вопросы, на которые вы получите ответы:</h2>
+            <div class="row">
+              <!--=== col-->
+              <div class="col">
+                <div class="block-wrap">
+                  <div class="title">Как запоминать:</div>
+                  <ul class="block-list">
+                    <li>по 50-100 новых слов в день в транспорте;</li>
+                    <li>сложные и длинные слова; </li>
+                    <li>глаголы, прилагательные и служебные части речи;</li>
+                    <li>фразы и словосочетания; </li>
+                    <li>неправильные глаголы;</li>
+                    <li>фразовые глаголы; </li>
+                    <li>многозначные слова;</li>
+                    <li>произношения и правописания слов.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block-wrap">
+                  <div class="desc desc-1">Как вылавливать и исправлять ошибки <span>в уже </span>запомненных словах;</div>
+                  <div class="desc desc-2">Как перевести выученные слова <span>в активный</span> разговорный язык;</div>
+                  <div class="desc desc-3">Как оптимально организовать работу <span>со словарным</span> запасом;</div>
+                  <div class="desc desc-4">Откуда брать слова для запоминания;</div>
+                  <div class="desc desc-5">Сколько слов нужно учить каждый день;</div>
+                  <div class="desc desc-6">Как повысить скорость запоминания слов.</div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-block">
+              <button class="btn block-2__btn js-getModal">Зарегистрироваться</button>
+            </div>
+          </div>
+        </section>
+        <!--=== Author-->
+        <section class="author sec">
+          <div class="container">
+            <h2 class="sec-title">Кто ведёт?</h2>
+            <div class="row">
+              <div class="col col-first">
+                <div class="author__block"><img src="img/7Tech/photo-NJ.jpg" alt="author"/></div>
+              </div>
+              <div class="col col-last">
+                <div class="author__block">
+                  <h3 class="author__block-name">Николай Ягодкин</h3>
+                  <p class="author__block-desc">Самый известный в России специалист по технологии обучения и изучения языков</p>
+                  <ul class="author__list">
+                    <li><strong>Получил 2 высших образования: <span>математическое и</span> педагогическое, специалист по инновационным методикам обучения</strong></li>
+                    <li><strong>Основатель и владелец образовательной компании Advance, </strong> полные программы которого прошли более <span>50 000</span> человек по всему миру</li>
+                    <li><strong>Отзывов о результатах применения его технологий только ВКонтакте больше <span>10 000</span></strong></li>
+                    <li>Репортажи о его технологиях и результатах их применения показывали <strong>по Первому каналу, НТВ</strong> и д.р.</li>
+                    <li><strong>Консультирует министров образования и обучает парламенты зарубежных стран</strong></li>
+                    <li>Среди частных учеников: <strong>министры, депутаты, ректоры и профессора, президенты правления крупнейших компаний и банков и их дети</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-3-->
+        <section class="block-3 sec">
+          <div class="container">
+            <h2 class="sec-title sec-title--red">Это мероприятие для Вас, если Вы</h2>
+            <div class="row">
+              <div class="col">
+                <div class="block">
+                  <div class="desc desc-1"><strong>Не знакомы с технологиями Advance —</strong> ведь за несколько часов сможете узнать о самых эффективных в мире технологиях обучения, работы <span>с информацией</span> и постановки навыков.</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="desc desc-2"><strong>Частично знакомы <span>с технологиями</span> Advance <span>(что-то проходили)</span> —</strong>  потому что расширите свои знания и повысите эффективность уже освоенного, так как все технологии взаимосвязаны и дают синергетический эффект. </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="desc desc-3"><strong>Прошли все программы <span>и применяете</span> навыки <span>в жизни</span> —</strong> ведь вы узнаете последние разработки нашей команды и внедрите их в свою практику. Каждая новая программа совершеннее предыдущей.</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="desc desc-4"><strong>Следите за тенденциями в образовании,</strong> потому что мы собрали лучшее со всего мира и расширили своими разработками. </div>
+                </div>
+              </div>
+            </div>
+            <div class="more-info">Начните применять технологии и повысьте свою эффективность!</div>
+          </div>
+        </section>
+            <section class="online">
+              <div class="container">
+                <div class="online__over-title">Присоединяйтесь к прямому включению с Николаем Ягодкиным на тему:</div>
+                <h2 class="online-title">Технология запоминания 100 иностранных слов в час</h2>
+                <time class="online-date">23 августа в 20:00</time>
+                <div class="btn-block">
+                  <button class="btn online__btn js-getModal">Присоединиться к трансляции</button>
+                </div>
+              </div>
+            </section>
+        <!--=== Reviews-->
+        <section class="reviews-slider sec">
+          <h2 class="sec-title">Отзывы о курсах Advance для детей:
+          </h2>
+          <div class="container">
+            <div class="my-flipster">
+              <ul>
+                <li data-flip-title=" ">
+                  <div class="parent">
+                    <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                      <h6><b>Александр Шурцов</b></h6>
+                    </div>
+                    <div class="child">
+                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                    </div>
+                  </div>
+                </li>
+                <li data-flip-title=" ">
+                  <div class="parent">
+                    <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                      <h6><b>Александр Шурцов</b></h6>
+                    </div>
+                    <div class="child">
+                      <h6><span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                    </div>
+                  </div>
+                </li>
+                <li data-flip-title=" ">
+                  <div class="parent">
+                    <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                      <h6><b>Александр Шурцов</b></h6>
+                    </div>
+                    <div class="child">
+                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--=== TOP NAV-->
+        <section class="bottom sec">
+          <div class="container">
+            <div class="menu bottom__menu">
+              <div class="bottom__title">Присоединяйтесь к другим темам <span>онлайн-марафона</span> Advance:</div>
+              <ul class="menu__list">
+                <li class="menu__item"><a href="http://advance-club.ru/marathon_children"><span>22 августа</span><br/>Мотивация детей<br/>на обучение</a></li>
+                <li class="menu__item"><a href="http://advance-club.ru/marathon_intellect"><span>23 августа</span><br/>Развитие интеллектуальных<br/>способностей</a></li>
+                <li class="menu__item bottom-menu__item--active-3"><a href="http://advance-club.ru/marathon_100_slov"><span>24 августа</span><br/>Запоминание<br/>иностранных слов</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner-wrap">
+            <div class="footer__informer informer">
+              <ul class="footer__follow follow">
+                <li class="follow__item follow__item_vk"><a href="https://vk.com/advanceclub"></a></li>
+                <li class="follow__item follow__item_fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+                <li class="follow__item follow__item_inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
+                <li class="follow__item follow__item_ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+                <li class="follow__item follow__item_yt"><a href="https://www.youtube.com/user/advanceclub?sub_confirmation=1"></a></li>
+              </ul>
+              <div class="informer__tel_bottom"><span class="tel">+7 (812) 363-43-53 <b>|</b></span><span class="tel"><b>|</b> 8 (800) 700-53-42</span></div>
+              <p class="footer__copy"><a href="http://advance-club.justclick.ru/agreement">Advance © 2017. Соглашение об обработке персональных данных </a><br/><a href="http://advance-club.ru/partner/">Партнёрская программа | </a><a href="http://advance-club.justclick.ru/conf">Политика конфиденциальности </a><br/>По вопросам сотрудничества yagodkin.n@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Modals 3-->
+      <div hidden="hidden" class="modal modal-main js-modal"><span class="modal__close js-modal-close">Закрыть</span>
+        <div class="modal__form">
+          <div class="modal__name">Оставить заявку</div>
+          <div id="subscr-block-1007">
+            <form method="POST" action="#~" target="_self" data-hash="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl" id="subscr-form-1007" onsubmit="if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) this.removeAttribute('target'); return jc_chkscrfrm(this, true, true, false, false, false, false, true, true, true, true, false, false, [], [], [])">
+              <input type="hidden" name="hash" value="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl"/>
+              <input type="text" name="lead_name" placeholder="Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_email" placeholder="Ваш e-mail" required="required" class="input"/>
+              <input type="tel" id="phone" required="required" name="lead_phone" value="" data-reload-payment-form="true" class="input"/>
+              <button class="button modal__btn">Оставить заявку</button>
+              <script language="JavaScript" src="http://justclick.ru/media/subscribe/helper2.js.php"></script>
+              <script language="JavaScript">jc_setfrmfld()</script>
+              <input name="activation" type="hidden" value="true"/>
+              <script language="JavaScript">
+                $(function(){$(".lgroup_datepicker").datepicker($.datepicker.regional["ru"]); $(".lgroup_datepicker").datepicker("option", "yearRange", "-100:+20"); $(".lgroup_datepicker").blur();});
+                
+              </script>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Overlay-->
+      <div id="overlay"></div>
+      <!-- Scroll top-->
+      <div class="top_btn"><span>^</span></div>
+      <script src="js/script.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="../main/js/intlTelInput.min.js"></script>
+      <script>
+        var telephone = $("#phone");
+        telephone.intlTelInput({
+        utilsScript: 'http://advance-club.ru/main/js/utils.js',
+        autoHideDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: true,
+        autoFormat: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+          selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+          var l = selectedCountryData['dialCode'].length;
+            return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+        },
+        preferredCountries: ['ru', 'by', 'ua'],
+                    // initialCountry: "ru"
+        })
+        
+      </script>
+      <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"> </script>
+      <!--=== VK Widget-->
+      <div id="vk_community_messages"></div>
+      <script type="text/javascript">VK.Widgets.CommunityMessages("vk_community_messages", 19444929, {tooltipButtonText: "Есть вопрос?"});</script>
+    </div>
+  </body>
+</html>

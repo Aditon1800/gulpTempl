@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500');
 
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700&subset=cyrillic');
+
 // normalize at smart-grid mixin
 @import 'common/smart-grid';
 
@@ -10,6 +12,9 @@
 
 // common
 @import 'common/fonts/frank';
+// @import 'common/fonts/muller';
+// @import 'common/fonts/panton';
+@import 'common/fonts/nexa';
 // @import 'common/fonts/lemon';
 // @import 'common/grid';
 // @import 'common/global';
@@ -19,7 +24,7 @@
 // @import 'components/baner';
 
 // lib
-@import 'lib/flipster';
+// @import 'lib/flipster';
 // @import 'lib/slick';
 
 // LAYOUTS
@@ -27,7 +32,7 @@
 @import 'layouts/main';
 
 // PARTIALS
-@import 'partials/header';
+// @import 'partials/header';
 // @import 'partials/f-list/f-main';
 
 //=== 7TEHCNIQUES
@@ -48,7 +53,11 @@
 // @import 'partials/eng/eng_testing/style';
 // @import 'partials/genius/genius_day/style';
 // @import 'partials/genius/genius_adult/style';
-@import 'partials/genius/genius_online/style';
+// @import 'partials/genius/genius_online/style';
+// @import 'partials/other/open_day/style';
+// @import 'partials/marathon/style';
+@import 'partials/krp/online/style';
+// @import 'partials/mental/style';
 // @import 'partials/eng/eng_start_online/style';
 // @import 'partials/eng/eng_tech/style';
 // @import 'partials/7Tech/recommend';
@@ -56,6 +65,12 @@
 // @import 'partials/eng/eng_free/style';
 // @import 'partials/eng/eng_kurs/style';
 // @import 'partials/eng/eng_mini/style';
+// @import 'partials/children/style';
+// @import 'partials/parents_meeting/style';
+// @import 'partials/prod/ver_1/style';
+// @import 'partials/advanced_reading/style';
+// @import 'partials/ielts/style';
+
 //=== ENG
 // @import 'partials/eng/style';
 // @import 'partials/cost';

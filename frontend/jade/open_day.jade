@@ -1,0 +1,15 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('День открытых дверей Advance')
+
+block main
+  main
+    include partials/other/open_day/jumb
+    include partials/other/open_day/tech
+    include partials/other/open_day/part-1
+    include partials/other/open_day/part-2
+    include partials/other/open_day/part-3
+    include partials/reviews
+    include partials/map/mapBlock

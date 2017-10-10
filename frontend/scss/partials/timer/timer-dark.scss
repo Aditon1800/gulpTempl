@@ -1,0 +1,64 @@
+.timer-dark {
+  background: url('../img/advanced_reading/bg-timer-1.jpg') center no-repeat;
+  background-size: cover;
+  padding: 10px 0;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
+  }
+
+  // Counter
+
+  &__counter {
+    padding: 10px;
+
+
+    .countbox-days,
+    .countbox-hours,
+    .countbox-mins,
+    .countbox-secs {
+      position: relative;
+      float: left;
+      width: 50px;
+      height: 60px;
+      border-radius: 5px;
+      background-color: #191919;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      padding-top: 12px;
+      margin-right: 10px;
+    }
+
+
+    .countbox-secs {
+      margin-right: 0;
+    }
+
+    .countbox-days-text,
+    .countbox-hours-text,
+    .countbox-mins-text,
+    .countbox-secs-text {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 1.2;
+    }
+  }
+}

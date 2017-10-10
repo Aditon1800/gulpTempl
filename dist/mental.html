@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <script language="JavaScript" type="text/javascript" src="//advance-club.justclick.ru/jsapi/click.js"></script>
+    <script>
+      //=== Google Tag Manager
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NWR77CZ');
+      //=== End Google Tag Manager
+    </script>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- === Iphone no phone number-->
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="description" content=""/>
+        <meta name="keywords" content=""/>
+        <title>Курс для детей 4-12 лет “Ментальная арифметика”</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="../main/css/intlTelInput.css"/>
+        <base target="_blank"/>
+        <link rel="icon" type="image/png" href="http://advance-club.ru/images/favicon.png"/>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/preloader.js"></script>
+        <!--
+        | [if lt IE 9]
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+        script(src='js/scriptIE.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')
+        |     [endif]
+        
+        -->
+  </head>
+  <body>
+    <noscript>
+      <!--=== Google Tag Manager (noscript)-->
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWR77CZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      <!--=== End Google Tag Manager (noscript)-->
+    </noscript>
+    <!--=== Preloader-->
+    <div id="preloader">
+      <div class="icon"></div>
+    </div>
+    <div class="container-fluid">
+      <main>
+        <!--=== JUMB-->
+        <section class="jumb">
+          <div class="container">
+            <div class="jumb__main-desc">
+              <div class="jumb__flag">Впервые в Advance!</div>
+              <h1 class="jumb__title"><span>Курс для детей <span>4-12 лет</span></span>Ментальная арифметика</h1>
+              <div class="block-info">
+                <time class="jumb__date">Старт курса: <span>18 сентября</span></time>
+                <ul class="jumb__list">
+                  <li>Санкт-Петербург, <span>ул. Таврическая, 2</span></li>
+                  <li>Всего 7 900 рублей <span>в месяц</span></li>
+                </ul>
+              </div>
+              <div class="jumb__main-info">Запишите ребенка на курс прямо сейчас!</div>
+              <div class="btn-block">
+                <button class="btn jumb__btn js-getModal">Занять место на курсе</button>
+              </div>
+            </div>
+          </div>
+        </section>
+            <!--=== Timer-->
+            <script>
+              var now = new Date();
+                  year = 2017;
+                  month = 08; // месяц указывает на 1 меньше( например, 03 - это апрель)
+                  day = 18;
+                  hour = 08; // по Гринвичу
+                  minute = 00;
+                  sec = 0;
+                  dateFuture = new Date(Date.UTC(year, month, day, hour, minute, sec));
+              
+                  function CountBox() {
+                      dateNow = new Date();
+                      amount = dateFuture.getTime() - dateNow.getTime() + 5;
+                      delete dateNow;
+                      if (amount < 0) {
+                          out = "<div class='countbox-days'><span></span>0<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>0<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>0<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>0<div class='countbox-secs-text'>секунд</div></div>";
+                          var list = document.getElementsByClassName("countbox");
+                          for (var i = 0; i < list.length; i++) {
+                              list[i].innerHTML = out;
+                          }
+              
+                      } else {
+                          days = 0;
+                          hours = 0;
+                          mins = 0;
+                          secs = 0;
+                          out = "";
+                          amount = Math.floor(amount / 1e3);
+                          days = Math.floor(amount / 86400);
+                          amount = amount % 86400;
+                          hours = Math.floor(amount / 3600);
+                          amount = amount % 3600;
+                          mins = Math.floor(amount / 60);
+                          amount = amount % 60;
+                          secs = Math.floor(amount);
+                          out = "<div class='countbox-days'><span></span>" + days + "<div class='countbox-days-text'>дней</div></div>" + "<div class='countbox-hours'><span></span>" + hours + "<div class='countbox-hours-text'>часов</div></div>" + "<div class='countbox-mins'><span></span>" + mins + "<div class='countbox-mins-text'>минут</div></div>" + "<div class='countbox-secs'><span></span>" + secs + "<div class='countbox-secs-text'>секунд</div></div>";
+                          var list = document.getElementsByClassName("countbox");
+                          for (var i = 0; i < list.length; i++) {
+                              list[i].innerHTML = out;
+                          }
+                          setTimeout("CountBox()", 1e3)
+                      }
+                  }
+              
+            </script>
+            <article class="timer sec">
+              <div class="container">
+                <div class="timer__content">
+                  <h2 class="timer__title">До старта курса осталось:</h2>
+                  <div class="timer__counter">
+                    <div class="countbox"></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+        <!--=== BLOCK-1-->
+        <section class="block-1 sec">
+          <div class="container">
+            <h2 class="sec-title sec-title--red">Что это такое? </h2>
+            <p class="sec-desc">Ментальная арифметика – это методика развития умственных <br/>способностей детей, основанная на системе устного счета. <br/>Обучаясь этой методике ребенок может невероятно быстро считать в уме. <br/>Но самое главное, что в процессе прохождения курса ребенок разносторонне развивается.</p>
+            <h3 class="title-min sec-title--red">Ментальная арифметика - это развитие:</h3>
+            <div class="row">
+              <div class="col">
+                <div class="block">
+                  <div class="block-img block-img--min"><img src="img/mental/brainstorm.svg" alt="brainstorm"/></div>
+                  <div class="block-desc">Обоих полушарий <br/>мозга;</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block-img"><img src="img/mental/target.svg" alt="target"/></div>
+                  <div class="block-desc">Концентрации <br/>внимания;</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block-img"><img src="img/mental/knowledge.svg" alt="knowledge"/></div>
+                  <div class="block-desc">Ассоциативного <br/>мышления;</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block-img block-img--min"><img src="img/mental/calculator.svg" alt="calculator"/></div>
+                  <div class="block-desc">Быстрого <br/>и точного счета.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-2-->
+        <section class="block-2 sec">
+          <div class="container">
+            <div class="block-2__top-desc">
+              <h2 class="sec-title sec-title--red">Как проходит обучение</h2>
+              <div class="sec-desc">На занятиях происходит последовательное освоение навыка счета <span>с использованием</span> японских счетов (абакус) с постепенным переводом навыка от механического к умственному (ментальному)</div>
+            </div>
+            <h3 class="sec-title sec-title--red">Ступени курса:</h3>
+            <div class="sec-desc">Есть несколько ступеней в освоении навыка быстрого счета в голове. Каждая ступень занимает около 4 месяцев.</div>
+            <div class="block-2__main-content">
+              <div class="row">
+                <div class="col">
+                  <div class="block block--1">
+                    <div class="name">1 cтупень</div>
+                    <p class="desc"><b>Дети от 4 до 8 лет</b> могут производить <span>от одного</span> до трех математических действий <span>с двузначными</span> числами на абакусе, используя обе руки.</p>
+                    <p class="desc"><b>Дети от 8 до 12 лет</b> производят от одного <span>до трех</span> математических действий <span>с двузначными</span> числами как на абакусе, так и ментально;  учатся умножать на абакусе.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="block block--2">
+                    <div class="name">2 cтупень</div>
+                    <p class="desc"><b>Дети от 4 до 8 лет</b> производят <span>от одного</span> до трех математических действий с двузначными числами как на абакусе, так и ментально.</p>
+                    <p class="desc"><b>Дети от 8 до 12 лет</b> могут производить до 6 действий с двузначными цифрами на абакусе и до 3х действий <span>с двузначными</span> числами ментально, начинают  работать с отрицательными и дробными числами.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="block block--3">
+                    <div class="name">3 cтупень</div>
+                    <p class="desc"><b>Дети от 4 до 8 лет</b> могут производить до 6 действий с двузначными цифрами на абакусе и до <span>3-х</span> действий с двузначными числами ментально.</p>
+                    <p class="desc"><b>Дети от 8 до 12 лет</b> учатся решать усложненные примеры на сложение, вычитание, умножение и деление на абакусе и ментально, делить с остатком.</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="block block--4">
+                    <div class="name">4 cтупень</div>
+                    <p class="desc"><b>Дети от 4 до 8 лет</b> учатся умножать на абакусе.</p>
+                    <p class="desc"><b>Дети от 8 до 12 лет</b> учатся складывать и вычитать десятичные дроби, а также работают <span>с процентами</span>. Закрепляют навыки, полученные на предыдущих уровнях.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block-2__bottom-desc">
+              <p class="sec-desc">Комфортные условия для максимального усвоения материала и возможность уделить время каждому ребенку.</p>
+              <div class="warn-desc">Группы от 4 до 10 участников</div>
+            </div>
+            <div class="btn-block">
+              <button class="btn block-2__btn js-getModal">Записаться на курс</button>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-3-->
+        <section class="block-3 sec">
+          <div class="container">
+            <h2 class="sec-title block-3__title">Продолжительность курса:</h2>
+            <div class="row">
+              <div class="col">
+                <div class="block block--1">
+                  <div class="num">64</div>
+                  <div class="text">академических <br/>часа</div>
+                </div>
+                <div class="block-desc">общая продолжительность <br/>курса</div>
+              </div>
+              <div class="col">
+                <div class="block block--2">
+                  <div class="num">2</div>
+                  <div class="text">раза<br/>в неделю</div>
+                </div>
+                <div class="block-desc">время проведения <span>с 18:00 до 20:00</span></div>
+              </div>
+              <div class="col">
+                <div class="block block--3">
+                  <div class="num">2</div>
+                  <div class="text">академических<br/>часа</div>
+                </div>
+                <div class="block-desc">длительность каждого <br/>занятия</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-4-->
+        <section class="block-4 sec">
+          <div class="container">
+            <div class="block-wrap">
+              <h2 class="block-title">Что дает курс?</h2>
+              <p class="block-desc">Курс “Ментальная арифметика” поможет ребенку:</p>
+              <div class="block-list">
+                <li>Повысить успеваемость в школе;</li>
+                <li>Разносторонне развиваться;</li>
+                <li>Развить фотографическую память;</li>
+                <li>Увеличить скорость восприятия информации;</li>
+                <li>Привить аналитическое мышление;</li>
+                <li>Развить инициативность и самостоятельность;</li>
+                <li>Привить уверенность в себе.</li>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--=== BLOCK-5-->
+        <section class="block-5 sec">
+          <div class="container">
+            <h2 class="sec-title sec-title--red">«Ментальная арифметика»</h2>
+            <div class="row">
+              <div class="col">
+                <div class="block">
+                  <div class="block__img block__img--min"><img src="img/mental/kid-gray.svg" alt="kid-gray"/></div>
+                  <div class="block-desc">Очный курс <br/>для детей <br/><strong>от 4 до 12 лет</strong></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/mental/calendar-gray.svg" alt="calendar-gray"/></div>
+                  <div class="block-desc">Старт курса: <br/><strong>18 сентября <br/>2017 года</strong></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/mental/wallet-gray.svg" alt="wallet-gray"/></div>
+                  <div class="block-desc">Стоимость: <br/><strong>7 900 <span class="cost__rf">₽</span> <br/>в месяц</strong></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="block">
+                  <div class="block__img"><img src="img/mental/placeholder-gray.svg" alt="placeholder-gray"/></div>
+                  <div class="block-desc">Место проведения: <br/><strong>Санкт-Петербург, <br/> <span>ул. Таврическая, 2</span></strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-block">
+              <button class="btn block-5__btn js-getModal">Записаться на курс</button>
+            </div>
+          </div>
+        </section>
+        <!--=== Reviews-->
+        <section class="reviews-slider sec">
+          <h2 class="sec-title">Отзывы о курсах Advance для детей:
+          </h2>
+          <div class="container">
+            <div class="my-flipster">
+              <ul>
+                <li data-flip-title=" ">
+                  <div class="parent">
+                    <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                      <h6><b>Александр Шурцов</b></h6>
+                    </div>
+                    <div class="child">
+                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                    </div>
+                  </div>
+                </li>
+                <li data-flip-title=" ">
+                  <div class="parent">
+                    <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                      <h6><b>Александр Шурцов</b></h6>
+                    </div>
+                    <div class="child">
+                      <h6><span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                    </div>
+                  </div>
+                </li>
+                <li data-flip-title=" ">
+                  <div class="parent">
+                    <div class="child"><img src="img/icon-people/icon-demo.png" alt="feedback-icon"/>
+                      <h6><b>Александр Шурцов</b></h6>
+                    </div>
+                    <div class="child">
+                      <h6> <span class="child-desc">«Семинар оказался довольно полезным. Доходчиво нам объяснили, почему не работают техники изучения языка, по которым нас учат в школах и ВУЗах. Были даны интересные техники, среди которых особенно хочется отметить просмотр сериалов на английском языке, заранее выучив слова из серии. Пожалуй, одно из самых эффективных средств для того, чтобы научиться понимать английскую речь на слух и развивать навык автоматического перевода. Уже проверено на себе :) Спасибо за семинар.»</span></h6>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--=== Map-->
+        <section id="map" class="map">
+          <div class="map__block">
+            <div class="map__frame">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.4030955657504!2d30.375070715667004!3d59.94204636878629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631974d72df53%3A0xb691bdd2c77142ae!2z0KLQsNCy0YDQuNGH0LXRgdC60LDRjyDRg9C7LiwgMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTAxNQ!5e0!3m2!1sru!2sru!4v1497021565281" frameborder="0" style="border:0" allowfullscreen="allowfullscreen"></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer-->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner-wrap">
+            <div class="footer__informer informer">
+              <ul class="footer__follow follow">
+                <li class="follow__item follow__item_vk"><a href="https://vk.com/advanceclub"></a></li>
+                <li class="follow__item follow__item_fb"><a href="https://www.facebook.com/pages/Advance-Club/370830876444181?fref=ts"></a></li>
+                <li class="follow__item follow__item_inst"><a href="https://www.instagram.com/advance_courses/"></a></li>
+                <li class="follow__item follow__item_ok"><a href="http://ok.ru/group/52611362652241"></a></li>
+                <li class="follow__item follow__item_yt"><a href="https://www.youtube.com/user/advanceclub?sub_confirmation=1"></a></li>
+              </ul>
+              <div class="informer__tel_bottom"><span class="tel">+7 (812) 363-43-53 <b>|</b></span><span class="tel"><b>|</b> 8 (800) 700-53-42</span></div>
+              <p class="footer__copy"><a href="http://advance-club.justclick.ru/agreement">Advance © 2017. Соглашение об обработке персональных данных </a><br/><a href="http://advance-club.ru/partner/">Партнёрская программа | </a><a href="http://advance-club.justclick.ru/conf">Политика конфиденциальности </a><br/>По вопросам сотрудничества yagodkin.n@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Modals 3-->
+      <div hidden="hidden" class="modal modal-main js-modal"><span class="modal__close js-modal-close">Закрыть</span>
+        <div class="modal__form">
+          <div class="modal__name">Оставить заявку</div>
+          <div id="subscr-block-1007">
+            <form method="POST" action="#~" target="_self" data-hash="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl" id="subscr-form-1007" onsubmit="if (navigator.userAgent.match(/(iPod|iPhone|iPad)/i)) this.removeAttribute('target'); return jc_chkscrfrm(this, true, true, false, false, false, false, true, true, true, true, false, false, [], [], [])">
+              <input type="hidden" name="hash" value="Zm9ybWlkPTEwMDcmdW5hbWU9dHJ1ZSZtaWRkbGVuYW1lPWZhbHNlJmxhc3RuYW1lPWZhbHNlJmVtYWlsPXRydWUmcGhvbmU9dHJ1ZSZjaXR5PWZhbHNl"/>
+              <input type="text" name="lead_name" placeholder="Ваше имя" required="required" class="input"/>
+              <input type="text" name="lead_email" placeholder="Ваш e-mail" required="required" class="input"/>
+              <input type="tel" id="phone" required="required" name="lead_phone" value="" data-reload-payment-form="true" class="input"/>
+              <button class="button modal__btn">Оставить заявку</button>
+              <script language="JavaScript" src="http://justclick.ru/media/subscribe/helper2.js.php"></script>
+              <script language="JavaScript">jc_setfrmfld()</script>
+              <input name="activation" type="hidden" value="true"/>
+              <script language="JavaScript">
+                $(function(){$(".lgroup_datepicker").datepicker($.datepicker.regional["ru"]); $(".lgroup_datepicker").datepicker("option", "yearRange", "-100:+20"); $(".lgroup_datepicker").blur();});
+                
+              </script>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Overlay-->
+      <div id="overlay"></div>
+      <!-- Scroll top-->
+      <div class="top_btn"><span>^</span></div>
+      <script src="js/script.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="../main/js/intlTelInput.min.js"></script>
+      <script>
+        var telephone = $("#phone");
+        telephone.intlTelInput({
+        utilsScript: 'http://advance-club.ru/main/js/utils.js',
+        autoHideDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: true,
+        autoFormat: true,
+        customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) { 
+          selectedCountryPlaceholder = selectedCountryPlaceholder.replace(/[0-9]/g, "X");
+          var l = selectedCountryData['dialCode'].length;
+            return '+' + selectedCountryData['dialCode'] + ' ' + selectedCountryPlaceholder.substring(l+2);
+        },
+        preferredCountries: ['ru', 'by', 'ua'],
+                    // initialCountry: "ru"
+        })
+        
+      </script>
+      <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"> </script>
+      <!--=== VK Widget-->
+      <div id="vk_community_messages"></div>
+      <script type="text/javascript">VK.Widgets.CommunityMessages("vk_community_messages", 19444929, {tooltipButtonText: "Есть вопрос?"});</script>
+    </div>
+  </body>
+</html>

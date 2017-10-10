@@ -1,0 +1,19 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Курс для детей 4-12 лет “Ментальная арифметика”')
+
+block main
+  main
+    article
+      .container
+        .crumbs
+          a(href="#~") Главная
+          a(href="#~") Курсы
+          a(href="#~") Обучение детей
+    include partials/prod/jumb
+    include partials/prod/desc
+    .container
+      include partials/map/mapBlock
+    include partials/prod/info

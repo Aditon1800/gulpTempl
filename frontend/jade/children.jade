@@ -1,0 +1,12 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Online “Презентация новых образовательных программ для детей”')
+
+block main
+  main
+    include partials/children/jumb
+    include partials/children/author
+
+    include partials/reviews

@@ -1,0 +1,15 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Курсы подготовки к IELTS')
+
+block main
+  main.muller-block
+    include partials/ielts/jumb
+    +timer('До старта курса осталось:', '09', '27', '09', '00')
+    include partials/ielts/block-1
+    include partials/ielts/block-2
+    include partials/ielts/block-3
+    include partials/ielts/block-4
+    include partials/ielts/block-5

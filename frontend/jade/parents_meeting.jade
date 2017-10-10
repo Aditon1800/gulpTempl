@@ -1,0 +1,18 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Бесплатный семинар для родителей «Научите детей учиться»')
+
+block main
+  main
+    include partials/parents_meeting/jumb
+    +timer('До начала семинара осталось:', '08', '05', '16', '00')
+    include partials/parents_meeting/block-1
+    include partials/parents_meeting/block-2
+    include partials/parents_meeting/block-3
+    include partials/reviews
+    include partials/7Tech/author
+    include partials/parents_meeting/block-4
+    include partials/map/mapBlock
+    

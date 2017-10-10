@@ -10,6 +10,12 @@
   }
 }
 
+@mixin pos() {
+  position: absolute;
+  content: '';
+  display: block;
+}
+
 // Normalize
 @mixin normalize(){
     * {
@@ -54,7 +60,7 @@
         font-weight: normal;
     }
     b,strong {
-      font-weight: 700;
+      font-weight: 500;
     }
     small {
       font-size: 80%;
@@ -90,12 +96,8 @@
       &:focus,
       &:visited {
         text-decoration: none;
-        color: unset;
         outline: none;
       }
-    }
-    a:visited {
-      color: unset;
     }
     button {
       display: inline-block;
@@ -168,10 +170,40 @@
   max-width: $maw;
   border-radius: 30px;
   background-color: $red;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 30px;
+  font-weight: 300;
   color: $white;
-  padding: 12px 0;
+  text-transform: none;
+  padding: 10px 0;
+  margin: 0 auto;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border-color: $red;
+    color: $red;
+  }
+}
+
+@mixin btn-newRed($maw) {
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+  display: block;
+  width: 100%;
+  max-width: $maw;
+  border-radius: 5px;
+  background-color: $red;
+  font-size: 24px;
+  font-weight: 300;
+  color: $white;
+  text-transform: none;
+  padding: 10px 0;
   margin: 0 auto;
 
   &:visited {
@@ -215,19 +247,50 @@
   }
 }
 
+@mixin btn-newTrans($maw) {
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+  display: block;
+  width: 100%;
+  max-width: $maw;
+  border-radius: 5px;
+  border: 2px dotted $white;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 500;
+  color: $white;
+  padding: 15px 0;
+  margin: 0 auto;
+
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $red;
+    border: 2px dotted $white;
+    color: $white;
+  }
+}
+
+// JUMB middle
+
+@mixin jumb-middle() {
+  height: 100vh;
+  min-height: 650px;
+  max-height: 750px;
+}
+
 // Wave title 
 
-@mixin wave-title() {
+@mixin wave-title($margin) {
 
-  &__over-title--wave {
-    @media(max-width: $sm-screen - 1) {
-        font-size: 26px;
-      }
+  &--wave {
     position: relative;
-    font-size: 30px;
-    font-weight: 100;
     overflow: hidden;
-    padding: 0 15px;
 
     &:before,
     &:after {
@@ -247,13 +310,97 @@
     &:before {
       margin-left: -100%;
       background-position: right center;
-      right: 15px;
+      right: $margin;
     }
 
     &:after {
       margin-right: -100%;
       background-position: left center;
-      left: 15px;
+      left: $margin;
     }
   }
+}
+
+// Color mixin
+
+// Logo wrap
+
+@mixin main-logo($color) {
+
+  &__logo-wrap {
+    @media(max-width: $sm-screen - 1) {
+      text-align: center;
+    }
+    @include cf();
+    width: 100%;
+    color: $color;
+    border-bottom: 1px solid rgba($color, .6);
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+
+    &--color {
+      color: $color;    
+    }
+
+    .logo {
+    @media(max-width: $sm-screen - 1) {
+      float: none;
+    }
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo-author {
+    @media(max-width: $sm-screen - 1) {
+      float: none;
+      display: inline-block;
+      text-align: center;
+      padding-left: 0;
+    }
+    float: left;
+    font-size: 12px;
+    padding-left: 30px;
+    padding-top: 25px;
+  }
+
+  &__logo-tel {
+    @media(max-width: $sm-screen - 1) {
+      float: none;
+      display: inline-block;
+      width: 100%; 
+    }
+    float: right;
+    font-size: 30px;
+    line-height: .8;
+    padding-top: 30px;
+  }
+}
+
+@mixin flag() {
+
+  &__flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    max-width: 372px;
+    height: 91px;
+    background: url('../img/flag/flag.png') center no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    font-weight: 100;
+    color: $white;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+}
+
+@mixin bg-size(){
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

@@ -5,6 +5,7 @@
 }
 
 .container {
+  @include cf();
   @include wrapper();
 }
 
@@ -12,9 +13,14 @@
   @include row-flex();
 }
 
+.col {
+  @include col();
+}
+
 body {
   min-width: 320px;
   font-family: 'Frank';
+  // font-family: 'Roboto', 'Arial', sans-serif;
   font-weight: 400;
   line-height: 1.2;
   color: $l-black;
@@ -22,13 +28,14 @@ body {
 
 span {
   display: inline-block;
+  font-size: inherit;
 }
 
 .btn {
   @extend button;
   transition: all .3s;
   border: 2px solid transparent;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .btn:visited {
@@ -62,6 +69,7 @@ a:visited {
   }
   font-size: 60px;
   font-weight: 100;
+  line-height: .9;
   // text-transform: uppercase;
   text-align: center;
   margin-bottom: 45px;
@@ -131,7 +139,8 @@ a:visited {
 .action__personal {
   display: block;
   padding: 8px 10px 8px 25px;
-  font-size: 16px;
+  // font-size: 16px;
+  font-size: 14px;
   line-height: 1.1;
   font-weight: 300;
   text-align: center;
@@ -153,7 +162,7 @@ a:visited {
   overflow: hidden;
   display: block;
   vertical-align: middle;
-  margin-bottom: 15px;
+  margin-bottom: 15px
 }
 
 .follow__item {

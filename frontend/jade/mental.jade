@@ -1,0 +1,17 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Курс для детей 4-12 лет “Ментальная арифметика”')
+
+block main
+  main
+    include partials/mental/jumb
+    +timer('До старта курса осталось:', '08', '18', '08', '00')
+    include partials/mental/block-1
+    include partials/mental/block-2
+    include partials/mental/block-3
+    include partials/mental/block-4
+    include partials/mental/block-5
+    include partials/reviews
+    include partials/map/mapBlock

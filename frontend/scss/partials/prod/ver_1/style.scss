@@ -1,0 +1,619 @@
+/* JUMB */
+
+.jumb {
+  margin: 30px 0;
+
+  &-main {
+    @media(max-width: $sm-screen - 1) {
+      display: block;
+    }
+    display: flex;
+    flex-direction: row;
+  }
+
+  &-left,
+  &-right {
+    @media(max-width: $sm-screen - 1) {
+      min-height: auto;
+    }
+    min-height: 370px;
+    padding: 15px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  &-left {
+    @media(max-width: $sm-screen - 1) {
+      width: 100%;
+    }
+    width: 66%;
+    background: url('../img/prod_2/bg-main.jpg') center no-repeat;
+    background-size: cover;
+    color: $white;
+  }
+
+  &-right {
+    @media(max-width: $sm-screen - 1) {
+      width: 100%;
+    }
+    width: 34%;
+    background-color: #f6f6f6;
+  }
+
+  h1 {
+    @media(max-width: $sm-screen - 1) {
+      padding-top: 50px;
+    }
+    font-size: 36px;
+    font-weight: 300;
+    padding-top: 70px;
+    padding-bottom: 10px;
+  
+    strong {
+      @media(max-width: $md-screen - 1) {
+        font-size: 38px;
+      }
+      display: inline-block;
+      width: 100%;
+      font-size: 48px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    max-width: 490px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 10px 0;
+    margin: 0 auto;
+  }
+
+  &-cost {
+    @media(max-width: $lg-screen - 1) {
+      font-size: 50px;
+    }
+    @media(max-width: $md-screen - 1) {
+      font-size: 38px;
+    }
+    @media(max-width: $sm-screen - 1) {
+      padding-top: 40px;
+    }
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 400;
+    color: $red;
+    line-height: .8;
+    text-transform: uppercase;
+    padding-top: 80px;
+    padding-left: 50px;
+
+    &:before {
+      @include pos();
+      bottom: 4px;
+      left: 0;
+      width: 37px;
+      height: 38px;
+      background: url('../img/prod_2/wallet.png') center no-repeat;
+    }
+  }
+
+  .btn-block {
+    padding: 10px;
+  }
+
+  &__btn {
+    @media(max-width: $lg-screen - 1) {
+      font-size: 38px;
+      line-height: 60px;
+    }
+    @media(max-width: $md-screen - 1) {
+      font-size: 24px;
+      line-height: 40px;
+    }
+    width: 100%;
+    max-width: 340px;
+    border-radius: 5px;
+    background-color: $red;
+    font-size: 48px;
+    color: $white;
+    text-transform: none;
+    line-height: 73px;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $red;
+      border-color: $red; 
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: inline-block;
+    background-color: #e8e8e8;
+    font-size: 16px;
+    font-weight: 300;
+    color: $l-black;
+    text-decoration: underline;
+    border-radius: 5px;
+    padding: 6px 6px 6px 36px;
+
+    &:before {
+      @include pos();
+      top: 50%;
+      left: 7px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 15px;
+      background: url('../img/prod_2/credit-card.png') center no-repeat;
+    }
+  }
+}
+
+/* TIME */
+
+.block-1 {
+  margin: 30px;
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @media(max-width: $md-screen - 1) {
+      padding-bottom: 40px;
+      border-right: none;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+    @include col-3();
+    @include col-md-5();
+    @include col-sm-12();
+    border-right: 1px solid #e8e8e8;
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+
+  .block-info {
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 50px;
+
+    a {
+      display: inline-block;
+      border-bottom: 1px dashed $l-black;
+      transition: all .3s;
+
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  .ico {
+
+    &:before {
+      @include pos();
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .ico-date {
+
+    &:before {
+      background-image: url('../img/prod_2/schedule.png');
+    }
+  }
+
+  .ico-clock {
+
+    &:before {
+      background-image: url('../img/prod_2/clock.png');
+    }
+  }
+
+  .ico-plh {
+
+    &:before {
+      width: 31px;
+      background-image: url('../img/prod_2/placeholder.png');
+    }
+  }
+
+  .ico-class {
+
+    &:before {
+      background-image: url('../img/prod_2/lecture.png');
+    }
+  }
+}
+
+.name-block {
+  @media(max-width: $md-screen - 1) {
+    width: auto;
+  }
+  width: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+
+  .sec-name {
+    @media(max-width: $md-screen - 1) {
+      font-size: 30px;
+      padding: 10px;
+    }
+    font-size: 0;
+    color: $white;
+    text-transform: uppercase;
+  }
+} 
+
+.content-wrap {
+  @media(max-width: $md-screen - 1) {
+    display: block;
+    font-size: 0;
+  }
+  display: flex;
+  flex-direction: row;
+}
+
+/* FB */
+
+.feedback {
+  background-color: #f6f6f6;
+  margin: 30px 0;
+
+  .name-block {
+    @media(max-width: $md-screen - 1) {
+      background-image: none;
+    }
+    background-color: #ff494d;
+    background-image: url('../img/prod_2/text.jpg');
+  }
+}
+
+.fb-block {
+  @media(max-width: $md-screen - 1) {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #cacaca;
+    padding: 0 15px 20px;
+  }
+  @include cf();
+  width: calc(100%/3);
+  border-right: 1px solid #cacaca;
+  padding: 0 30px;
+  margin: 25px 0;
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.fb-author {
+  float: left;
+}
+
+.fb-author-desc {
+  padding-left: 55px;
+
+  .name {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .desc {
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+/* TEACHER */
+
+.teacher {
+  background-color: #389ecc;
+  color: $white;
+  margin: 30px 0;
+
+  .name-block {
+    @media(max-width: $md-screen - 1) {
+      background-image: none;
+    }
+    background-color: #2484bb;
+    background-image: url('../img/prod_2/text-2.jpg');
+  }
+
+  &-block {
+    @media(max-width: $md-screen - 1) {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid $white;
+      padding-bottom: 40px;
+      margin: 30px 0;
+    }
+    @include cf()
+    width: 50%;
+    border-right: 1px solid $white;
+    padding: 0 25px;
+    margin: 30px 0 50px;
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}
+
+.tch-img {
+  @media(max-width: $sm-screen - 1) {
+    float: none;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  float: left;
+}
+
+.tch-desc {
+  @media(max-width: $sm-screen - 1) {
+    padding-left: 0;
+  }
+  padding-left: 120px;
+
+  .name {
+    @media(max-width: $md-screen - 1) {
+      font-size: 28px;
+      text-align: center;
+    }
+    font-size: 34px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+
+  .desc {
+    font-size: 14px;
+
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 8px;
+
+      &:before {
+        @include pos();
+        top: 6px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+/* DESC */
+
+.main-desc {
+  background-color: #f6f6f6;
+
+  .desc-block {
+    @media(max-width: $sm-screen - 1) {
+      padding: 10px 10px 10px 160px;
+    }
+    @media(max-width: 639px) {
+      padding: 10px;
+    }
+    position: relative;
+    padding: 10px 10px 20px 200px;
+    border-bottom: 1px solid #bbb;
+
+    &:first-of-type {
+      border-top: 1px solid #bbb;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2484bb;
+      text-transform: uppercase;
+    }
+
+    strong {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      padding: 12px 0;
+
+      b {
+        font-weight: 400;
+      }
+    }
+
+    &:before {
+      @media(max-width: $sm-screen - 1) {
+        left: 15px;
+      }
+      @media(max-width: 639px) {
+        display: none;
+      }
+      @include pos();
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--about:before {
+      width: 100px;
+      height: 123px;
+      background-image: url('../img/prod_2/light-bulb.svg');
+    }
+
+    &--content:before {
+      width: 120px;
+      height: 120px;
+      background-image: url('../img/prod_2/guide.svg');
+    }
+
+    &--result:before {
+      width: 120px;
+      height: 120px;
+      background-image: url('../img/prod_2/tasks.svg');
+    }
+  }
+}
+
+/* COURSE */
+
+.info {
+  padding: 40px 0;
+  overflow-x: hidden;
+
+  &-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: $red;
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+
+  .slick-slider {
+    margin: 0 -15px;
+  }
+}
+
+.slide-wrap {
+  @media(max-width: $md-screen - 1) {
+    padding-bottom: 60px;
+  }
+  position: relative;
+  margin: 0 -15px;
+
+  .arrow-left,
+  .arrow-right {
+    position: absolute;
+    bottom: -60px;
+    width: calc(50% - 15px);
+    height: 50px;
+    border: 1px solid #dadada;
+    transition: all .3s;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+      background-color: #dadada;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .arrow-left {
+    left: 15px;
+
+    &:after {
+      background-image: url('http://advance-club.ru/open_doors/img/open_day/arrows/arrow-left-gray.svg');
+    }
+
+    &:hover {
+
+      &:after {
+        background-image: url('http://advance-club.ru/open_doors/img/open_day/arrows/arrow-left-white.svg');
+      }
+    }
+  }
+
+  .arrow-right {
+    right: 15px;
+
+    &:after {
+      background-image: url('http://advance-club.ru/open_doors/img/open_day/arrows/arrow-right-gray.svg');
+    }
+
+    &:hover {
+
+      &:after {
+        background-image: url('http://advance-club.ru/open_doors/img/open_day/arrows/arrow-right-white.svg');
+      }
+    }
+  }
+}
+
+.course-block {
+  min-height: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  line-height: 1;
+  color: $white;
+  padding: 20px 20px 15px;
+  margin: 0 15px;
+
+  h3 {
+    max-width: 170px;
+    min-height: 34px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 7px;
+  }
+
+  button {
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 25px;
+    text-transform: none;
+    margin-top: 6px;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: #007eff;
+      border-color: $white;
+    }
+  }
+}

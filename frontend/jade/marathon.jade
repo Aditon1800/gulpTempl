@@ -1,0 +1,24 @@
+extends layout
+
+block meta
+
+  include helpers/mixin
+  include partials/marathon/jumb
+  include partials/marathon/online
+  +meta('Онлайн-марафон "Технология запоминания 100 иностранных слов в час"')
+
+block main
+  main
+    include partials/marathon/top-nav
+    
+    +jumb('23', 'Технология запоминания 100 иностранных слов в час', 'part3/bg-part3.jpg')
+    +timer('До старта марафона осталось:', '07', '23', '08', '00')
+    include partials/marathon/block-1
+    //- include partials/marathon/block-2
+    //- include partials/marathon/block-2-2
+    include partials/marathon/block-2-3
+    include partials/7Tech/author
+    include partials/marathon/block-3
+    +online('23', 'Технология запоминания 100 иностранных слов в час')
+    include partials/reviews
+    include partials/marathon/bottom-nav

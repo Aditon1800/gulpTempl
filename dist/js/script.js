@@ -11,24 +11,24 @@ $(document).ready(function(){
 
   // Кибер Ягодкин
 
-  (function(){
+  // (function(){
 
-      if( $(window).width() > 768 ) {
-        $(window).scroll(function() {
-          $('.header__nav').removeClass('header__nav--open');
-          $('.header__toggle').removeClass('header__toggle--open');
-            $("section.author").each(function() {
-                var imagePos = $(this).offset().top;
+  //     if( $(window).width() > 768 ) {
+  //       $(window).scroll(function() {
+  //         $('.header__nav').removeClass('header__nav--open');
+  //         $('.header__toggle').removeClass('header__toggle--open');
+  //           $("section.author").each(function() {
+  //               var imagePos = $(this).offset().top;
 
-                var topOfWindow = $(window).scrollTop();
-                if (imagePos < topOfWindow + 400 && $(window).width() > 799) {
-                    $(this).addClass("animate");
-                }
-            });
-        });
-      }
+  //               var topOfWindow = $(window).scrollTop();
+  //               if (imagePos < topOfWindow + 400 && $(window).width() > 799) {
+  //                   $(this).addClass("animate");
+  //               }
+  //           });
+  //       });
+  //     }
 
-  }());
+  // }());
 
   // Открытие и закрытие меню (через гамбургер)
   (function() {
@@ -45,37 +45,97 @@ $(document).ready(function(){
     };
   }());
 
-  $('.my-flipster').flipster({
-      style: 'flat',
-      spacing: -0.25,
-      loop: true,
-      scrollwheel: false,
-      buttons: true,
-      nav: true
+  // $('.my-flipster').flipster({
+  //     style: 'flat',
+  //     spacing: -0.25,
+  //     loop: true,
+  //     scrollwheel: false,
+  //     buttons: true,
+  //     nav: true
+  // });
+
+  $('.slide').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<span data-role="none" class="arrow-left animate" aria-label="Previous" tabindex="0" role="button"></span>',
+    nextArrow: '<span data-role="none" class="arrow-right animate" aria-label="Next" tabindex="0" role="button"></span>',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          }
+        },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          }
+        }
+    ]
   });
 
+  // $('.part-2 .slide-block').slick({
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   prevArrow: '<span data-role="none" class="arrow-left animate" aria-label="Previous" tabindex="0" role="button"></span>',
+  //   nextArrow: '<span data-role="none" class="arrow-right animate" aria-label="Next" tabindex="0" role="button"></span>',
+  //   responsive: [
+  //     {
+  //       breakpoint: 1199,
+  //       settings: {
+  //         slidesToShow: 4,
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 992,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         }
+  //       },
+  //     {
+  //       breakpoint: 680,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         }
+  //       },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         }
+  //       }
+  //   ]
+  // });
+
   // Табы для переключений преимуществ
-  (function() {
+  // (function() {
 
-    var vacInfo = $('.adg-tabs__desc');
-    var elemAdgTabs = $('.adg-tabs__item');
+  //   var vacInfo = $('.adg-tabs__desc');
+  //   var elemAdgTabs = $('.adg-tabs__item');
 
-    elemAdgTabs.each(function() {
+  //   elemAdgTabs.each(function() {
 
-      $(this).on('click', function() {
+  //     $(this).on('click', function() {
         
-        $(this).addClass('adg-tabs__item_active')
-               .siblings()
-               .removeClass('adg-tabs__item_active');
+  //       $(this).addClass('adg-tabs__item_active')
+  //              .siblings()
+  //              .removeClass('adg-tabs__item_active');
 
-        var indexElem = $(this).data('index');
+  //       var indexElem = $(this).data('index');
 
-        vacInfo.eq(indexElem).addClass('adg-tabs__desc_active')
-                             .siblings()
-                             .removeClass('adg-tabs__desc_active');
-      });
-    });
-  }());
+  //       vacInfo.eq(indexElem).addClass('adg-tabs__desc_active')
+  //                            .siblings()
+  //                            .removeClass('adg-tabs__desc_active');
+  //     });
+  //   });
+  // }());
 
   // Модальные окна
   (function() {
@@ -164,7 +224,7 @@ $(document).ready(function(){
       var top = $(this).scrollTop();
       var elem = $('.top_btn');
 
-      if (top > 500)
+      if (top > 700)
           elem.css({
               "transform": "translate(-5px)",
               "opacity": ".8"

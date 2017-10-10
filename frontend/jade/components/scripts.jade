@@ -1,5 +1,6 @@
-script(src='js/jquery.flipster.js')
+//- script(src='js/jquery.flipster.js')
 script(src='js/script.js')
+script(src='js/slick.min.js')
 script(src='../main/js/intlTelInput.min.js')
 script.
   var telephone = $("#phone");
@@ -17,3 +18,10 @@ script.
   preferredCountries: ['ru', 'by', 'ua'],
               // initialCountry: "ru"
   })
+
+script(type="text/javascript" src="//vk.com/js/api/openapi.js?146") 
+
+//=== VK Widget
+#vk_community_messages
+script(type="text/javascript").
+  VK.Widgets.CommunityMessages("vk_community_messages", 19444929, {tooltipButtonText: "Есть вопрос?"});

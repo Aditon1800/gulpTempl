@@ -1,0 +1,551 @@
+/* JUMB */
+
+.jumb {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/parents/mob/bg-ndu-1-md.jpg');
+    padding: 70px 0;
+  }
+  @media(max-width: 639px) {
+    background-image: url('../img/parents/mob/bg-ndu-1-sm.jpg');
+    padding: 40px 0 50px;
+  }
+  background-image: url('../img/parents/bg-ndu-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  padding: 140px 0 120px;
+
+  &__main-desc {
+    @media(max-width: $md-screen - 1) {
+      max-width: none;
+    }
+    max-width: 770px;
+  }
+
+  &__title {
+    @media(max-width: $md-screen - 1) {
+      font-size: 48px;
+    }
+    @media(max-width: $sm-screen - 1) {
+      font-size: 42px;
+      padding-bottom: 20px;
+    }
+    @media(max-width: 480px) {
+      font-size: 36px;
+    }
+    font-size: 60px;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+
+    span {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 100;
+      text-transform: none;
+      padding-bottom: 10px;
+    }
+  }
+
+  .btn-block {
+    padding-top: 30px;
+  }
+
+  &__btn {
+    @include btn-newRed(571px);
+    border: 2px dotted $white;
+  }
+}
+
+.date-block {
+  @media(max-width: $sm-screen - 1) {
+    padding: 20px;
+  }
+  max-width: 570px;
+  background-color: rgba($black, .2);
+  border: 1px solid $white;
+  color: $white;
+  text-align: left;
+  padding: 32px 40px;
+  margin: 20px auto;
+
+  &__time,
+  &__address {
+    position: relative;
+    padding-left: 70px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 2px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__time {
+    @media(max-width: $md-screen - 1) {
+      font-size: 42px;
+    }
+    @media(max-width: $sm-screen - 1) {
+      font-size: 32px;
+      padding-left: 60px;
+    }
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 25px;
+
+    &:before {
+      background-image: url('../img/parents/calendar.svg');
+    }
+  }
+
+  &__address {
+    @media(max-width: $md-screen - 1) {
+      font-size: 20px;
+    }
+    @media(max-width: 480px) {
+      padding-left: 60px;
+    }
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.1;
+
+    &:before {
+      background-image: url('../img/parents/placeholder.svg');
+    }
+  }
+}
+
+
+@import 'partials/timer/timer';
+
+/* BLOCK-1 */
+
+.block-1 {
+
+  .sec-title:last-of-type {
+    padding-top: 40px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col-4();
+    @include col-lg-5();
+    @include col-md-6();
+    @include col-sm-11();
+    @include col-xs-12();
+  }
+
+  .block {
+    margin-bottom: 25px;
+    
+
+    &--line {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  .block__img {
+    width: 70px;
+    height: 64px;
+    margin: 0 auto 20px;
+  }
+
+  .block__desc {
+    font-size: 23px;
+    font-weight: 300;
+
+    strong {
+      font-weight: 400;
+    }
+
+    &--check {
+      position: relative;
+      padding-left: 26px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 5px;
+        left: 0;
+        width: 20px;
+        height: 19px;
+        background: url('../img/parents/check.svg') center no-repeat;
+      }
+    }
+  }
+
+  .block-info {
+    font-size: 30px;
+    font-weight: 100;
+    color: $red;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  &__btn {
+    @include btn-newRed(571px);
+  }
+}
+
+/* BLOCK-2 */
+
+.block-2 {
+  position: relative;
+  background-image: url('../img/parents/bg-block-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 15px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 15px;
+    background: url('../img/parents/triangles-white.png') center no-repeat;
+  }
+
+  .sec-title {
+    padding-top: 15px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col-full {
+    @include col-4();
+    @include col-md-5();
+    @include col-sm-7();
+    @include col-xs-11();
+
+    .block {
+      @media(max-width: $lg-screen - 1) {
+        min-height: 300px;
+      }
+      @media(max-width: $md-screen - 1) {
+        min-height: 310px;
+      }
+      @media(max-width: $sm-screen - 1) {
+        min-height: auto;
+      }
+      min-height: 290px;
+    }
+  }
+
+  .col-min {
+    @include col-3()
+    @include col-md-5();
+    @include col-sm-7();
+    @include col-xs-11();
+
+    .block {
+      @media(max-width: $lg-screen - 1) {
+        min-height: 270px;
+      }
+      @media(max-width: $md-screen - 1) {
+        min-height: 230px;
+      }
+      @media(max-width: $sm-screen - 1) {
+        min-height: auto;
+      }
+      min-height: 230px;
+    }
+  }
+
+  .block {
+    background-color: $white;
+    padding: 25px 20px 20px;
+    margin-bottom: 40px;
+
+    &__name {
+      position: relative;
+      font-size: 18px;
+      line-height: 1.1;
+      color: $red;
+      padding-left: 65px;
+      margin-bottom: 20px;
+
+      &--1,
+      &--3,
+      &--6,
+      &--7 {
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &--1 {
+
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url('../img/parents/education.svg');
+          width: 45px;
+          height: 43px;
+        }
+      }
+
+
+      &--2 {
+
+        &:before {
+          background-image: url('../img/parents/open-book.svg');
+          width: 45px;
+          height: 43px;
+        }
+      }
+
+      &--3 {
+
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url('../img/parents/trophy.svg');
+          width: 40px;
+          height: 45px;
+        }
+      }
+
+      &--4 {
+
+        &:before {
+          background-image: url('../img/parents/carpentry.svg');
+          width: 45px;
+          height: 45px;
+        }
+      }
+
+      &--5 {
+
+        &:before {
+          background-image: url('../img/parents/smile.svg');
+          width: 40px;
+          height: 45px;
+        }
+      }
+
+      &--6 {
+
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url('../img/parents/children.svg');
+          width: 45px;
+          height: 37px;
+        }
+      }
+
+      &--7 {
+
+        &:before {
+          top: 50%;
+          transform: translateY(-50%);
+          background-image: url('../img/parents/search.svg');
+          width: 37px;
+          height: 45px;
+        }
+      }
+
+    }
+
+    &__list {
+
+      li {
+        position: relative;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        padding-left: 8px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          position: absolute;
+          content: '';
+          display: block;
+          top: 6px;
+          left: 0;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: $red;
+        }
+      }
+    }
+  }
+}
+
+/* BLOCK-3 */
+
+.block-3 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/parents/mob/bg-ndu-2-md.jpg');
+  }
+  @media(max-width: 639px) {
+    background-image: url('../img/parents/mob/bg-ndu-2-sm.jpg');
+  }
+  background-image: url('../img/parents/bg-ndu-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  padding: 50px 0;
+
+  .container {
+    @include cf();
+  }
+
+  .author {
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+
+    &--dt {
+      @media(max-width: $md-screen - 1)  {
+        display: none;
+      }
+      position: absolute;
+      bottom: -20px;
+      left: 50px;
+    }
+
+    &--mob {
+      @media(max-width: $md-screen - 1)  {
+        display: block;
+        font-size: 16px;
+      }
+      @include cf();
+      display: none;
+      text-align: right;
+      padding-bottom: 30px;
+
+      span {
+        max-width: 300px;
+        float: right;
+      }
+    }
+  }
+
+  .block-wrap {
+    @media(max-width: $md-screen - 1)  {
+      max-width: 767px;
+      float: none;
+      margin: 0 auto;
+    }
+    max-width: 571px;
+    float: right;
+  }
+
+  &__name {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+
+  .block-quot {
+    position: relative;
+    font-size: 18px;
+    font-weight: 100;
+
+    strong {
+      display: inline-block;
+      width: 100%;
+      font-weight: 700;
+      padding: 30px 70px 30px 0;
+    }
+
+    &:before,
+    &:after {
+      @media(max-width: $md-screen - 1)  {
+        display: none;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      width: 75px;
+      height: 70px;
+      background: url('../img/parents/quot.png') center no-repeat;
+      background-size: cover;
+    }
+
+    &:before {
+      top: 0;
+      left: -80px;
+    }
+
+    &:after {
+      right: 0;
+      bottom: 20px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__btn {
+    @extend .block-1__btn;
+  }
+}
+
+@import 'partials/reviews';
+
+@import 'partials/7Tech/author';
+
+/* BLOCK-4 */
+
+.block-4 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/parents/mob/bg-ndu-3-md.jpg');
+  }
+  @media(max-width: $sm-screen - 1) {
+    background-image: url('../img/parents/mob/bg-ndu-3-sm.jpg');
+  }
+  background-image: url('../img/parents/bg-ndu-3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  &__title {
+    @media(max-width: $md-screen - 1) {
+      font-size: 42px;  
+    }
+    @media(max-width: $sm-screen - 1) {
+      font-size: 36px;  
+    }
+    font-size: 48px;
+    color: $white;
+    padding-bottom: 10px;
+  }
+
+  &__btn {
+    @extend .jumb__btn;
+  }
+}
+
+@import 'partials/map/map'

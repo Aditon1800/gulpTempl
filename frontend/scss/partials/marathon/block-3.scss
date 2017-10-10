@@ -1,0 +1,99 @@
+
+/*=== BLOCK-3 ===*/
+
+.block-3 {
+  background-image: url('../img/marathon/part3/bg-maraphon-advance-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  .row {
+    @include justify-content-md(center);
+  }
+
+  .col {
+    @media(max-width: $md-screen - 1) {
+      border-right: none;
+      border-bottom: 1px solid #bababa;
+    }
+    @include col();
+    @include col-3();
+    @include col-md-11();
+    border-right: 1px solid #bababa;
+    margin-bottom: 40px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .block {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+
+  .desc {
+    @media(max-width: $md-screen - 1) {
+      padding-top: 68px;
+    }
+    position: relative;
+    font-size: 20px;
+    font-weight: 100;
+    padding-top: 82px;
+
+    strong {
+      font-weight: 400;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 55px;
+    }
+
+    &-1 {
+
+      &:before {
+        background: url('../img/marathon/part3/block/employee-1.svg');
+        width: 55px;
+      }
+    }
+
+    &-2 {
+
+      &:before {
+        background: url('../img/marathon/part3/block/employee-2.svg');
+        width: 55px;
+      }
+    }
+
+    &-3 {
+
+      &:before {
+        background: url('../img/marathon/part3/block/brainstorm.svg');
+        width: 48px;
+      }
+    }
+
+    &-4 {
+
+      &:before {
+        background: url('../img/marathon/part3/block/ebook.svg');
+        width: 44px;
+      }
+    }
+  }
+
+  .more-info {
+    font-size: 30px;
+    font-weight: 100;
+    color: $red;
+  }
+}

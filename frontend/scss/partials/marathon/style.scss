@@ -1,0 +1,796 @@
+/*=== MENU ===*/
+
+.menu {
+
+  &__list {
+    @media(max-width: $sm-screen - 1) {
+      flex-direction: column;
+      justify-content: center;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  &__item {
+    @media(max-width: $md-screen - 1) {
+      font-size: 20px;
+    }
+    @media(max-width: $sm-screen - 1) {
+      width: 100%;
+      max-width: 500px;
+      min-height: auto;
+      font-size: 18px;
+      margin: 20px auto;
+    }
+    width: calc(100%/3 - 30px);
+    min-height: 150px;
+    font-size: 24px;
+    border: 2px dotted $white;
+    border-radius: 5px;
+    text-align: center;
+
+    a {
+      @media(max-width: $md-screen - 1) {
+        padding: 20px;
+      }
+      @media(max-width: $sm-screen - 1) {
+        padding: 15px;
+      }
+      display: block;
+      color: inherit;
+      padding: 30px 20px;
+    }
+
+    span {
+      width: 100%;
+      font-size: 36px;
+    }
+  }
+}
+
+/*=== TOP NAV ===*/
+
+.header,
+.bottom {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/marathon/mob/bg-maraphon-top-1-md.jpg');
+  }
+  @media(max-width: 640px) {
+    background-image: url('../img/marathon/mob/bg-maraphon-top-1-sm.jpg');
+  }
+  background-image: url('../img/marathon/bg-maraphon-top-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+}
+
+.header {
+  @media(max-width: $sm-screen - 1) {
+    padding-bottom: 40px;
+  }
+  @include main-logo(#fff);
+  padding-bottom: 70px;
+
+  &-title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 56px;
+    }
+    @media(max-width: $sm-screen - 1) {
+      font-size: 36px;
+    }
+    font-size: 60px;
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+
+  &-menu {
+
+    &__item--active {
+      background-color: $red;
+      border: 2px solid $red;
+    }
+  }
+}
+
+/*=== JUMB ===*/
+
+.jumb {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px 0;
+
+  &__main-desc {
+    max-width: 665px;
+    line-height: 1.1;
+  }
+
+  &__over-title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 28px;
+    }
+    font-size: 30px;
+    font-weight: 500;
+    line-height: .9;
+    padding: 20px 0;
+  }
+
+  &__title {
+    @media(max-width: $md-screen - 1) {
+      font-size: 42px;
+    }
+    @media(max-width: $sm-screen - 1) {
+      font-size: 36px;
+    }
+    font-size: 48px;
+    font-weight: 700;
+    color: $red;
+    padding-bottom: 20px;
+  }
+
+  &__desc {
+    @media(max-width: $sm-screen - 1) {
+      padding: 20px 60px 20px 0;
+    }
+    @media(max-width: 480px) {
+      padding: 20px 0;
+    }
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px 0;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    @media(max-width: $sm-screen - 1) {
+      margin: 20px auto;
+    }
+    @include btn-newRed(371px);
+    margin: 20px 0;
+  }
+}
+
+@import 'partials/timer/timer';
+
+.block {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.block__img {
+  @media(max-width: $sm-screen - 1) {
+    margin: 0 auto 15px;
+  }
+  margin: 0 auto 25px;
+}
+
+/*=== BLOCK-1 ===*/
+
+.block-1 {
+  padding: 70px 0 40px;
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col();
+    @include col-3();
+    @include col-md-4();
+    @include col-sm-11();
+  }
+
+  .block__img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .block__desc {
+    @media(max-width: 480px){
+
+      br {
+        display: none;
+      }
+    }
+    font-size: 24px;
+    font-weight: 100;
+  }
+
+  .more-info {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 20px;
+    }
+    max-width: 975px;
+    border-top: 1px solid #bababa;
+    border-bottom: 1px solid #bababa;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    .title {
+      color: $red;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+    }
+
+    .desc {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*=== BLOCK-2 ===*/
+
+@mixin block-2-2(){
+
+  &-2 {
+
+    .row {
+      @include justify-content-md(center);
+    }
+
+    .col {
+      @include col();
+      @include col-6();
+      @include col-sm-11();
+      @include col-xs-12();
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .desc {
+      position: relative;
+      font-size: 24px;
+      font-weight: 100;
+      line-height: 1;
+      padding-left: 68px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &-1 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/thinking.svg');
+        }
+      }
+
+      &-2 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/visibility.svg');
+        }
+      }
+
+      &-3 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/open-book.svg');
+        }
+      }
+
+      &-4 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/line-chart.svg');
+        }
+      }
+
+      &-5 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/manager.svg');
+        }
+      }
+
+      &-6 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/target.svg');
+        }
+      }
+
+      &-7 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/training.svg');
+        }
+      }
+
+      &-8 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/battery.svg');
+        }
+      }
+
+      &-9 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/pie-chart.svg');
+        }
+      }
+
+      &-10 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/bus.svg');
+        }
+      }
+
+      &-11 {
+
+        &:before {
+          background-image: url('../img/marathon/part2/know/studies.svg');
+        }
+      }
+    }
+  }
+}
+
+@mixin block-2() {
+
+  .col,
+  .col-min {
+    @include col();
+  }
+  
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col-6();
+    @include col-md-7();
+    @include col-sm-9();
+    @include col-xs-12();
+
+    .block-wrap {
+      min-height: 380px;
+    }
+  }
+
+  .col-min {
+    @include col-4();
+    @include col-lg-7();
+    @include col-sm-9();
+    @include col-xs-12();
+
+    .block-wrap {
+      @media(max-width: $lg-screen - 1) {
+        min-height: 200px;
+      }
+      min-height: 340px;
+    }
+  }
+
+  .block-wrap {
+    background-color: $white;
+    padding: 40px 25px 20px;
+    margin-bottom: 40px;
+  }
+
+  .name {
+    @media(max-width: $sm-screen - 1) {
+      max-width: 350px;
+      padding-left: 58px;
+
+      br {
+        display: none;
+      }
+    }
+    position: relative;
+    min-height: 50px;
+    font-size: 24px;
+    color: $red;
+    line-height: 1;
+    padding-left: 68px;
+    margin-bottom: 15px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 3px;
+      left: 0;
+      width: 45px;
+      height: 45px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-1 {
+      @media(max-width: $md-screen - 1) {
+        margin-bottom: 25px;
+      }
+      min-height: auto;
+      margin-bottom: 40px;
+
+
+      &:before {
+        background: url('../img/marathon/about/girl-crying.svg') center no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &-2 {
+
+      &:before {
+        background: url('../img/marathon/about/art-studies.svg') center no-repeat;
+      }
+    }
+
+    &-3 {
+
+      &:before {
+        background: url('../img/marathon/about/family.svg') center no-repeat;
+      }
+    }
+
+    &-4 {
+
+      &:before {
+        background: url('../img/marathon/about/motivation.svg') center no-repeat;
+      }
+    }
+
+    &-5 {
+
+      &:before {
+        background: url('../img/marathon/about/motivation-2.svg') center no-repeat;
+      }
+    }
+  }
+
+  .block-list {
+
+    li {
+      position: relative;
+      font-size: 18px;
+      font-weight: 100;
+      padding-left: 30px;
+
+      strong {
+        font-weight: 400;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 0;
+        width: 16px;
+        height: 15px;
+        background: url('../img/marathon/check.png') center no-repeat;
+      }
+    }
+  }
+
+}
+
+.block-2 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/marathon/part2/mob/bg-maraphon-question-1-md.jpg');
+  }
+  @media(max-width: 640px) {
+    background-image: url('../img/marathon/part2/mob/bg-maraphon-question-1-sm.jpg');
+  }
+  position: relative;
+  background-image: url('../img/marathon/part2/bg-maraphon-question-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 70px 0 30px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:before {
+    top: 0;
+    background-image: url('../img/marathon/triangle-pattern-1.png');
+  }
+
+  &:after {
+    bottom: 0;
+    background-image: url('../img/marathon/triangle-pattern-2.png');
+  }
+
+  .block-wrap {
+
+    .title {
+      @media(max-width: $sm-screen - 1) {
+        padding-left: 75px;
+        padding-bottom: 35px;
+      }
+      position: relative;
+      font-size: 24px;
+      padding-bottom: 15px;
+      padding-left: 85px;
+
+      &:before {
+        @media(max-width: $sm-screen - 1) {
+          top: -25px;
+        }
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 0;
+        width: 70px;
+        height: 70px;
+        background: url('../img/marathon/part3/quest/student-reading.svg') center no-repeat;
+      }
+    }
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @media(max-width: $md-screen - 1) {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include col();
+    @include col-6();
+    @include col-md-9();
+    @include col-sm-11();
+  }
+
+  .desc {
+    position: relative;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    padding-left: 55px;
+    margin-bottom: 35px;
+
+    &:before {
+      @media(max-width: 480px) {
+        top: 2px;
+        transform: translateY(0);
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &-1 {
+
+      &:before {
+        background-image: url('../img/marathon/part3/quest/clipboard.svg');
+      }
+    }
+
+    &-2 {
+
+      &:before {
+        background-image: url('../img/marathon/part3/quest/conversation.svg');
+      }
+    }
+
+    &-3 {
+
+      &:before {
+        background-image: url('../img/marathon/part3/quest/books.svg');
+      }
+    }
+
+    &-4 {
+
+      &:before {
+        background-image: url('../img/marathon/part3/quest/learning.svg');
+      }
+    }
+
+    &-5 {
+
+      &:before {
+        background-image: url('../img/marathon/part3/quest/timer.svg');
+      }
+    }
+
+    &-6 {
+
+      &:before {
+        background-image: url('../img/marathon/part3/quest/speed.svg');
+      }
+    }
+  }
+
+  .block-list {
+    @media(max-width: $sm-screen - 1) {
+      padding-left: 0;
+    }
+    padding-left: 85px;
+
+    li {
+      position: relative;
+      font-size: 24px;
+      font-weight: 100;
+      padding-left: 30px;
+
+      strong {
+        font-weight: 400;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 0;
+        width: 16px;
+        height: 15px;
+        background: url('../img/marathon/check.png') center no-repeat;
+      }
+    }
+  }
+
+  .btn-block {
+    margin: 20px 0;
+  }
+
+  .btn-block {
+    padding: 25px 0 15px;
+  }
+
+  &__btn {
+    @include btn-newRed(571px);
+  }
+
+}
+
+@import 'block-3';
+
+/*=== ONLINE ===*/
+
+.online {
+  @media(max-width: $sm-screen - 1) {
+    padding: 50px 0;
+  }
+  @media(max-width: 640px) {
+    background-image: url('../img/marathon/mob/bg-maraphon-date-1-sm.jpg');
+  }
+  background-image: url('../img/marathon/bg-maraphon-date-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  padding: 100px 0;
+
+  &__over-title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 26px;
+    }
+    font-size: 30px;
+    font-weight: 300;
+    padding-bottom: 15px;
+  }
+
+  &-title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 42px;
+    }
+    @media(max-width: 480px) {
+      font-size: 34px;
+    }
+    font-size: 48px;
+  }
+
+  &-date {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    @media(max-width: 480px) {
+      font-size: 36px;
+    }
+    font-size: 60px;
+    font-weight: 300;
+    color: $red;
+    padding: 20px 0;
+  }
+
+  .btn-block {
+    padding-top: 20px;
+  }
+
+  &__btn {
+    @include btn-newTrans(571px);
+    @media(max-width: 480px) {
+      font-size: 16px;
+    }
+  }
+}
+
+/*=== BOTTOM MENU ===*/
+
+.bottom {
+  color: $white;
+
+  &__title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 36px;
+    }
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .menu {
+
+    &__item {
+      border: none;
+      background-color: #ffffff;
+      opacity: 0.2;
+      color: #26698b;
+    }
+  }
+
+  .bottom-menu__item {
+
+    &--active-1 {
+      background-color: #3fbcef;
+      color: $white;
+      opacity: 1;
+    }
+
+    &--active-2 {
+      background-color: #31b573;
+      color: $white;
+      opacity: 1;
+    }
+
+    &--active-3{
+      background-color: #f09450;
+      color: $white;
+      opacity: 1;
+    }
+  }
+}
+
+@import 'partials/7Tech/author';

@@ -1,0 +1,76 @@
+/* JUMB */
+
+.jumb{
+  @include main-logo($white);
+  @include  jumb-middle();
+  background-image: url('../img/krp_online/bg-krp-1.jpg');
+  @include bg-size();
+
+  &__main-desc {
+    max-width: 585px;
+    color: $white;
+    text-align: center;
+    padding-bottom: 70px;
+  }
+
+  &__title {
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: $red;
+    margin: 20px 0;
+
+    span {
+      width: 100%;
+      font-size: 36px;
+      text-transform: uppercase;
+      color: $white;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__desc {
+    font-size: 24px;
+    padding: 20px 0 40px;
+  }
+
+  &__btn {
+    @include btn-newRed(371px);
+  }
+}
+
+.block-title {
+  font-size: 32px;
+  font-weight: 500;
+  color: $red;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+/* BLOCK-1 */
+
+.block-1 {
+  background-image: url('../img/krp_online/bg-krp-2.jpg');
+  @include bg-size();
+  color: $white;
+
+  .block-wrap {
+    padding-left: 45%;
+  }
+
+  .block-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: $red;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

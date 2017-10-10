@@ -1,0 +1,438 @@
+/* JUMB */
+
+.jumb {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/ielts/mob/bg-ielts-01-md.jpg');  
+  }
+  @media(max-width: 639px) {
+    background-image: url('../img/ielts/mob/bg-ielts-01-sm.jpg');  
+  }
+  background-image: url('../img/ielts/bg-ielts-01.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: $white;
+
+  &__title {
+    @media(max-width: $md-screen - 1) {
+      font-size: 60px;
+      line-height: 1.1;
+    }
+    @media(max-width: $sm-screen - 1) {
+      font-size: 48px;
+      line-height: 1.3;
+    }
+    font-size: 72px;
+    font-weight: 500;
+    line-height: .8;
+    padding: 20px 0;
+
+    span {
+      @media(max-width: $sm-screen - 1) {
+        font-size: 20px;
+      }
+      width: 100%;
+      font-size: 25px;
+      font-weight: 300;
+    }
+  }
+
+  &__place {
+    @media(max-width: $sm-screen - 1) {
+      max-width: 480px;
+      flex-direction: column;
+      font-size: 22px;
+    }
+    max-width: 570px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 0;
+    margin: 20px auto;
+
+    .icon {
+      @media(max-width: $sm-screen - 1) {
+        margin: 15px 0;
+      }
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: url('../img/ielts/calendar-big.png') center no-repeat;
+    }
+  }
+
+  &__info {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 42px;
+    }
+    font-family: $nexa;
+    font-size: 48px;
+    font-weight: 300;
+    padding: 20px 0;
+  }
+
+  .btn-block {
+    padding-top: 10px;
+  }
+
+  &__btn {
+    @include btn-newRed(371px);
+  }
+}
+
+@import 'partials/timer/timer';
+
+.red {
+  color: $red;
+}
+
+/* BLOCK-1 */
+
+.block-1 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/ielts/mob/bg-ielts-02-md.jpg');
+  }
+  @media(max-width: 639px) {
+    background-image: url('../img/ielts/mob/bg-ielts-02-sm.jpg');
+  }
+  background-image: url('../img/ielts/bg-ielts-02.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .block-wrap {
+    @media(max-width: $md-screen - 1) {
+      max-width: 550px;
+      text-align: center;
+      padding: 0;
+      margin: 0 auto;
+    }
+    padding: 130px 0 110px 50%;
+  }
+
+  p {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 20px;
+    }
+    font-size: 23px;
+    font-weight: 300;
+
+    strong {
+      font-weight: 500;
+    }
+
+    &:first-of-type {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.block-title {
+  @media(max-width: $md-screen - 1) {
+    font-size: 32px;
+  }
+  @media(max-width: 480px) {
+    font-size: 28px;
+  }
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* BLOCK-2 */
+
+.block-2 {
+  text-align: center;
+
+  .row{
+    @include justify-content(center);
+  }
+
+  .col {
+    @media(max-width: $md-screen - 1) {
+      margin-bottom: 40px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    @include col-4();
+    @include col-md-5();
+    @include col-sm-10();
+    @include col-xs-12();
+
+    &:first-of-type {
+
+      .block-img {
+        width: 53px;
+      }
+    }
+  }
+
+  .block-img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 30px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+/* BLOCK-3 */
+
+.block-3 {
+  background-image: url('../img/ielts/bg-ielts-03.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col-3();
+    @include col-lg-5();
+    @include col-md-7();
+    @include col-xs-11();
+
+    &:last-of-type {
+
+      .title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .block-wrap {
+    @media(max-width: $md-screen - 1) {
+      min-height: auto;
+    }
+    min-height: 510px;
+    background-color: $white;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+
+  .title,
+  .untitle {
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .title {
+    min-height: 34px;
+    font-size: 26px;
+  }
+
+  .untitle {
+    font-size: 18px;
+  }
+
+  .block-list {
+    @media(max-width: $md-screen - 1) {
+      min-height: auto;
+    }
+    min-height: 140px;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    padding: 20px 0;
+    margin: 20px 0;
+
+    li {
+      position: relative;
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 20px;
+      margin-bottom: 5px;
+
+      &:before {
+        @include pos();
+        top: 2px;
+        left: 0;
+        width: 12px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  .ico-star {
+
+    &:before {
+      background-image: url('../img/ielts/small-star.svg');
+    }
+  }
+
+  .ico-time {
+
+    &:before {
+      background-image: url('../img/ielts/small-wall-clock.svg');
+    }
+  }
+
+  .ico-sand {
+
+    &:before {
+      background-image: url('../img/ielts/small-hourglass.svg');
+    }
+  }
+
+  .ico-cal {
+
+    &:before {
+      background-image: url('../img/ielts/small-calendar.svg');
+    }
+  }
+
+  .desc {
+    @media(max-width: $lg-screen - 1) {
+      min-height: 130px;
+    }
+    @media(max-width: $md-screen - 1) {
+      min-height: 50px;
+      padding-bottom: 20px;
+    }
+    min-height: 190px;
+    border-bottom: 1px solid #dadada;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
+
+  .bottom-cost {
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    color: $red;
+    padding: 20px 5px;
+
+    i {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('../img/ielts/small-coin.svg') left top no-repeat;
+      vertical-align: baseline;
+    }
+  }
+
+  .block-btn {
+    width: 100%;
+    border: 1px solid $l-black;
+    background-color: $white;
+    font-size: 18px;
+    text-transform: none;
+    padding: 12px;
+    cursor: pointer;
+
+    &:visited {
+      color: $l-black;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $red;
+      border-color: $red;
+      color: $white;
+    }
+  }
+
+  .bottom-info {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* BLOCK-4 */
+
+.block-4 {
+  text-align: center;
+
+  .col{
+    @media(max-width: $md-screen - 1) {
+
+      &:first-of-type {
+        margin-bottom: 50px;
+      }
+    }
+    @include col-6();
+    @include col-md-12();
+  }
+
+  .name {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 24px;
+    }
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+    @media(max-width: 480px) {
+      font-size: 42px;
+    }
+    display: inline-block;
+    font-size: 70px;
+    margin-bottom: 18px;
+  }
+
+  .info {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+/* BLOCK-5 */
+
+.block-5 {
+  @media(max-width: $sm-screen - 1) {
+    background-image: url('../img/ielts/mob/bg-ielts-04-md.jpg');
+  }
+  background-image: url('../img/ielts/bg-ielts-04.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .block-wrap {
+    @media(max-width: $sm-screen - 1) {
+      max-width: none;
+      text-align: center;
+    }
+    max-width: 545px;
+  }
+
+  p {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 20px;
+    }
+    font-size: 24px;
+
+    &:last-of-type {
+      font-family: $nexa;
+      font-size: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  strong {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,13 @@
+mixin jumb(date, title, path)
+  section.jumb(style="background-image: url(img/marathon/#{path});")
+    .container
+      .jumb__main-desc
+        .jumb__over-title Присоединяйтесь к бесплатному 
+          br
+          | онлайн-марафону #{date} августа и узнайте
+
+        h1.jumb__title= title
+        .jumb__desc Прямое включение с Николаем Ягодкиным на весь мир
+          br
+          span Начало в 20:00
+        button.btn.jumb__btn.js-getModal Принять участие

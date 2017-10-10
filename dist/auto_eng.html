@@ -39,41 +39,11 @@
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWR77CZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <!--=== End Google Tag Manager (noscript)-->
     </noscript>
+    <!--=== Preloader-->
+    <div id="preloader">
+      <div class="icon"></div>
+    </div>
     <div class="container-fluid">
-      <!--=== HEADER-->
-      <header class="header">
-        <button class="header__toggle"><span></span></button>
-        <div class="container">
-          <div class="header__content-wrap"><a href="http://advance-club.ru" class="header__logo"><img src="img/main-logo.png" alt="logo"/></a>
-            <div class="header__content">
-              <h1 class="header__title">Центр образовательных технологий<br/>Николая Ягодкина</h1>
-              <p class="header__desc"><a href="http://advance-club.ru/fulllist/?link=spb">Санкт-Петербург</a><span> • </span><a href="http://advance-club.ru/fulllist/?link=msk">Москва</a><span> • </span><a href="http://advance-club.ru/fulllist/?link=online">Онлайн весь мир</a></p>
-            </div>
-            <div class="header__informer">
-              <ul class="action__follow follow">
-                <li>+7 (812) 363-43-53</li>
-                <li>8 (800) 700-53-42</li>
-              </ul>
-              <!-- === Login in--><a href="http://advanglish.ru/%D0%B2%D1%85%D0%BE%D0%B4/" class="action__personal">Вход в личный кабинет</a>
-            </div>
-          </div>
-        </div>
-        <!--=== header nav-->
-        <nav class="header__nav">
-          <div class="container">
-            <ul class="header__nav-list">
-              <li><a href="http://advance-club.ru/" class="header__nav-list--main">Главная</a></li>
-              <li><a href="http://advance-club.ru/izuchenie-yazykov" class="header__nav-list--lang">Иностранные языки</a></li>
-              <li><a href="http://advance-club.ru/razvitie-pamyati" class="header__nav-list--effect">Повышение эффективности</a></li>
-              <li><a href="http://advance-club.ru/obuchenie-detey" class="header__nav-list--child">Обучение детей</a></li>
-              <li><a href="http://advance-club.ru/fulllist" class="header__nav-list--sched">Расписание</a></li>
-              <li><a href="http://advance-club.ru/knowledge" class="header__nav-list--base">База знаний</a></li>
-              <li><a href="http://advance-club.ru/about" class="header__nav-list--about">Об Advance</a></li>
-              <li><a href="http://advance-club.ru/contact" class="header__nav-list--contact">Контакты</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
       <main>
         <!--=== Jumbotron-->
         <section class="jumb jumb--auto sec">
@@ -200,7 +170,7 @@
                     <li><strong>Отзывов о результатах применения его технологий только ВКонтакте больше <span>10 000</span></strong></li>
                     <li>Репортажи о его технологиях и результатах их применения показывали <strong>по Первому каналу, НТВ</strong> и д.р.</li>
                     <li><strong>Консультирует министров образования и обучает парламенты зарубежных стран</strong></li>
-                    <li>Среди частных учеников: <strong>министры, депутаты, ректора и профессоры, президенты правления крупнейших компаний и банков и их дети</strong></li>
+                    <li>Среди частных учеников: <strong>министры, депутаты, ректоры и профессора, президенты правления крупнейших компаний и банков и их дети</strong></li>
                   </ul>
                 </div>
               </div>
@@ -281,8 +251,8 @@
       <div id="overlay"></div>
       <!-- Scroll top-->
       <div class="top_btn"><span>^</span></div>
-      <script src="js/jquery.flipster.js"></script>
       <script src="js/script.js"></script>
+      <script src="js/slick.min.js"></script>
       <script src="../main/js/intlTelInput.min.js"></script>
       <script>
         var telephone = $("#phone");
@@ -300,7 +270,12 @@
         preferredCountries: ['ru', 'by', 'ua'],
                     // initialCountry: "ru"
         })
+        
       </script>
+      <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"> </script>
+      <!--=== VK Widget-->
+      <div id="vk_community_messages"></div>
+      <script type="text/javascript">VK.Widgets.CommunityMessages("vk_community_messages", 19444929, {tooltipButtonText: "Есть вопрос?"});</script>
     </div>
   </body>
 </html>

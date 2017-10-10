@@ -1,0 +1,17 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Презентация нового онлайн-продукта “Курс развития памяти”')
+
+block main
+  main
+    include partials/krp/jumb
+    +timer('До старта курса осталось:', '07', '14', '08', '00')
+    include partials/krp/block-1
+    include partials/krp/block-2
+    include partials/krp/block-3
+    include partials/krp/block-4
+    include partials/7Tech/author
+    include partials/reviews
+    include partials/krp/block-5

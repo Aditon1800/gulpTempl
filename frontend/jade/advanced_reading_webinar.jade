@@ -1,0 +1,20 @@
+extends layout
+
+block meta
+  include helpers/mixin
+  +meta('Бесплатный вебинар Эффективное чтение')
+
+block main
+  main.muller-block
+    include partials/advanced_reading/jumb
+    +timer-dark('До старта:', '09', '04', '17', '00')
+    include partials/advanced_reading/block-1
+    include partials/advanced_reading/block-2
+    include partials/advanced_reading/block-3
+    include partials/advanced_reading/block-4
+    include partials/advanced_reading/block-5
+    include partials/advanced_reading/block-6
+    article.bottom-info
+      .container
+        .btn-block
+          button.btn.block-btn.js-getModal Хочу развиваться

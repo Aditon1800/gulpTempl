@@ -1,0 +1,587 @@
+/*=== JUMB ===*/
+
+.jumb {
+  @media(max-width: $sm-screen) {
+    background-image: url('../img/mental/mob/bg-boy-abac-1-sm.jpg');
+  }
+  background-image: url('../img/mental/bg-boy-abac-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  &__main-desc {
+    @media (max-width: $md-screen - 1) {
+      max-width: none;
+    }
+    max-width: 760px;
+    position: relative;
+    text-align: center;
+    color: $white;
+    padding: 110px 0 70px;
+  }
+
+  @include flag();
+
+  &__title {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 48px;
+    }
+    @media (max-width: 480px) {
+      font-size: 42px;
+    }
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-top: 30px;
+
+    span {
+      width: 100%;
+      font-size: 30px;
+      font-weight: 100;
+      text-transform: none;
+      padding-bottom: 15px;
+    }
+  }
+
+  .block-info {
+    @media (max-width: $sm-screen - 1) {
+      max-width: 540px;
+      padding: 25px 20px;
+      margin: 40px auto;
+    }
+    max-width: 700px;
+    border: 1px solid $white;
+    background-color: rgba(0, 0, 0, .2);
+    text-align: left;
+    padding: 40px 60px;
+    margin: 50px auto 45px;
+  }
+
+  &__date {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 42px;
+      line-height: 1;
+      padding-left: 50px;
+    }
+    @media (max-width: 480px) {
+      font-size: 36px;
+    }
+    position: relative;
+    font-size: 48px;
+    font-weight: 100;
+    padding-left: 70px;
+    margin-bottom: 20px;
+
+    &:before {
+      @media (max-width: $sm-screen - 1) {
+        top: -2px;
+        transform: translateY(0);
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background: url('../img/mental/calendar-white.svg') center no-repeat;
+    }
+  }
+
+  &__list {
+    @include cf();
+
+    li {
+      @media (max-width: $sm-screen - 1) {
+        float: none;
+        width: 100%;
+        padding-left: 50px;
+
+        &:first-child {
+          margin-bottom: 25px;
+        }
+      }
+      float: left;
+      position: relative;
+      width: 50%;
+      font-size: 24px;
+      font-weight: 100;
+      line-height: 1.2;
+      padding-left: 70px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+      }
+
+      &:first-child:before {
+        background-image: url('../img/mental/placeholder-white.svg');
+      }
+
+      &:last-child:before {
+        background-image: url('../img/mental/wallet-white.svg');
+      }
+    }
+  }
+
+  &__main-info {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 28px;
+    }
+    font-size: 36px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 20px 0;
+  }
+
+  .btn-block {
+    padding: 10px 0;
+  }
+
+  &__btn {
+    @include btn-red(570px);
+    text-transform: none;
+  }
+}
+
+@import 'partials/timer/timer';
+
+.col {
+  @include col();
+}
+
+.sec-desc {
+  @media (max-width: $sm-screen - 1) {
+    font-size: 20px;
+  }
+  font-size: 24px;
+  font-weight: 100;
+}
+
+/*=== BLOCK-1 ===*/
+
+.block-1 {
+  text-align: center;
+
+  &.sec {
+    padding-bottom: 30px;
+  }
+
+  .title-min {
+    font-size: 36px;
+    font-weight: 100;
+    padding: 20px 0 45px;
+  }
+
+  .sec-desc {
+    padding-bottom: 40px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col-3();
+    @include col-md-5();
+    @include col-sm-10();
+    @include col-xs-12();
+  }
+
+  .block {
+    margin-bottom: 40px;
+  }
+
+  .block-img {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+
+    &--min {
+      width: 65px;
+    }
+  }
+
+  .block-desc {
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+  }
+}
+
+/*=== BLOCK-2 ===*/
+
+.block-2 {
+  @media (max-width: $sm-screen - 1) {
+    background-image: url('../img/mental/mob/bg-pattern-1-md.jpg');
+  }
+  position: relative;
+  background-image: url('../img/mental/bg-pattern-1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: $l-black;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:before {
+    top: 0;
+    background-image: url('../img/mental/triangle-1.png');
+  }
+
+  &:after {
+    bottom: 0;
+    background-image: url('../img/mental/triangle-2.png');
+  }
+
+  .sec-desc {
+    max-width: 730px;
+    margin: 0 auto;
+  }
+
+  &__top-desc {
+    border-bottom: 1px solid $l-black;
+    padding-bottom: 50px;
+    margin-bottom: 40px;
+  }
+
+  &__main-content {
+    border-bottom: 1px solid $l-black;
+    margin-bottom: 25px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col-3();
+    @include col-lg-5();
+    @include col-sm-8();
+    @include col-xs-12();
+  }
+
+  .block {
+    @media(max-width: $sm-screen - 1) {
+      min-height: 300px;
+    }
+    min-height: 430px;
+    background-color: $white;
+    text-align: left;
+    padding: 20px 20px 10px;
+    margin-bottom: 40px;
+
+    &--1 {
+    @media(max-width: $sm-screen - 1) {
+      margin-top: 40px;
+    }
+      margin-top: 90px;
+    }
+
+    &--2 {
+    @media(max-width: $sm-screen - 1) {
+      margin-top: 0;
+    }
+      margin-top: 60px;
+    }
+
+    &--3 {
+    @media(max-width: $sm-screen - 1) {
+      margin-top: 0;
+    }
+      margin-top: 30px;
+    }
+
+  }
+
+  .name {
+    font-size: 30px;
+    font-weight: 100;
+    color: $red;
+    text-align: center;
+    border-bottom: 1px solid $red;
+    padding-bottom: 10px;
+  }
+
+  .desc {
+    position: relative;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 25px;
+    padding-left: 36px;
+
+    b {
+      display: inline-block;
+      width: 100%;
+      font-weight: 400;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 3px;
+      left: 0;
+      width: 25px;
+    }
+
+    &:first-of-type {
+
+      &:before {
+        background: url('../img/mental/small-kid-1.svg') center no-repeat;
+        height: 23px;
+      }
+    }
+
+    &:last-of-type {
+
+      &:before {
+        background: url('../img/mental/small-kid-2.svg') center top no-repeat;
+        height: 28px;
+      }
+    }
+  }
+
+  .warn-desc {
+    font-size: 30px;
+    margin: 10px 0 40px;
+  }
+
+  .btn-block {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    @extend .jumb__btn;
+  }
+}
+
+/*=== BLOCK-3 ===*/
+
+.block-3 {
+
+  &__title {
+    @media (max-width: $sm-screen - 1) {
+      font-size: 42px;
+    }
+    @media (max-width: 480px) {
+      font-size: 32px;
+    }
+    font-size: 48px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @media (max-width: $sm-screen - 1) {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include col-4;
+    @include col-md-5();
+    @include col-sm-12();
+  }
+
+  .block {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    &--1 {
+      background-image: url('../img/mental/brush-1.png');
+    }
+
+    &--2 {
+      background-image: url('../img/mental/brush-2.png');
+    }
+
+    &--3 {
+      background-image: url('../img/mental/brush-3.png');
+    }
+  }
+
+  .num,
+  .text {
+    color: $red;
+  }
+
+  .num {
+    font-size: 72px;
+    font-weight: 100;
+    line-height: .8;
+  }
+
+  .text {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .block-desc {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+
+/*=== BLOCK-4 ===*/
+
+.block-4 {
+  @media (max-width: $sm-screen - 1) {
+    background-image: url('../img/mental/mob/bg-boy-abac-2-sm.jpg');
+  }
+  background-image: url('../img/mental/bg-boy-abac-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  .block-wrap {
+    @media (max-width: $sm-screen - 1) {
+      float: none;
+    }
+    float: right;
+    color: $white;
+  }
+
+  .block-title {
+    font-size: 40px;
+    padding-bottom: 15px;
+  }
+
+  .block-desc {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  .block-list {
+    @media (max-width: $sm-screen - 1) {
+      padding-bottom: 0;
+      font-size: 20px;
+    }
+    font-size: 24px;
+    padding-bottom: 25px;
+
+    li {
+      @media (max-width: $sm-screen - 1) {
+        padding-left: 40px;
+      }
+      position: relative;
+      padding-left: 50px;
+      margin-top: 15px;
+
+      &:before {
+        @media (max-width: $sm-screen - 1) {
+          top: -2px;
+          background-size: cover;
+          width: 25px;
+          height: 25px;
+        }
+        position: absolute;
+        content: '';
+        display: block;
+        top: -2%;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background: url('../img/mental/check-white.svg') center no-repeat;
+      }
+    }
+  }
+}
+
+/*=== BLOCK-5 ===*/
+
+.block-5 {
+
+  .sec-title {
+    font-weight: 100;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col-3();
+    @include col-lg-5();
+    @include col-sm-12();
+  }
+
+  .block {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .block__img {
+    @media (max-width: $sm-screen - 1) {
+      margin: 0 auto 15px;
+    }
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 25px;
+
+    &--min {
+      width: 62px;
+    }
+  }
+
+  .block-desc {
+    @media (max-width: $lg-screen - 1) {
+      font-size: 26px;
+    }
+    font-size: 30px;
+    font-weight: 300;
+
+    strong {
+      font-weight: 400;
+    }
+  }
+
+  &__btn {
+    @extend .jumb__btn;
+  }
+}
+
+@import 'partials/reviews';
+
+@import 'partials/map/map';

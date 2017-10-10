@@ -1,0 +1,452 @@
+/*=== JUMB ===*/
+
+.jumb {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/genius/genius_online/mob/bg-main-md.jpg');
+  }
+  @media(max-width: 560px) {
+    background-image: url('../img/genius/genius_online/mob/bg-main-sm.jpg');
+  }
+  background-image: url('../img/genius/genius_online/bg-main.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 4em 0 7em;
+
+  &__main-desc {
+    max-width: 750px;
+    color: $white;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &__over-title {
+    @media(max-width: 480px){
+      font-size: 26px;
+      padding: 5px 0;
+    }
+    @include wave-title(60px);
+    font-size: 30px;
+    font-weight: 100;
+    padding: 10px 0;
+  }
+
+  &__title {
+    @media(max-width: $md-screen - 1){
+      font-size: 56px;
+    }
+    @media(max-width: $sm-screen - 1){
+      font-size: 48px;
+    }
+    @media(max-width: 480px){
+      font-size: 38px;
+      padding: 8px 0 6px;
+    }
+    font-size: 66px;
+    text-transform: uppercase;
+    padding: 12px 0 10px;
+
+    span {
+      @media(max-width: 480px){
+        font-size: 20px;
+      }
+      width: 100%;
+      font-size: 24px;
+      font-weight: 100;
+      text-transform: none;
+      line-height: 1.1;
+    }
+  }
+
+  &__date {
+    @media(max-width: 480px){
+      font-size: 32px;
+    }
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1;
+    padding-top: 10px;
+  }
+
+  &__cost {
+    font-size: 36px;
+    padding-bottom: 15px;
+  }
+
+  .btn-block {
+    padding-top: 12px;
+  }
+
+  &__btn {
+    @include btn-red(571px);
+    border: 2px dotted $white;
+  }
+
+}
+
+@import 'partials/timer/timer';
+
+.block__list {
+
+  li {
+    position: relative;
+    font-size: 24px;
+    font-weight: 100;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+    }
+  }
+}
+
+.main-content {
+  @include cf();
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__wrap {
+    @media(max-width: $md-screen - 1) {
+      float: none;
+    }
+    float: right;
+
+    .sec-title {
+      @media(max-width: $md-screen - 1){
+        text-align: center;
+      }
+      text-align: left;
+    }
+  }
+}
+
+/*=== BLOCK-1 ===*/
+
+.block-1 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/genius/genius_online/mob/bg-krp-2-md.jpg');
+  }
+  @media(max-width: 560px) {
+    background-image: url('../img/genius/genius_online/mob/bg-krp-2-sm.jpg');
+  }
+  background-image: url('../img/genius/genius_online/bg-krp-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .main-content {
+
+    &:before {
+      @media(max-width: $md-screen - 1){
+        display: none;
+      }
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 400px;
+      height: 575px;
+      background: url('../img/genius/genius_online/nerd-with-books.png') center no-repeat;
+      transform: translateX(-320px);
+    }
+
+    &__wrap {
+      @media(max-width: $md-screen - 1){
+        max-width: none;
+      }
+      max-width: 675px;
+    }
+  }
+
+  &__list {
+
+    li {
+      @media(max-width: $md-screen - 1){
+        
+        br {
+          display: none;
+        }
+      }
+      @media(max-width: $md-screen - 1){
+        padding-left: 40px;
+      }
+      padding-left: 50px;
+
+      &:before {
+        top: 4px;
+        left: 0;
+        width: 30px;
+        height: 27px;
+        background: url('../img/genius/genius_online/warning.svg') center no-repeat;
+      }
+    }
+  }
+}
+
+/*=== BLOCK-2 ===*/
+
+.block-2 {
+
+  .sec-title {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 42px;
+    }
+    font-size: 48px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @media(max-width: $sm-screen - 1) {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include col();
+    @include col-6();
+    @include col-sm-11();
+  }
+
+  .block {
+    text-align: center;
+
+    &__img {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 25px;
+
+      &--custom {
+        width: 63px;
+      }
+    }
+
+    &__desc {
+      font-size: 24px;
+      font-weight: 300;
+
+      strong {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+/*=== BLOCK-3 ===*/
+
+.block-3 {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/genius/genius_online/mob/bg-krp-3-md.jpg');
+  }
+  @media(max-width: 560px) {
+    background-image: url('../img/genius/genius_online/mob/bg-krp-3-sm.jpg');
+  }
+  position: relative;
+  background-image: url('../img/genius/genius_online/bg-krp-3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:before {
+    top: 0;
+    background-image: url('../img/genius/genius_online/triangle-pattern-1.png');
+  }
+
+  &:after {
+    bottom: 0;
+    background-image: url('../img/genius/genius_online/triangle-pattern-2.png');
+  }
+
+  .sec-title {
+    margin-bottom: 10px;
+  }
+
+  .sec-desc {
+    @media(max-width: $sm-screen - 1){
+      font-size: 26px;
+    }
+    font-size: 30px;
+    font-weight: 100;
+    padding-bottom: 60px;
+  }
+
+  .row {
+    @include justify-content(center);
+  }
+
+  .col {
+    @include col();
+    @include col-4();
+    @include col-md-5();
+    @include col-sm-6();
+    @include col-xs-11();
+  }
+
+  .block {
+    margin-bottom: 40px;
+
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $white;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+
+      img {
+        max-width: 55%;
+      }
+    }
+
+    &__desc {
+      @media(max-width: 560px) {
+
+        br {
+          display: none;
+        }
+      }
+      font-size: 24px;
+      font-weight: 100;
+
+      strong {
+        display: inline-block;
+        width: 100%;
+        font-weight: 300;
+        color: $red;
+      }
+    }
+  }
+}
+
+/*=== BLOCK-4 ===*/
+
+.block-4 {
+
+  .main-content {
+
+    &:before {
+      @media(max-width: $lg-screen - 1){
+        display: none;
+      }
+      position: absolute;
+      content: '';
+      display: block;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 400px;
+      height: 415px;
+      background: url('../img/genius/genius_online/good.png') center no-repeat;
+    }
+  }
+
+  .main-content__wrap {
+    @media(max-width: $lg-screen - 1){
+      float: none;
+
+      .sec-title {
+        text-align: center;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__list {
+    @media(max-width: $lg-screen - 1) {
+      max-width: 770px;
+      margin: 0 auto;
+    }
+
+    li {
+      padding-left: 40px;
+      
+      &:before {
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 32px;
+        background: url('../img/genius/genius_online/good_small.png') center no-repeat;
+      }
+    }
+  }
+}
+
+/*=== COST ===*/
+
+.cost {
+  @media(max-width: $md-screen - 1) {
+    background-image: url('../img/genius/genius_online/mob/bg-krp-4-md.jpg');
+  }
+  @media(max-width: 560px) {
+    background-image: url('../img/genius/genius_online/mob/bg-krp-4-sm.jpg');
+    padding: 40px 0 50px;
+  }
+  background-image: url('../img/genius/genius_online/bg-krp-4.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  text-align: center;
+  padding: 90px 0 100px;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 100;
+  }
+
+  &-block {
+    @media(max-width: $sm-screen - 1) {
+      font-size: 56px;
+    }
+    @media(max-width: 480px) {
+      font-size: 48px;
+    }
+    font-size: 60px;
+  }
+
+  .btn-block {
+    padding-top: 35px;
+  }
+
+  &__btn {
+    @include btn-trans(571px);
+    font-size: 30px;
+    text-transform: none;
+    padding: 10px 0;
+  }
+}
+
+@import 'partials/reviews';
